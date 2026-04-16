@@ -3,41 +3,620 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel's Portfolio</title>
+    <title>Daniel Kim — Software Engineer</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            max-width: 720px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-            line-height: 1.6;
-            color: #222;
+        :root {
+            --surface: #ffffff;
+            --soft: #f4f6fb;
+            --soft-2: #fbf6ff;
+            --text: #15182a;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --accent-2: #a855f7;
+            --accent-3: #06b6d4;
+            --dark: #1f2233;
+            --dark-muted: #9aa3b2;
         }
-        h1 { margin-bottom: 0.25rem; }
-        .tagline { color: #666; margin-top: 0; }
-        section { margin-top: 2.5rem; }
+
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--surface);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page { width: 100%; background: var(--surface); }
+
+        a { color: inherit; text-decoration: none; }
+        h1, h2, h3 { margin: 0; line-height: 1.25; }
+
+        /* Nav */
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 48px;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-left { display: flex; align-items: center; gap: 28px; }
+        .nav-links { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+        .nav-links a:hover { color: var(--text); }
+        .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+        .brand-mark {
+            width: 22px; height: 22px; border-radius: 6px;
+            background: linear-gradient(135deg, var(--primary), var(--accent-2));
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+        }
+
+        /* Buttons */
+        .btn {
+            font: inherit;
+            padding: 9px 18px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color .15s, border-color .15s, color .15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent-2));
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-hover), #9333ea);
+            box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        .btn-secondary:hover { background: rgba(79, 70, 229, 0.08); border-color: var(--primary-hover); }
+
+        /* Hero */
+        .hero {
+            padding: 96px 48px 104px;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 900px 600px at 85% 10%, rgba(168, 85, 247, 0.18), transparent 55%),
+                radial-gradient(ellipse 700px 500px at 10% 90%, rgba(79, 70, 229, 0.14), transparent 55%),
+                radial-gradient(ellipse 500px 400px at 95% 95%, rgba(6, 182, 212, 0.10), transparent 55%),
+                linear-gradient(180deg, #fafbff 0%, #ffffff 100%);
+        }
+        .hero h1 {
+            background: linear-gradient(135deg, var(--text) 20%, var(--primary) 75%, var(--accent-2) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.10), rgba(168, 85, 247, 0.10));
+            border: 1px solid rgba(79, 70, 229, 0.15);
+        }
+        .hero h1 {
+            font-size: 40px;
+            max-width: 640px;
+            margin-bottom: 18px;
+        }
+        .hero p {
+            max-width: 560px;
+            color: var(--muted);
+            margin: 0 0 28px;
+            font-size: 17px;
+        }
+        .hero-actions { display: flex; gap: 12px; }
+
+        /* Section wrapper */
+        section { padding: 72px 48px; position: relative; }
+        section.banded { background: linear-gradient(180deg, var(--soft) 0%, var(--soft-2) 100%); }
+        .section-head {
+            text-align: center;
+            max-width: 560px;
+            margin: 0 auto 44px;
+        }
+        .section-head h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--text) 30%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-head p { color: var(--muted); margin: 0; }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .stat {
+            background: var(--soft);
+            border-radius: 6px;
+            padding: 24px 18px;
+            text-align: center;
+        }
+        .stat-number { font-size: 26px; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+        /* Feature rows */
+        .feature-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .mockup {
+            background: linear-gradient(135deg, #eef2ff 0%, #fdf4ff 50%, #ecfeff 100%);
+            border-radius: 12px;
+            aspect-ratio: 4 / 3;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px -10px rgba(79, 70, 229, 0.18), 0 2px 6px rgba(15, 23, 42, 0.04);
+        }
+        .mockup::before {
+            content: "";
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(circle at 72% 60%, rgba(168, 85, 247, 0.35) 0 70px, transparent 71px),
+                radial-gradient(circle at 28% 78%, rgba(79, 70, 229, 0.25) 0 46px, transparent 47px),
+                radial-gradient(circle at 80% 22%, rgba(6, 182, 212, 0.25) 0 30px, transparent 31px);
+            filter: blur(0.5px);
+        }
+        .mockup.browser::after {
+            content: "";
+            position: absolute; top: 0; left: 0; right: 0; height: 26px;
+            background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+            border-bottom: 1px solid rgba(79, 70, 229, 0.12);
+        }
+        .feature-list { display: flex; flex-direction: column; gap: 22px; }
+        .feature-item { display: flex; gap: 14px; }
+        .feature-icon {
+            flex: 0 0 40px; height: 40px; border-radius: 8px;
+            background: #eef1f6; border: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+        }
+        .feature-item h3 { font-size: 15px; margin-bottom: 4px; }
+        .feature-item p { margin: 0; font-size: 14px; color: var(--muted); }
+
+        .feature-text .eyebrow { margin-bottom: 10px; }
+        .feature-text h2 { font-size: 26px; margin-bottom: 12px; }
+        .feature-text p { color: var(--muted); margin: 0 0 18px; }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--soft);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        /* Tech stack */
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .stack-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .stack-card::before {
+            content: "";
+            position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent-2));
+        }
+        .stack-card:nth-child(2)::before { background: linear-gradient(90deg, var(--accent-2), #ec4899); }
+        .stack-card:nth-child(3)::before { background: linear-gradient(90deg, var(--accent-3), var(--primary)); }
+        .stack-card:nth-child(4)::before { background: linear-gradient(90deg, #f59e0b, #ec4899); }
+        .stack-card:nth-child(5)::before { background: linear-gradient(90deg, #10b981, var(--accent-3)); }
+        .stack-card:nth-child(6)::before { background: linear-gradient(90deg, var(--accent-2), var(--primary)); }
+        .stack-card:nth-child(7)::before { background: linear-gradient(90deg, #ec4899, #f59e0b); }
+        .stack-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px -12px rgba(79, 70, 229, 0.18);
+        }
+        .stack-card h3 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        /* Contact CTA */
+        .contact {
+            background:
+                radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.18), transparent 55%),
+                radial-gradient(circle at 85% 85%, rgba(6, 182, 212, 0.15), transparent 55%),
+                linear-gradient(135deg, #eef2ff 0%, #fdf4ff 100%);
+            border: 1px solid rgba(79, 70, 229, 0.10);
+            border-radius: 16px;
+            padding: 56px 48px;
+            text-align: center;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .contact h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--text) 20%, var(--primary) 80%, var(--accent-2) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .contact p { color: var(--muted); margin: 0 0 24px; }
+        .contact-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: #d5dae3;
+            padding: 40px 48px 24px;
+        }
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .footer .brand { color: #fff; font-size: 16px; }
+        .footer-links {
+            display: flex;
+            gap: 28px;
+            font-size: 14px;
+        }
+        .footer-links a {
+            color: #d5dae3;
+            transition: color .15s;
+        }
+        .footer-links a:hover { color: #fff; }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 12px; color: var(--dark-muted);
+            padding-top: 20px; margin-top: 24px;
+            border-top: 1px solid #3a4355;
+        }
+
+        /* Responsive */
+        @media (max-width: 960px) {
+            .stack-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 760px) {
+            .nav { padding: 14px 20px; }
+            .nav-links { display: none; }
+            section, .hero { padding: 48px 20px; }
+            .hero { padding-top: 56px; padding-bottom: 56px; }
+            .hero h1 { font-size: 28px; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .stack-grid { grid-template-columns: 1fr; }
+            .feature-row { grid-template-columns: 1fr; gap: 28px; }
+            .contact { padding: 32px 20px; }
+            .footer { padding: 28px 20px 20px; }
+            .footer-inner { flex-direction: column; align-items: flex-start; }
+        }
     </style>
 </head>
 <body>
-    <h1>Daniel</h1>
-    <p class="tagline">Software engineer &middot; portfolio</p>
+    <div class="page">
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="nav-left">
+                <a class="brand" href="#"><span class="brand-mark"></span>Daniel Kim</a>
+                <div class="nav-links">
+                    <a href="#work">Work</a>
+                    <a href="#stack">Stack</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">Get in touch</a>
+        </nav>
 
-    <section>
-        <h2>About</h2>
-        <p>Short intro goes here.</p>
-    </section>
+        <!-- Hero -->
+        <section class="hero">
+            <span class="eyebrow">Software Engineer</span>
+            <h1>Building thoughtful, reliable software for the web.</h1>
+            <p>I design and ship full-stack products end to end — from the data model to the pixel. Currently open to new opportunities.</p>
+            <div class="hero-actions">
+                <a href="#work" class="btn btn-primary">View my work</a>
+                <a href="#contact" class="btn btn-secondary">Contact me</a>
+            </div>
+        </section>
 
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>Project one &mdash; description</li>
-            <li>Project two &mdash; description</li>
-        </ul>
-    </section>
+        <!-- Tech stack -->
+        <section id="stack" class="banded">
+            <div class="section-head">
+                <h2>Tech stack</h2>
+                <p>Tools and services I've used to ship and operate the projects below.</p>
+            </div>
+            <div class="stack-grid">
+                <div class="stack-card">
+                    <h3>Web frontend</h3>
+                    <div class="tag-list">
+                        <span class="tag">Next.js 16</span>
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Tailwind CSS v4</span>
+                        <span class="tag">HTML &amp; CSS</span>
+                        <span class="tag">Server Components</span>
+                    </div>
+                </div>
+                <div class="stack-card">
+                    <h3>Mobile</h3>
+                    <div class="tag-list">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">Deep links</span>
+                        <span class="tag">i18n (9 languages)</span>
+                    </div>
+                </div>
+                <div class="stack-card">
+                    <h3>Backend &amp; data</h3>
+                    <div class="tag-list">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">JSP</span>
+                        <span class="tag">Cloud Functions</span>
+                        <span class="tag">Server Actions</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Oracle DB</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">Firestore</span>
+                        <span class="tag">Drizzle ORM</span>
+                        <span class="tag">REST &amp; JSON</span>
+                    </div>
+                </div>
+                <div class="stack-card">
+                    <h3>Cloud &amp; deployment</h3>
+                    <div class="tag-list">
+                        <span class="tag">Vercel</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Vercel Cron</span>
+                        <span class="tag">FCM</span>
+                        <span class="tag">Crashlytics</span>
+                        <span class="tag">Google Analytics</span>
+                        <span class="tag">Firebase Analytics</span>
+                        <span class="tag">Vercel Analytics</span>
+                        <span class="tag">Remote Config</span>
+                        <span class="tag">App Check</span>
+                    </div>
+                </div>
+                <div class="stack-card">
+                    <h3>APIs &amp; integrations</h3>
+                    <div class="tag-list">
+                        <span class="tag">IGDB</span>
+                        <span class="tag">RAWG</span>
+                        <span class="tag">HowLongToBeat</span>
+                        <span class="tag">Google Books</span>
+                        <span class="tag">NYT Books</span>
+                        <span class="tag">Google Vision</span>
+                        <span class="tag">RevenueCat</span>
+                        <span class="tag">Google Ads</span>
+                        <span class="tag">Google AdMob</span>
+                        <span class="tag">Google AdSense</span>
+                        <span class="tag">Amazon Associates</span>
+                        <span class="tag">CJ Affiliate</span>
+                    </div>
+                </div>
+                <div class="stack-card">
+                    <h3>AI tools</h3>
+                    <div class="tag-list">
+                        <span class="tag">Claude (Anthropic)</span>
+                        <span class="tag">Claude Code CLI</span>
+                        <span class="tag">GPT (OpenAI)</span>
+                        <span class="tag">Gemini (Google)</span>
+                        <span class="tag">Prompt engineering</span>
+                        <span class="tag">AI-assisted workflows</span>
+                    </div>
+                </div>
+                <div class="stack-card">
+                    <h3>Design &amp; architecture</h3>
+                    <div class="tag-list">
+                        <span class="tag">ERD</span>
+                        <span class="tag">Flow charts</span>
+                        <span class="tag">Sequence diagrams</span>
+                        <span class="tag">Wireframes</span>
+                        <span class="tag">SEO / Schema.org</span>
+                        <span class="tag">Google Search Console</span>
+                        <span class="tag">Open Graph images</span>
+                        <span class="tag">Sitemaps &amp; RSS</span>
+                        <span class="tag">Rate limiting</span>
+                        <span class="tag">Solana / Web3</span>
+                        <span class="tag">Firebase Auth</span>
+                        <span class="tag">Cookie-based admin</span>
+                        <span class="tag">Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p><a href="mailto:dkimdaniel0911@gmail.com">dkimdaniel0911@gmail.com</a></p>
-    </section>
+        <!-- Featured projects -->
+        <section id="work">
+            <div class="section-head">
+                <h2>Featured work</h2>
+                <p>Five products I designed, built, shipped, and operate — including this site.</p>
+            </div>
+
+            <!-- Geesly -->
+            <div class="feature-row">
+                <div class="feature-text">
+                    <span class="eyebrow">Project · Live · iOS &amp; Android</span>
+                    <h2>Geesly — Dating app</h2>
+                    <p>A cross-platform dating app in the spirit of Tinder, Hinge, and Glam. Real-time matching over Firestore, geospatial discovery, in-app currency ("corns"), RevenueCat subscriptions, rewarded ads, and Vision-API content moderation. Localized in 9 languages. The hardest lesson has been distribution — shipping the app is only the first problem.</p>
+                    <div class="tag-list">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Firestore</span>
+                        <span class="tag">Cloud Functions</span>
+                        <span class="tag">RevenueCat</span>
+                        <span class="tag">FCM</span>
+                        <span class="tag">Google Vision API</span>
+                        <span class="tag">i18n (9 languages)</span>
+                    </div>
+                    <p style="margin-top:16px;"><a href="https://geesly.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit geesly.net →</a></p>
+                </div>
+                <div class="mockup"></div>
+            </div>
+        </section>
+
+        <section class="banded">
+            <!-- BookList4U -->
+            <div class="feature-row">
+                <div class="mockup browser"></div>
+                <div class="feature-text">
+                    <span class="eyebrow">Project · Live</span>
+                    <h2>BookList4U — Book series, in order</h2>
+                    <p>Find any book series and read it in the right order — by publication date or in-world chronology. 100+ hand-curated series with original editorials, community-submitted reading times, NYT bestseller integration, and a Google-Books-powered generator so users can add new series themselves. Daily Vercel cron keeps data fresh; Amazon affiliate links monetize clicks.</p>
+                    <div class="tag-list">
+                        <span class="tag">Next.js 16</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Tailwind CSS v4</span>
+                        <span class="tag">Supabase / Postgres</span>
+                        <span class="tag">Vercel</span>
+                        <span class="tag">Google Books API</span>
+                        <span class="tag">NYT Books API</span>
+                        <span class="tag">SEO / Schema.org</span>
+                    </div>
+                    <p style="margin-top:16px;"><a href="https://booklist4u.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit booklist4u.com →</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- NELA token -->
+            <div class="feature-row">
+                <div class="feature-text">
+                    <span class="eyebrow">Project · On-chain</span>
+                    <h2>NELA — Solana token</h2>
+                    <p>Issued a token on Solana to learn the full lifecycle end to end: contract setup, liquidity provisioning, and DEX listing. A roughly $500 lesson in how tokenomics, fees, and market-making actually behave in the wild.</p>
+                    <div class="tag-list">
+                        <span class="tag">Solana</span>
+                        <span class="tag">Web3</span>
+                        <span class="tag">DeFi</span>
+                    </div>
+                    <p style="margin-top:16px;"><a href="https://dexscreener.com/solana/vbyphyrvrrhsomsytiepsv8bcdtmh1pas3v1frzg46e" class="btn btn-secondary" target="_blank" rel="noopener">View on DexScreener →</a></p>
+                </div>
+                <div class="mockup"></div>
+            </div>
+        </section>
+
+        <section class="banded">
+            <!-- CanonTrails -->
+            <div class="feature-row">
+                <div class="mockup browser"></div>
+                <div class="feature-text">
+                    <span class="eyebrow">Project · Live</span>
+                    <h2>CanonTrails — The right order to play any game series</h2>
+                    <p>Canonical play order with DLC placement, branching timelines, and HowLongToBeat estimates per game version. Imports from IGDB with auto-detected entry types (main / DLC / remaster / spinoff), stores per-platform playtime, and routes buy clicks through Amazon + CJ-affiliate store links with hashed-IP tracking. Auto-generated Open Graph images, ⌘K global search, and cookie-gated admin curator tools (entry-type editor, canonical-order editor, HLTB batch refresh).</p>
+                    <div class="tag-list">
+                        <span class="tag">Next.js 16</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Drizzle ORM</span>
+                        <span class="tag">Supabase / Postgres</span>
+                        <span class="tag">Tailwind CSS v4</span>
+                        <span class="tag">Vercel</span>
+                        <span class="tag">IGDB + RAWG APIs</span>
+                        <span class="tag">HowLongToBeat</span>
+                        <span class="tag">CJ Affiliate</span>
+                        <span class="tag">SEO / Schema.org</span>
+                    </div>
+                    <p style="margin-top:16px;"><a href="https://canontrails.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit canontrails.com →</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- This website -->
+            <div class="feature-row">
+                <div class="feature-text">
+                    <span class="eyebrow">Project · You're looking at it</span>
+                    <h2>This portfolio</h2>
+                    <p>Hand-written from scratch in a single HTML file — no React, no bundler, no CSS framework. An exercise in keeping things lean: readable markup, inline styles, and a layout that holds up from mobile to desktop.</p>
+                    <div class="tag-list">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Static</span>
+                        <span class="tag">Zero-dependency</span>
+                    </div>
+                </div>
+                <div class="mockup browser"></div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="contact">
+                <h2>Let's build something together.</h2>
+                <p>I'm open to full-time roles and interesting freelance work. The fastest way to reach me is email.</p>
+                <div class="contact-actions">
+                    <a href="mailto:dkimdaniel0911@gmail.com" class="btn btn-primary">Email me</a>
+                    <a href="https://github.com/dkim0910" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+                    <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <a class="brand" href="#"><span class="brand-mark"></span>Daniel Kim</a>
+                <div class="footer-links">
+                    <a href="#work">Work</a>
+                    <a href="#contact">Contact</a>
+                    <a href="https://github.com/dkim0910" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Daniel Kim. Hand-built with HTML and CSS.</span>
+                <a href="mailto:dkimdaniel0911@gmail.com">dkimdaniel0911@gmail.com</a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

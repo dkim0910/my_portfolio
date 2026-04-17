@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Daniel Kim — Software Engineer</title>
     <style>
         :root {
@@ -221,41 +222,79 @@
         .stack-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1080px;
+            gap: 24px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         .stack-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 26px;
+            --card-color: var(--primary);
+            --card-glow: rgba(79, 70, 229, 0.10);
+            background: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(255,255,255,0.7));
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 16px;
+            padding: 28px;
             position: relative;
             overflow: hidden;
-            transition: transform .2s, box-shadow .2s;
+            transition: transform .25s, box-shadow .25s;
         }
         .stack-card::before {
             content: "";
-            position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
             background: linear-gradient(90deg, var(--primary), var(--accent-2));
         }
-        .stack-card:nth-child(2)::before { background: linear-gradient(90deg, var(--accent-2), #ec4899); }
-        .stack-card:nth-child(3)::before { background: linear-gradient(90deg, var(--accent-3), var(--primary)); }
+        .stack-card::after {
+            content: "";
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at 90% 10%, var(--card-glow) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .stack-card:nth-child(1) { --card-color: #4f46e5; --card-glow: rgba(79, 70, 229, 0.12); }
+        .stack-card:nth-child(1)::before { background: linear-gradient(90deg, #4f46e5, #818cf8); }
+        .stack-card:nth-child(2) { --card-color: #a855f7; --card-glow: rgba(168, 85, 247, 0.12); }
+        .stack-card:nth-child(2)::before { background: linear-gradient(90deg, #a855f7, #ec4899); }
+        .stack-card:nth-child(3) { --card-color: #06b6d4; --card-glow: rgba(6, 182, 212, 0.12); }
+        .stack-card:nth-child(3)::before { background: linear-gradient(90deg, #06b6d4, #4f46e5); }
+        .stack-card:nth-child(4) { --card-color: #f59e0b; --card-glow: rgba(245, 158, 11, 0.12); }
         .stack-card:nth-child(4)::before { background: linear-gradient(90deg, #f59e0b, #ec4899); }
-        .stack-card:nth-child(5)::before { background: linear-gradient(90deg, #10b981, var(--accent-3)); }
-        .stack-card:nth-child(6)::before { background: linear-gradient(90deg, var(--accent-2), var(--primary)); }
+        .stack-card:nth-child(5) { --card-color: #10b981; --card-glow: rgba(16, 185, 129, 0.12); }
+        .stack-card:nth-child(5)::before { background: linear-gradient(90deg, #10b981, #06b6d4); }
+        .stack-card:nth-child(6) { --card-color: #8b5cf6; --card-glow: rgba(139, 92, 246, 0.12); }
+        .stack-card:nth-child(6)::before { background: linear-gradient(90deg, #8b5cf6, #4f46e5); }
+        .stack-card:nth-child(7) { --card-color: #ec4899; --card-glow: rgba(236, 72, 153, 0.12); }
         .stack-card:nth-child(7)::before { background: linear-gradient(90deg, #ec4899, #f59e0b); }
         .stack-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 28px -12px rgba(79, 70, 229, 0.18);
+            transform: translateY(-4px);
+            box-shadow:
+                0 20px 40px -16px var(--card-glow),
+                0 8px 20px -8px rgba(0,0,0,0.06);
+        }
+        .stack-icon {
+            display: inline-flex;
+            align-items: center; justify-content: center;
+            width: 38px; height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--card-glow), rgba(255,255,255,0));
+            border: 1px solid rgba(255,255,255,0.6);
+            font-size: 18px;
+            margin-bottom: 12px;
         }
         .stack-card h3 {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
-            color: var(--primary);
-            letter-spacing: 0.06em;
+            color: var(--card-color);
+            letter-spacing: 0.04em;
             text-transform: uppercase;
             margin-bottom: 14px;
+        }
+        .stack-card .tag {
+            background: linear-gradient(135deg, rgba(255,255,255,0.8), var(--soft));
+            border-color: rgba(0,0,0,0.06);
+            transition: transform .15s, box-shadow .15s;
+        }
+        .stack-card .tag:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px -2px var(--card-glow);
         }
 
         /* Contact CTA */
@@ -343,7 +382,7 @@
             <div class="nav-left">
                 <a class="brand" href="#"><span class="brand-mark"></span>Daniel Kim</a>
                 <div class="nav-links">
-                    <a href="#work">Work</a>
+                    <a href="#projects">Projects</a>
                     <a href="#stack">Stack</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -357,7 +396,7 @@
             <h1>Building thoughtful, reliable software for the web.</h1>
             <p>I design and ship full-stack products end to end — from the data model to the pixel. Currently open to new opportunities.</p>
             <div class="hero-actions">
-                <a href="#work" class="btn btn-primary">View my work</a>
+                <a href="#projects" class="btn btn-primary">View my projects</a>
                 <a href="#contact" class="btn btn-secondary">Contact me</a>
             </div>
         </section>
@@ -370,15 +409,14 @@
             </div>
             <div class="stack-grid">
                 <div class="stack-card">
-                    <h3>Web frontend</h3>
+                    <h3>Frontend</h3>
                     <div class="tag-list">
-                        <span class="tag">Next.js 16</span>
+                        <span class="tag">Next.js</span>
                         <span class="tag">React</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">JavaScript</span>
-                        <span class="tag">Tailwind CSS v4</span>
+                        <span class="tag">Tailwind CSS</span>
                         <span class="tag">HTML &amp; CSS</span>
-                        <span class="tag">Server Components</span>
                     </div>
                 </div>
                 <div class="stack-card">
@@ -388,8 +426,6 @@
                         <span class="tag">Dart</span>
                         <span class="tag">iOS</span>
                         <span class="tag">Android</span>
-                        <span class="tag">Deep links</span>
-                        <span class="tag">i18n (9 languages)</span>
                     </div>
                 </div>
                 <div class="stack-card">
@@ -398,86 +434,54 @@
                         <span class="tag">Node.js</span>
                         <span class="tag">Java</span>
                         <span class="tag">Spring Boot</span>
-                        <span class="tag">JSP</span>
-                        <span class="tag">Cloud Functions</span>
-                        <span class="tag">Server Actions</span>
                         <span class="tag">PostgreSQL</span>
                         <span class="tag">MySQL</span>
                         <span class="tag">Oracle DB</span>
                         <span class="tag">Supabase</span>
-                        <span class="tag">Firestore</span>
-                        <span class="tag">Drizzle ORM</span>
-                        <span class="tag">REST &amp; JSON</span>
+                        <span class="tag">Firebase</span>
                     </div>
                 </div>
                 <div class="stack-card">
-                    <h3>Cloud &amp; deployment</h3>
+                    <h3>Cloud &amp; services</h3>
                     <div class="tag-list">
                         <span class="tag">Vercel</span>
                         <span class="tag">Firebase</span>
-                        <span class="tag">Vercel Cron</span>
-                        <span class="tag">FCM</span>
-                        <span class="tag">Crashlytics</span>
                         <span class="tag">Google Analytics</span>
-                        <span class="tag">Firebase Analytics</span>
-                        <span class="tag">Vercel Analytics</span>
-                        <span class="tag">Remote Config</span>
-                        <span class="tag">App Check</span>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <h3>APIs &amp; integrations</h3>
-                    <div class="tag-list">
-                        <span class="tag">IGDB</span>
-                        <span class="tag">RAWG</span>
-                        <span class="tag">HowLongToBeat</span>
-                        <span class="tag">Google Books</span>
-                        <span class="tag">NYT Books</span>
-                        <span class="tag">Google Vision</span>
-                        <span class="tag">RevenueCat</span>
                         <span class="tag">Google Ads</span>
-                        <span class="tag">Google AdMob</span>
                         <span class="tag">Google AdSense</span>
-                        <span class="tag">Amazon Associates</span>
-                        <span class="tag">CJ Affiliate</span>
+                        <span class="tag">Google AdMob</span>
+                        <span class="tag">Google Search Console</span>
+                        <span class="tag">RevenueCat</span>
                     </div>
                 </div>
                 <div class="stack-card">
-                    <h3>AI tools</h3>
+                    <h3>AI</h3>
                     <div class="tag-list">
-                        <span class="tag">Claude (Anthropic)</span>
+                        <span class="tag">Claude</span>
                         <span class="tag">Claude Code CLI</span>
-                        <span class="tag">GPT (OpenAI)</span>
-                        <span class="tag">Gemini (Google)</span>
+                        <span class="tag">GPT</span>
+                        <span class="tag">Gemini</span>
                         <span class="tag">Prompt engineering</span>
-                        <span class="tag">AI-assisted workflows</span>
                     </div>
                 </div>
                 <div class="stack-card">
-                    <h3>Design &amp; architecture</h3>
+                    <h3>Design &amp; planning</h3>
                     <div class="tag-list">
                         <span class="tag">ERD</span>
                         <span class="tag">Flow charts</span>
                         <span class="tag">Sequence diagrams</span>
                         <span class="tag">Wireframes</span>
-                        <span class="tag">SEO / Schema.org</span>
-                        <span class="tag">Google Search Console</span>
-                        <span class="tag">Open Graph images</span>
-                        <span class="tag">Sitemaps &amp; RSS</span>
-                        <span class="tag">Rate limiting</span>
+                        <span class="tag">SEO</span>
                         <span class="tag">Solana / Web3</span>
-                        <span class="tag">Firebase Auth</span>
-                        <span class="tag">Cookie-based admin</span>
-                        <span class="tag">Git / GitHub</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured projects -->
-        <section id="work">
+        <section id="projects">
             <div class="section-head">
-                <h2>Featured work</h2>
+                <h2>Featured projects</h2>
                 <p>Five products I designed, built, shipped, and operate — including this site.</p>
             </div>
 
@@ -606,7 +610,7 @@
             <div class="footer-inner">
                 <a class="brand" href="#"><span class="brand-mark"></span>Daniel Kim</a>
                 <div class="footer-links">
-                    <a href="#work">Work</a>
+                    <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
                     <a href="https://github.com/dkim0910" target="_blank" rel="noopener">GitHub</a>
                     <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">LinkedIn</a>

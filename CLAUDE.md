@@ -63,13 +63,18 @@ If these change, update both the contact section and the footer.
 
 ## TODO
 
-- [ ] **PNG favicon** — add a `favicon.png` fallback for browsers that don't render SVG favicons (Chrome tab may need it)
-- [ ] **Deploy** — pick a host (Vercel, Netlify, GitHub Pages) and deploy; update README "deploy target TBD"
-- [ ] **Real screenshots** — replace pure-CSS `.mockup` placeholders with actual screenshots of Geesly, BookList4U, CanonTrails
-- [ ] **Hero copy** — personalize tagline and description beyond the current placeholder
-- [ ] **Resume / CV** — add a downloadable PDF resume and link it from the contact section
-- [ ] **Custom domain** — point a domain at the deployed site
-- [ ] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)
-- [ ] **Accessibility** — add `aria-label` on nav links, verify contrast ratios, keyboard tab order
-- [ ] **Analytics** — add Google Analytics or Vercel Analytics to track recruiter visits
-- [ ] **Open Graph meta** — add `og:title`, `og:description`, `og:image` so the link previews well when shared
+### Must-have (before sharing with recruiters)
+1. [ ] **PNG favicon** — add a `favicon.png` fallback for browsers that don't render SVG favicons (Chrome tab may need it)
+2. [ ] **Hero copy** — personalize tagline and description beyond the current placeholder
+3. [ ] **Real screenshots** — replace pure-CSS `.mockup` placeholders with actual screenshots of Geesly, BookList4U, CanonTrails
+4. [ ] **Resume / CV** — add a downloadable PDF resume and link it from the contact section
+5. [ ] **Open Graph meta** — add `og:title`, `og:description`, `og:image` so the link previews well when shared
+6. [ ] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)
+
+### Should-have (before going live)
+7. [ ] **Deploy** — pick a host (Vercel, Netlify, GitHub Pages) and deploy; update README "deploy target TBD"
+8. [ ] **Custom domain** — point a domain at the deployed site
+9. [ ] **Analytics** — add Google Analytics or Vercel Analytics to track recruiter visits
+
+### Nice-to-have
+10. [ ] **Accessibility** — add `aria-label` on nav links, verify contrast ratios, keyboard tab order

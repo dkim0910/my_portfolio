@@ -49,9 +49,8 @@
         .nav-links a:hover { color: var(--text); }
         .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; }
         .brand-mark {
-            width: 22px; height: 22px; border-radius: 6px;
-            background: linear-gradient(135deg, var(--primary), var(--accent-2));
-            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+            width: 22px; height: 22px;
+            border-radius: 6px;
         }
 
         /* Buttons */
@@ -174,7 +173,6 @@
         .mockup {
             background: linear-gradient(135deg, #eef2ff 0%, #fdf4ff 50%, #ecfeff 100%);
             border-radius: 12px;
-            aspect-ratio: 4 / 3;
             position: relative;
             overflow: hidden;
             box-shadow: 0 10px 40px -10px rgba(79, 70, 229, 0.18), 0 2px 6px rgba(15, 23, 42, 0.04);
@@ -193,6 +191,14 @@
             position: absolute; top: 0; left: 0; right: 0; height: 26px;
             background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
             border-bottom: 1px solid rgba(79, 70, 229, 0.12);
+        }
+        .mockup-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            position: relative;
+            z-index: 1;
         }
         .feature-list { display: flex; flex-direction: column; gap: 22px; }
         .feature-item { display: flex; gap: 14px; }
@@ -380,7 +386,7 @@
         <!-- Nav -->
         <nav class="nav">
             <div class="nav-left">
-                <a class="brand" href="#"><span class="brand-mark"></span>Daniel Kim</a>
+                <a class="brand" href="#"><img src="favicon.svg" alt="D" class="brand-mark">Daniel Kim</a>
                 <div class="nav-links">
                     <a href="#projects">Projects</a>
                     <a href="#stack">Stack</a>
@@ -504,14 +510,14 @@
                     </div>
                     <p style="margin-top:16px;"><a href="https://geesly.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit geesly.net →</a></p>
                 </div>
-                <div class="mockup"></div>
+                <div class="mockup"><img src="images/geesly_images.png" alt="Geesly screenshot" class="mockup-img"></div>
             </div>
         </section>
 
         <section class="banded">
             <!-- BookList4U -->
             <div class="feature-row">
-                <div class="mockup browser"></div>
+                <div class="mockup"><img src="images/booklist_image.png" alt="BookList4U screenshot" class="mockup-img"></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
                     <h2>BookList4U — Book series, in order</h2>
@@ -545,14 +551,14 @@
                     </div>
                     <p style="margin-top:16px;"><a href="https://dexscreener.com/solana/vbyphyrvrrhsomsytiepsv8bcdtmh1pas3v1frzg46e" class="btn btn-secondary" target="_blank" rel="noopener">View on DexScreener →</a></p>
                 </div>
-                <div class="mockup"></div>
+                <div class="mockup"><img src="images/Nelera_image.png" alt="NELA on DexScreener" class="mockup-img"></div>
             </div>
         </section>
 
         <section class="banded">
             <!-- CanonTrails -->
             <div class="feature-row">
-                <div class="mockup browser"></div>
+                <div class="mockup"><img src="images/canontrails_image.png" alt="CanonTrails screenshot" class="mockup-img"></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
                     <h2>CanonTrails — The right order to play any game series</h2>
@@ -588,7 +594,7 @@
                         <span class="tag">Zero-dependency</span>
                     </div>
                 </div>
-                <div class="mockup browser"></div>
+                <div class="mockup"><img src="images/my_website_image.png" alt="This portfolio screenshot" class="mockup-img"></div>
             </div>
         </section>
 
@@ -608,7 +614,7 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-inner">
-                <a class="brand" href="#"><span class="brand-mark"></span>Daniel Kim</a>
+                <a class="brand" href="#"><img src="favicon.svg" alt="D" class="brand-mark">Daniel Kim</a>
                 <div class="footer-links">
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>

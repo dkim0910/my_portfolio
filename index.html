@@ -150,6 +150,72 @@
             font-size: 17px;
         }
         .hero-actions { display: flex; gap: 12px; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .hero-code {
+            display: flex;
+            align-items: center;
+            justify-content: stretch;
+        }
+        .code-window {
+            width: 100%;
+            min-width: 0;
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.5);
+        }
+        .code-dots {
+            display: flex;
+            gap: 6px;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .code-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .code-dots span:nth-child(1) { background: #ef4444; }
+        .code-dots span:nth-child(2) { background: #f59e0b; }
+        .code-dots span:nth-child(3) { background: #22c55e; }
+        .code-lang {
+            padding: 8px 16px;
+            font-size: 11px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+        .code-body {
+            padding: 24px;
+            margin: 0;
+            font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text);
+            height: 220px;
+        }
+        .code-body code {
+            display: block;
+            white-space: pre;
+        }
+        .code-body .kw { color: #c084fc; }
+        .code-body .fn { color: #60a5fa; }
+        .code-body .str { color: #34d399; }
+        .code-body .cm { color: var(--muted); }
+        .code-body .ty { color: #f59e0b; }
+        .code-fade-in { animation: codeFade 0.8s ease-in-out; }
+        @keyframes codeFade {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
         /* Section wrapper */
         section { padding: 72px 48px; position: relative; }
@@ -402,6 +468,7 @@
             .hero h1 { font-size: 28px; }
             .stats { grid-template-columns: repeat(2, 1fr); }
             .stack-grid { grid-template-columns: 1fr; }
+            .hero-grid { grid-template-columns: 1fr; gap: 28px; }
             .feature-row { grid-template-columns: 1fr; gap: 28px; }
             .contact { padding: 32px 20px; }
             .footer { padding: 28px 20px 20px; }
@@ -426,12 +493,23 @@
 
         <!-- Hero -->
         <section class="hero">
-            <span class="eyebrow">Software Engineer</span>
-            <h1>Building thoughtful, reliable software for the web.</h1>
-            <p>I design and ship full-stack products end to end — from the data model to the pixel. Currently open to new opportunities.</p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View my projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact me</a>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow">Software Engineer</span>
+                    <h1>Building thoughtful, reliable software for the web.</h1>
+                    <p>I design and ship full-stack products end to end — from the data model to the pixel. Currently open to new opportunities.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View my projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact me</a>
+                    </div>
+                </div>
+                <div class="hero-code">
+                    <div class="code-window">
+                        <div class="code-dots"><span></span><span></span><span></span></div>
+                        <div class="code-lang" id="codeLang">JavaScript</div>
+                        <pre class="code-body"><code id="codeBlock"></code></pre>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -614,15 +692,16 @@
                 <div class="feature-text">
                     <span class="eyebrow">Project · You're looking at it</span>
                     <h2>This portfolio</h2>
-                    <p>Hand-written from scratch in a single HTML file — no React, no bundler, no CSS framework. An exercise in keeping things lean: readable markup, inline styles, and a layout that holds up from mobile to desktop.</p>
+                    <p>The site you're on right now. Hand-written in a single HTML file with no frameworks or build tools — just clean markup, CSS variables, and vanilla JavaScript. Dark theme, animated code showcase, glass-morphism cards, and a responsive layout that works from phone to ultrawide.</p>
                     <div class="tag-list">
                         <span class="tag">HTML</span>
                         <span class="tag">CSS</span>
-                        <span class="tag">Static</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive</span>
                         <span class="tag">Zero-dependency</span>
                     </div>
                 </div>
-                <div class="mockup"><img src="images/my_webstie_image.png" alt="This portfolio screenshot" class="mockup-img"></div>
+                <div class="mockup"><img src="images/my_website_image.png" alt="This portfolio screenshot" class="mockup-img"></div>
             </div>
         </section>
 
@@ -663,6 +742,30 @@
             document.querySelectorAll('[data-contact]').forEach(function(el) {
                 el.href = 'mai' + 'lto:' + u + '@' + d;
             });
+
+            // Code cycling
+            var snippets = [
+                { lang: 'JavaScript', code: '<span class="kw">function</span> <span class="fn">helloWorld</span>() {\n  <span class="fn">console</span>.<span class="fn">log</span>(<span class="str">"Hello, World!"</span>);\n}\n\n<span class="fn">helloWorld</span>();' },
+                { lang: 'Dart', code: '<span class="kw">void</span> <span class="fn">main</span>() {\n  <span class="fn">print</span>(<span class="str">\'Hello, World!\'</span>);\n}' },
+                { lang: 'TypeScript', code: '<span class="kw">const</span> <span class="fn">helloWorld</span> = (<span class="ty">name</span>: <span class="ty">string</span>): <span class="ty">void</span> =&gt; {\n  <span class="fn">console</span>.<span class="fn">log</span>(<span class="str">`Hello, ${name}!`</span>);\n};\n\n<span class="fn">helloWorld</span>(<span class="str">"World"</span>);' },
+                { lang: 'Java', code: '<span class="kw">public class</span> <span class="ty">Main</span> {\n  <span class="kw">public static void</span> <span class="fn">main</span>(<span class="ty">String</span>[] args) {\n    System.out.<span class="fn">println</span>(<span class="str">"Hello, World!"</span>);\n  }\n}' },
+                { lang: 'SQL', code: '<span class="kw">SELECT</span> <span class="str">\'Hello, World!\'</span>\n<span class="kw">AS</span> <span class="ty">greeting</span>\n<span class="kw">FROM</span> <span class="ty">dual</span>;' },
+                { lang: 'HTML', code: '<span class="kw">&lt;!DOCTYPE</span> <span class="ty">html</span><span class="kw">&gt;</span>\n<span class="kw">&lt;h1&gt;</span><span class="str">Hello, World!</span><span class="kw">&lt;/h1&gt;</span>' },
+                { lang: 'CSS', code: '<span class="ty">body</span>::<span class="fn">after</span> {\n  <span class="kw">content</span>: <span class="str">"Hello, World!"</span>;\n  <span class="kw">color</span>: <span class="str">#ea580c</span>;\n}' }
+            ];
+            var codeBlock = document.getElementById('codeBlock');
+            var codeLang = document.getElementById('codeLang');
+            var codeIdx = 0;
+            function showSnippet() {
+                codeBlock.innerHTML = snippets[codeIdx].code;
+                codeLang.textContent = snippets[codeIdx].lang;
+                codeBlock.classList.remove('code-fade-in');
+                void codeBlock.offsetWidth;
+                codeBlock.classList.add('code-fade-in');
+                codeIdx = (codeIdx + 1) % snippets.length;
+            }
+            showSnippet();
+            setInterval(showSnippet, 4500);
 
             // Navbar scroll effect
             var nav = document.querySelector('.nav');

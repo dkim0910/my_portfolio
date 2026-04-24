@@ -22,6 +22,7 @@
         }
 
         * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         html, body { margin: 0; padding: 0; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -33,6 +34,8 @@
 
         .page { width: 100%; background: var(--surface); }
 
+
+
         a { color: inherit; text-decoration: none; }
         h1, h2, h3 { margin: 0; line-height: 1.25; }
 
@@ -43,6 +46,17 @@
             justify-content: space-between;
             padding: 18px 48px;
             border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: box-shadow 0.3s, background 0.3s;
+        }
+        .nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            background: rgba(255, 255, 255, 0.92);
         }
         .nav-left { display: flex; align-items: center; gap: 28px; }
         .nav-links { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
@@ -602,11 +616,11 @@
         <section id="contact">
             <div class="contact">
                 <h2>Let's build something together.</h2>
-                <p>I'm open to full-time roles and interesting freelance work. The fastest way to reach me is email.</p>
+                <p>I'm open to full-time roles and interesting freelance work.</p>
                 <div class="contact-actions">
-                    <a href="mailto:dkimdaniel0911@gmail.com" class="btn btn-primary">Email me</a>
+                    <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener" class="btn btn-primary">Message me on LinkedIn</a>
+                    <a href="#" class="btn btn-secondary" data-contact="email">Email me</a>
                     <a href="https://github.com/dkim0910" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
-                    <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
                 </div>
             </div>
         </section>
@@ -624,9 +638,25 @@
             </div>
             <div class="footer-bottom">
                 <span>© 2026 Daniel Kim. Hand-built with HTML and CSS.</span>
-                <a href="mailto:dkimdaniel0911@gmail.com">dkimdaniel0911@gmail.com</a>
             </div>
         </footer>
     </div>
+    <script>
+        (function() {
+            // Email protection
+            var u = 'geeslyhelp';
+            var d = 'gmail.com';
+            document.querySelectorAll('[data-contact]').forEach(function(el) {
+                el.href = 'mai' + 'lto:' + u + '@' + d;
+            });
+
+            // Navbar scroll effect
+            var nav = document.querySelector('.nav');
+            window.addEventListener('scroll', function() {
+                nav.classList.toggle('scrolled', window.scrollY > 20);
+            });
+
+        })();
+    </script>
 </body>
 </html>

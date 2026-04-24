@@ -15,7 +15,7 @@ Serves at http://localhost:5500 with auto-reload on file changes.
 
 ## Links
 
-- Live: http://localhost:5500 (local) — deploy target TBD
+- Live: https://dkim0910.github.io/my_portfolio/
 - GitHub: https://github.com/dkim0910
 - LinkedIn: https://www.linkedin.com/in/daniel-kim-6991882b3/
-- Contact: dkimdaniel0911@gmail.com
+- Contact: geeslyhelp@gmail.com

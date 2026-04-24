@@ -56,7 +56,7 @@ Dark theme throughout. Primary buttons, brand mark, gradient headings, and hero 
 
 - GitHub: https://github.com/dkim0910
 - LinkedIn: https://www.linkedin.com/in/daniel-kim-6991882b3/
-- Email: dkimdaniel0911@gmail.com
+- Email: geeslyhelp@gmail.com
 - Projects: geesly.net, booklist4u.com, canontrails.com, DexScreener page for NELA
 
 If these change, update both the contact section and the footer.
@@ -72,7 +72,7 @@ If these change, update both the contact section and the footer.
 6. [ ] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)
 
 ### Should-have (before going live)
-7. [ ] **Deploy** — pick a host (Vercel, Netlify, GitHub Pages) and deploy; update README "deploy target TBD"
+7. [x] **Deploy** — live on GitHub Pages at https://dkim0910.github.io/my_portfolio/
 8. [ ] **Custom domain** — point a domain at the deployed site
 9. [ ] **Analytics** — add Google Analytics or Vercel Analytics to track recruiter visits
 

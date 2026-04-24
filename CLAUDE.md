@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Daniel Kim's personal portfolio — a single static `index.html` with all CSS inlined, targeted at recruiters. No framework, no bundler, no build step. The only dependency is `live-server` for local development with auto-reload. Favicon is `favicon.svg` (indigo→purple gradient with white "D").
+Daniel Kim's personal portfolio — a single static `index.html` with all CSS inlined, targeted at recruiters. No framework, no bundler, no build step. The only dependency is `live-server` for local development with auto-reload. Favicon is `favicon.svg` (deep orange gradient with white "D"). Dark theme with warm accent colors and subtle grain texture overlay.
 
 ## Preview
 
@@ -33,19 +33,19 @@ One-page layout, top to bottom:
 
 Palette lives in `:root` as CSS variables — edit these, don't hardcode colors:
 
-- `--primary: #4f46e5` (indigo), `--primary-hover: #4338ca`
-- `--accent-2: #a855f7` (purple), `--accent-3: #06b6d4` (cyan)
-- `--surface: #ffffff`, `--soft: #f4f6fb`, `--soft-2: #fbf6ff`
-- `--text: #15182a`, `--muted: #6b7280`, `--border: #e5e7eb`
-- `--dark: #1f2233`, `--dark-muted: #9aa3b2` (footer only)
+- `--primary: #ea580c` (deep orange), `--primary-hover: #c2410c`
+- `--accent-2: #14b8a6` (teal), `--accent-3: #f97316` (orange)
+- `--surface: #0f1117`, `--soft: #161927`, `--soft-2: #1a1e30`
+- `--text: #e8eaed`, `--muted: #8b92a5`, `--border: #2a2f42`
+- `--dark: #0a0c14`, `--dark-muted: #6b7280` (footer only)
 
-Primary buttons, brand mark, gradient headings, and hero blobs all use indigo→purple (and sometimes cyan) gradients — keep this treatment consistent when adding new CTAs.
+Dark theme throughout. Primary buttons, brand mark, gradient headings, and hero blobs use deep orange gradients — keep this treatment consistent when adding new CTAs. A subtle grain texture overlay (`.page::after`) adds tactile depth.
 
 ## Conventions
 
 - All styles live in the single `<style>` block at the top of `index.html`. Prefer editing CSS variables over hardcoding colors.
 - **Banded sections** — add `class="banded"` to alternate section backgrounds. Currently: Tech stack, BookList4U, CanonTrails are banded. Preserve the every-other-section rhythm when reordering.
-- **Mockups** are pure CSS (indigo→pink→cyan gradient with colored radial circles). If a real screenshot is added, replace `<div class="mockup">` with an `<img>` and keep the 4:3 aspect ratio.
+- **Mockups** use dark gradient backgrounds with warm-toned radial circles. Real project screenshots are in `images/` folder and displayed via `<img class="mockup-img">` inside `.mockup` containers.
 - **Feature rows** alternate mockup-left vs mockup-right for rhythm; preserve alternation when reordering or adding projects.
 - **Stack cards** are glass-effect with per-card `--card-color` / `--card-glow` via `:nth-child(N)` rules. Each card has a gradient top bar, radial glow, hover lift, and tinted tag hover shadows. When adding/removing cards, re-check the nth-child rules so each card keeps a distinct color.
 - **Tags** use `<span class="tag">`; keep them short (ideally ≤3 words).
@@ -66,7 +66,7 @@ If these change, update both the contact section and the footer.
 ### Must-have (before sharing with recruiters)
 1. [ ] **PNG favicon** — add a `favicon.png` fallback for browsers that don't render SVG favicons (Chrome tab may need it)
 2. [ ] **Hero copy** — personalize tagline and description beyond the current placeholder
-3. [ ] **Real screenshots** — replace pure-CSS `.mockup` placeholders with actual screenshots of Geesly, BookList4U, CanonTrails
+3. [x] **Real screenshots** — all five projects now have screenshots in `images/`
 4. [ ] **Resume / CV** — add a downloadable PDF resume and link it from the contact section
 5. [ ] **Open Graph meta** — add `og:title`, `og:description`, `og:image` so the link previews well when shared
 6. [ ] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)

@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Daniel Kim's personal portfolio — a single static `index.html` with all CSS inlined, targeted at recruiters. No framework, no bundler, no build step. The only dependency is `live-server` for local development with auto-reload. Favicon is `favicon.svg` (deep orange gradient with white "D"). Dark theme with warm accent colors and subtle grain texture overlay.
+Daniel Kim's personal portfolio — clean HTML, CSS, and vanilla JavaScript targeted at recruiters. No framework, no bundler, no build step. The only dependency is `live-server` for local development with auto-reload. Favicon is `favicon.svg` (deep orange gradient with white "D"). Dark theme with warm accent colors and subtle grain texture overlay.
 
 ## Preview
 
 ```sh
 npm install
-npm run dev   # live-server on http://localhost:5500, auto-reloads on save
+npm start     # live-server on http://localhost:5500 via 'dev' script
 ```
 
 ## Page structure
@@ -43,7 +43,7 @@ Dark theme throughout. Primary buttons, brand mark, gradient headings, and hero 
 
 ## Conventions
 
-- All styles live in the single `<style>` block at the top of `index.html`. Prefer editing CSS variables over hardcoding colors.
+- Code is separated into `index.html`, `style.css`, and `script.js`.
 - **Banded sections** — add `class="banded"` to alternate section backgrounds. Currently: Tech stack, BookList4U, CanonTrails are banded. Preserve the every-other-section rhythm when reordering.
 - **Mockups** use dark gradient backgrounds with warm-toned radial circles. Real project screenshots are in `images/` folder and displayed via `<img class="mockup-img">` inside `.mockup` containers.
 - **Feature rows** alternate mockup-left vs mockup-right for rhythm; preserve alternation when reordering or adding projects.
@@ -51,6 +51,7 @@ Dark theme throughout. Primary buttons, brand mark, gradient headings, and hero 
 - **Tags** use `<span class="tag">`; keep them short (ideally ≤3 words).
 - **Eyebrows** are pill-shaped (gradient bg + border) — use them above every section heading and project title for consistency.
 - Layout collapses 3→2→1 columns at 960px and 760px. Nav links hide below 760px — brand + primary CTA only.
+- **Accessibility** — Use `aria-label` for navigation and interactive elements. Maintain visible `:focus-visible` states for keyboard navigation.
 
 ## External links (keep in sync)
 
@@ -64,17 +65,23 @@ If these change, update both the contact section and the footer.
 ## TODO
 
 ### Must-have (before sharing with recruiters)
-1. [ ] **PNG favicon** — add a `favicon.png` fallback for browsers that don't render SVG favicons (Chrome tab may need it)
-2. [ ] **Hero copy** — personalize tagline and description beyond the current placeholder
-3. [x] **Real screenshots** — all five projects now have screenshots in `images/`
-4. [ ] **Resume / CV** — add a downloadable PDF resume and link it from the contact section
-5. [ ] **Open Graph meta** — add `og:title`, `og:description`, `og:image` so the link previews well when shared
-6. [ ] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)
+1. [ ] **PNG favicon** — add a `favicon.png` fallback for browsers that don't render SVG favicons (Chrome tab may need it) - we need to change the logo to Nelera later
+2. [ ] **Resume / CV** — add a downloadable PDF resume and link it from the contact section
+3. [x] **Hero copy** — personalize tagline and description beyond the current placeholder
+4. [x] **Real screenshots** — all five projects now have screenshots in `images/`
+5. [x] **Open Graph meta** — add `og:title`, `og:description`, `og:image` so the link previews well when shared
+6. [x] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)
+7. [x] **Separation of Concerns** — Separated index, css, and js into individual files.
 
 ### Should-have (before going live)
-7. [x] **Deploy** — live on GitHub Pages at https://dkim0910.github.io/my_portfolio/
-8. [ ] **Custom domain** — point a domain at the deployed site
-9. [ ] **Analytics** — add Google Analytics or Vercel Analytics to track recruiter visits
+8. [x] **Analytics** — add Google Analytics to track recruiter visits - I don't think we need this
+9. [x] **Custom domain** — point a domain at the deployed site - mabye (showing my github would be better)
+10. [x] **Deploy** — live on GitHub Pages at https://dkim0910.github.io/my_portfolio/
+11. [x] **Localhost Setup** — Standardized `npm start` to run on localhost:5500.
 
 ### Nice-to-have
-10. [ ] **Accessibility** — add `aria-label` on nav links, verify contrast ratios, keyboard tab order
+12. [x] **Accessibility** — add `aria-label` on nav links, verify contrast ratios, keyboard tab order
+13. [x] **Interactive Project Filtering** — Add category filters (Mobile, Web, Web3) to the projects section.
+14. [x] **Scroll-to-Top & Reading Progress** — Add a subtle reading progress bar or back-to-top button.
+15. [x] **Performance Optimization** — Implement lazy loading and async decoding for images.
+16. [x] **Micro-interactions** — Add hover effects to cards and "copy to clipboard" for email.

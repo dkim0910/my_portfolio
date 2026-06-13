@@ -1,10 +1,11 @@
 {
   "name": "my_portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Personal portfolio site",
   "scripts": {
-    "dev": "live-server --port=5500"
+    "start": "npm run dev",
+    "dev": "live-server --port=5500 --host=localhost"
   },
   "devDependencies": {
     "live-server": "^1.2.2"

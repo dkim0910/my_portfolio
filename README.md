@@ -2,6 +2,8 @@
 
 Personal portfolio site showcasing seven shipped projects: Geesly, BookList4U, NELA, CanonTrails, this site itself, BestScreenTester, and MaxCandela.
 
+> **Note:** This repository is linked with [nelera.net](https://nelera.net) — the live site is deployed directly from this repo via GitHub Pages.
+
 Single hand-written `index.html` with inline CSS. No framework, no bundler, no build step — the only dependency is `live-server` for local development.
 
 ## Development

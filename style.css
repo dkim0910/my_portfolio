@@ -158,8 +158,8 @@ h1, h2, h3 { margin: 0; line-height: 1.25; }
 .nav-links a:hover { color: var(--text); }
 .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; }
 .brand-mark {
-    width: 22px; height: 22px;
-    border-radius: 6px;
+    width: 32px; height: 32px;
+    object-fit: contain;
 }
 
 /* Buttons */

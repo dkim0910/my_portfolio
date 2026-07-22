@@ -1,7 +1,7 @@
 (function() {
     // Email protection & Copy to Clipboard
-    var u = 'geeslyhelp';
-    var d = 'gmail.com';
+    var u = 'hello+contact';
+    var d = 'nelera.net';
     var email = u + '@' + d;
     document.querySelectorAll('[data-contact="email"]').forEach(function(el) {
         el.href = 'mailto:' + email;

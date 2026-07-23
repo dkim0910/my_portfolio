@@ -565,9 +565,166 @@ section.banded { background: linear-gradient(180deg, var(--soft) 0%, var(--soft-
     border-top: 1px solid var(--border);
 }
 
+/* Active nav / footer link (Donate page) */
+.nav-links a.active { color: var(--primary); }
+.footer-links a.active { color: var(--primary); }
+
+/* Donate page — centered hero */
+.hero-centered {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hero-centered h1,
+.hero-centered p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Donate page — impact cards */
+.donate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.donate-card {
+    background: linear-gradient(160deg, rgba(26,30,48,0.95), rgba(22,25,39,0.7));
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform .25s, box-shadow .25s;
+}
+.donate-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -16px rgba(234, 88, 12, 0.10), 0 8px 20px -8px rgba(0,0,0,0.2);
+}
+.donate-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+.donate-card h3 { font-size: 16px; margin-bottom: 8px; }
+.donate-card p { margin: 0; font-size: 14px; color: var(--muted); }
+
+/* Donate page — ways to support */
+.ways-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 680px;
+    margin: 0 auto;
+}
+.way-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px 30px;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.way-card:hover { transform: translateY(-3px); }
+.way-icon-wrapper {
+    flex: 0 0 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.way-info { flex: 1; min-width: 0; }
+.way-info h3 { font-size: 19px; margin-bottom: 5px; }
+.way-info p { margin: 0; font-size: 15px; color: var(--muted); }
+.way-arrow {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    color: var(--muted);
+    transition: color .2s, transform .2s;
+}
+.way-card:hover .way-arrow { transform: translateX(4px); }
+
+/* Per-platform banner tints (matched to canontrails.com/donate) */
+.way-card-kofi {
+    background: rgba(236, 72, 153, 0.10);
+    border-color: rgba(236, 72, 153, 0.35);
+}
+.way-card-kofi:hover {
+    border-color: rgba(236, 72, 153, 0.60);
+    box-shadow: 0 12px 28px -14px rgba(236, 72, 153, 0.40);
+}
+.way-card-kofi .way-arrow { color: #ec4899; }
+
+.way-card-bmc {
+    background: rgba(234, 179, 8, 0.10);
+    border-color: rgba(234, 179, 8, 0.35);
+}
+.way-card-bmc:hover {
+    border-color: rgba(234, 179, 8, 0.60);
+    box-shadow: 0 12px 28px -14px rgba(234, 179, 8, 0.40);
+}
+.way-card-bmc .way-arrow { color: #eab308; }
+
+.way-card-patreon {
+    background: rgba(249, 104, 84, 0.15);
+    border-color: rgba(249, 104, 84, 0.40);
+}
+.way-card-patreon:hover {
+    border-color: rgba(249, 104, 84, 0.65);
+    box-shadow: 0 12px 28px -14px rgba(249, 104, 84, 0.40);
+}
+.way-card-patreon .way-arrow { color: #F96854; }
+
+/* Donate page — other (free) ways */
+.other-ways-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.other-way-item {
+    background: linear-gradient(160deg, rgba(26,30,48,0.6), rgba(22,25,39,0.4));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+}
+.other-way-item h3 { font-size: 15px; margin-bottom: 8px; color: var(--text); }
+.other-way-item p { margin: 0; font-size: 14px; color: var(--muted); }
+
+/* Donate page — thank you */
+.thank-you-box {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.10), transparent 60%),
+        linear-gradient(135deg, #1a1e30 0%, #161927 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 44px 40px;
+}
+.thank-you-heart {
+    width: 40px;
+    height: 40px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
 /* Responsive */
 @media (max-width: 960px) {
     .stack-grid { grid-template-columns: repeat(2, 1fr); }
+    .donate-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
     .nav { padding: 14px 20px; }
@@ -582,4 +739,7 @@ section.banded { background: linear-gradient(180deg, var(--soft) 0%, var(--soft-
     .contact { padding: 32px 20px; }
     .footer { padding: 28px 20px 20px; }
     .footer-inner { flex-direction: column; align-items: flex-start; }
+    .other-ways-container { grid-template-columns: 1fr; }
+    .way-card { padding: 16px 18px; gap: 14px; }
+    .thank-you-box { padding: 32px 24px; }
 }

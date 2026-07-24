@@ -15,12 +15,12 @@ npm start     # live-server on http://localhost:5500 via 'dev' script
 
 ## Page structure
 
-One-page layout, top to bottom:
+Main page (`index.html`) is a one-page layout, top to bottom. A separate standalone `donate.html` page is linked from the nav and footer.
 
-1. **Nav** — brand, Projects / Stack / Contact anchors, primary "Get in touch" CTA
+1. **Nav** — brand, Projects / Stack / Contact anchors, a "Donate" link (to `donate.html`), and the primary "Get in touch" CTA
 2. **Hero** — gradient-text tagline, "View my projects" / "Contact me" buttons, multi-color radial gradient background
 3. **Tech stack** (`#stack`, banded) — 3-column grid of 6 glass cards: Frontend, Mobile, Backend & data, Cloud & services, AI, Design & planning. Each card has its own color accent (`--card-color`), gradient top bar, radial glow, and hover lift.
-4. **Featured projects** (`#projects`) — seven alternating feature rows (text + mockup, swapped every other row):
+4. **Featured projects** (`#projects`) — a category filter bar (All / Mobile / Web / Web3, driven by `data-filter` buttons and `data-category` on each row) above seven alternating feature rows (text + mockup, swapped every other row):
    - Geesly (Flutter dating app) — plain
    - BookList4U (Next.js book-series site) — banded
    - NELA (Solana token) — plain
@@ -29,7 +29,7 @@ One-page layout, top to bottom:
    - BestScreenTester (Next.js screen-test suite) — banded
    - MaxCandela (macOS XDR brightness utility) — plain
 5. **Contact** — radial-glow gradient card with Email / GitHub / LinkedIn buttons
-6. **Footer** — brand, nav + social links, copyright + email on the bottom row
+6. **Footer** — brand, nav + social links (including a Donate link), copyright + email on the bottom row
 
 ## Design system
 

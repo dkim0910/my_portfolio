@@ -3,25 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/my_portfolio_logo.png">
+
+    <!-- Primary meta -->
+    <title>Daniel Kim — Full-Stack Software Engineer &amp; Product Builder</title>
+    <meta name="description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, three Next.js sites, and a macOS utility. Flutter, Next.js, TypeScript, Supabase, Firebase.">
+    <meta name="author" content="Daniel Kim">
+    <meta name="theme-color" content="#0f1117">
     <link rel="canonical" href="https://nelera.net/">
-    <title>Daniel Kim — Software Engineer</title>
-    <meta name="description" content="Full-stack engineer passionate about building scalable solutions and delivering high-quality user experiences.">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Crawler directives -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <!-- No verification meta needed: nelera.net is verified as a Domain property in
+         Google Search Console and as a site in Bing Webmaster Tools. See SEO.md. -->
+
+    <!-- Icons (Google Search requires a square favicon that is a multiple of 48px) -->
+    <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Daniel Kim — Software Engineer">
-    <meta property="og:description" content="Full-stack engineer passionate about building scalable solutions and delivering high-quality user experiences.">
+    <meta property="og:site_name" content="Daniel Kim">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Daniel Kim — Full-Stack Software Engineer &amp; Product Builder">
+    <meta property="og:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, three Next.js sites, and a macOS utility.">
     <meta property="og:url" content="https://nelera.net/">
-    <meta property="og:image" content="https://nelera.net/images/my_portfolio_logo.png">
+    <meta property="og:image" content="https://nelera.net/images/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Daniel Kim's portfolio homepage, showing the hero section and tech stack.">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Daniel Kim — Software Engineer">
-    <meta property="twitter:description" content="Full-stack engineer passionate about building scalable solutions and delivering high-quality user experiences.">
-    <meta property="twitter:image" content="https://nelera.net/images/my_portfolio_logo.png">
+    <!-- Twitter / X (spec uses name=, not property=) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daniel Kim — Full-Stack Software Engineer &amp; Product Builder">
+    <meta name="twitter:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, three Next.js sites, and a macOS utility.">
+    <meta name="twitter:image" content="https://nelera.net/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="Daniel Kim's portfolio homepage, showing the hero section and tech stack.">
 
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://nelera.net/#person",
+          "name": "Daniel Kim",
+          "givenName": "Daniel",
+          "familyName": "Kim",
+          "url": "https://nelera.net/",
+          "email": "mailto:hello+contact@nelera.net",
+          "jobTitle": "Full-Stack Software Engineer",
+          "description": "Full-stack software engineer who designs, builds, ships, and operates his own products — mobile, web, and desktop.",
+          "image": {
+            "@type": "ImageObject",
+            "@id": "https://nelera.net/#logo",
+            "url": "https://nelera.net/images/my_portfolio_logo.png",
+            "width": 1254,
+            "height": 1254,
+            "caption": "Daniel Kim"
+          },
+          "sameAs": [
+            "https://github.com/dkim0910",
+            "https://www.linkedin.com/in/daniel-kim-6991882b3/"
+          ],
+          "knowsAbout": [
+            "Full-stack web development",
+            "Flutter",
+            "Dart",
+            "Next.js",
+            "React",
+            "TypeScript",
+            "JavaScript",
+            "Java",
+            "Spring Boot",
+            "Node.js",
+            "PostgreSQL",
+            "Supabase",
+            "Firebase",
+            "Google Cloud Platform",
+            "Vercel",
+            "Mobile app development",
+            "SEO and structured data"
+          ],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Software Engineer",
+            "occupationalCategory": "15-1252.00"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nelera.net/#website",
+          "url": "https://nelera.net/",
+          "name": "Daniel Kim — Portfolio",
+          "description": "Portfolio of Daniel Kim, a full-stack software engineer.",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://nelera.net/#person" },
+          "copyrightHolder": { "@id": "https://nelera.net/#person" }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://nelera.net/#profilepage",
+          "url": "https://nelera.net/",
+          "name": "Daniel Kim — Full-Stack Software Engineer & Product Builder",
+          "isPartOf": { "@id": "https://nelera.net/#website" },
+          "about": { "@id": "https://nelera.net/#person" },
+          "mainEntity": { "@id": "https://nelera.net/#person" },
+          "primaryImageOfPage": { "@id": "https://nelera.net/#logo" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://nelera.net/#projects",
+          "name": "Featured projects",
+          "description": "Seven products Daniel Kim designed, built, shipped, and operates.",
+          "numberOfItems": 7,
+          "itemListOrder": "https://schema.org/ItemListOrderAscending",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "MobileApplication",
+                "name": "Geesly",
+                "url": "https://geesly.net",
+                "applicationCategory": "SocialNetworkingApplication",
+                "operatingSystem": "iOS, Android",
+                "image": "https://nelera.net/images/geesly_image.webp",
+                "description": "A cross-platform dating app with real-time Firestore matching, geospatial discovery, in-app currency, RevenueCat subscriptions, and Vision-API content moderation. Localized in 9 languages.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "WebApplication",
+                "name": "BookList4U",
+                "url": "https://booklist4u.com",
+                "applicationCategory": "ReferenceApplication",
+                "operatingSystem": "Web browser",
+                "image": "https://nelera.net/images/booklist4u_image.webp",
+                "description": "Find any book series and read it in the right order — by publication date or in-world chronology. 100+ hand-curated series with NYT bestseller and Google Books integration.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "NELA",
+                "url": "https://dexscreener.com/solana/vbyphyrvrrhsomsytiepsv8bcdtmh1pas3v1frzg46e",
+                "image": "https://nelera.net/images/Nelera_image.webp",
+                "description": "A token issued on Solana to learn the full lifecycle end to end: contract setup, liquidity provisioning, and DEX listing.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "WebApplication",
+                "name": "CanonTrails",
+                "url": "https://canontrails.com",
+                "applicationCategory": "ReferenceApplication",
+                "operatingSystem": "Web browser",
+                "image": "https://nelera.net/images/canontrails_image.webp",
+                "description": "Canonical play order for any game series, with DLC placement, branching timelines, and HowLongToBeat estimates per game version.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "WebSite",
+                "name": "Daniel Kim — Portfolio",
+                "url": "https://nelera.net",
+                "image": "https://nelera.net/images/my_website_image.webp",
+                "description": "This portfolio, hand-built in clean HTML, CSS, and vanilla JavaScript with no frameworks or build tools.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "WebApplication",
+                "name": "BestScreenTester",
+                "url": "https://bestscreentester.com",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Web browser",
+                "image": "https://nelera.net/images/bestscreentester_image.webp",
+                "description": "About 21 free, browser-based screen tests across panel and backlight, color and calibration, motion and timing, plus fun utilities. Fully static and 100% client-side.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "MaxCandela",
+                "url": "https://maxcandela.com",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "macOS",
+                "image": "https://nelera.net/images/maxcandela_image.webp",
+                "description": "A focused macOS menu-bar utility that unlocks the extra brightness built into MacBook Pro XDR displays with one click.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div id="progress-bar"></div>
@@ -29,7 +234,7 @@
         <!-- Nav -->
         <nav class="nav" aria-label="Main navigation">
             <div class="nav-left">
-                <a class="brand" href="#" aria-label="Daniel Kim - Home"><img src="images/my_portfolio_logo.png" alt="Nelera logo" class="brand-mark" loading="lazy" decoding="async">Daniel Kim</a>
+                <a class="brand" href="#" aria-label="Daniel Kim - Home"><img src="/favicon-96.png" alt="Daniel Kim logo" class="brand-mark" width="32" height="32" loading="eager" fetchpriority="high" decoding="async">Daniel Kim</a>
                 <div class="nav-links">
                     <a href="#projects" aria-label="View my projects">Projects</a>
                     <a href="#stack" aria-label="View my tech stack">Stack</a>
@@ -171,14 +376,14 @@
                     </div>
                     <p style="margin-top:16px;"><a href="https://geesly.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit geesly.net →</a></p>
                 </div>
-                <div class="mockup"><img src="images/geesly_image.png" alt="Geesly screenshot" class="mockup-img" loading="lazy" decoding="async"><span class="mockup-date">Updated: July 2026</span></div>
+                <div class="mockup"><img src="images/geesly_image.webp" alt="Geesly dating app interface showing real-time matching and profile discovery on mobile" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Updated: July 2026</span></div>
             </div>
         </section>
 
         <section class="banded" data-category="web">
             <!-- BookList4U -->
             <div class="feature-row">
-                <div class="mockup"><img src="images/booklist4u_image.png" alt="BookList4U screenshot" class="mockup-img" loading="lazy" decoding="async"><span class="mockup-date">Updated: July 2026</span></div>
+                <div class="mockup"><img src="images/booklist4u_image.webp" alt="BookList4U homepage listing book series in publication and chronological reading order" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Updated: July 2026</span></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
                     <h2>BookList4U — Book series, in order</h2>
@@ -212,14 +417,14 @@
                     </div>
                     <p style="margin-top:16px;"><a href="https://dexscreener.com/solana/vbyphyrvrrhsomsytiepsv8bcdtmh1pas3v1frzg46e" class="btn btn-secondary" target="_blank" rel="noopener">View on DexScreener →</a></p>
                 </div>
-                <div class="mockup"><img src="images/Nelera_image.png" alt="NELA on DexScreener" class="mockup-img" loading="lazy" decoding="async"><span class="mockup-date">Updated: July 2026</span></div>
+                <div class="mockup"><img src="images/Nelera_image.webp" alt="NELA Solana token price chart and liquidity pool on DexScreener" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Updated: July 2026</span></div>
             </div>
         </section>
 
         <section class="banded" data-category="web">
             <!-- CanonTrails -->
             <div class="feature-row">
-                <div class="mockup"><img src="images/canontrails_image.png" alt="CanonTrails screenshot" class="mockup-img" loading="lazy" decoding="async"><span class="mockup-date">Updated: July 2026</span></div>
+                <div class="mockup"><img src="images/canontrails_image.webp" alt="CanonTrails homepage showing the canonical play order for a video game series" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Updated: July 2026</span></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
                     <h2>CanonTrails — The right order to play any game series</h2>
@@ -257,14 +462,14 @@
                     </div>
                     <p style="margin-top:16px;"><a href="https://nelera.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit nelera.net →</a></p>
                 </div>
-                <div class="mockup"><img src="images/my_website_image.png" alt="This portfolio screenshot" class="mockup-img" loading="lazy" decoding="async"><span class="mockup-date">Updated: July 2026</span></div>
+                <div class="mockup"><img src="images/my_website_image.webp" alt="Daniel Kim's portfolio homepage with the hero section and tech stack grid" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Updated: July 2026</span></div>
             </div>
         </section>
 
         <section class="banded" data-category="web">
             <!-- BestScreenTester -->
             <div class="feature-row">
-                <div class="mockup"><img src="images/bestscreentester_image.png" alt="BestScreenTester screenshot" class="mockup-img" loading="lazy" decoding="async"><span class="mockup-date">Updated: July 2026</span></div>
+                <div class="mockup"><img src="images/bestscreentester_image.webp" alt="BestScreenTester homepage showing the suite of browser-based monitor and screen tests" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Updated: July 2026</span></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
                     <h2>BestScreenTester — A full suite of browser screen tests</h2>
@@ -301,7 +506,7 @@
                     </div>
                     <p style="margin-top:16px;"><a href="https://maxcandela.com" class="btn btn-secondary">Visit maxcandela.com →</a></p>
                 </div>
-                <div class="mockup"><img src="images/maxcandela_image.png" alt="MaxCandela website screenshot" class="mockup-img" loading="lazy" decoding="async"><span class="mockup-date">Updated: July 2026</span></div>
+                <div class="mockup"><img src="images/maxcandela_image.webp" alt="MaxCandela product page for the macOS menu-bar XDR display brightness utility" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Updated: July 2026</span></div>
             </div>
         </section>
 
@@ -321,7 +526,7 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-inner">
-                <a class="brand" href="#"><img src="images/my_portfolio_logo.png" alt="Nelera logo" class="brand-mark">Daniel Kim</a>
+                <a class="brand" href="#"><img src="/favicon-96.png" alt="Daniel Kim logo" class="brand-mark" width="32" height="32" loading="lazy" decoding="async">Daniel Kim</a>
                 <div class="footer-links">
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>

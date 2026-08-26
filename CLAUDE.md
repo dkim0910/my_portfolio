@@ -82,6 +82,10 @@ Console setup steps that need Daniel's login live in `SEO.md`.
   `width`/`height` to the WebP's real size.
 - **Feature rows** alternate mockup-left vs mockup-right for rhythm; preserve alternation when reordering or adding projects.
 - **Stack cards** are glass-effect with per-card `--card-color` / `--card-glow` via `:nth-child(N)` rules. Each card has a gradient top bar, radial glow, hover lift, and tinted tag hover shadows. When adding/removing cards, re-check the nth-child rules so each card keeps a distinct color.
+- **Mockup date overlay** — each `.mockup` holds a `<span class="mockup-date">Created: Month Year</span>`
+  that fades in on hover. These are **creation** dates, not last-updated: they come from the first commit
+  in each project's repo under `~/Codes` (NELA has no repo — its date is the Raydium pair creation shown
+  on DexScreener). Don't hand-edit them to "look recent"; they're a build log, not a changelog.
 - **Tags** use `<span class="tag">`; keep them short (ideally ≤3 words).
 - **Eyebrows** are pill-shaped (gradient bg + border) — use them above every section heading and project title for consistency.
 - Layout collapses 3→2→1 columns at 960px and 760px. Nav links hide below 760px — brand + primary CTA only.

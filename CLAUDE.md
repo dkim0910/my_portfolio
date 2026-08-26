@@ -15,7 +15,8 @@ npm start     # live-server on http://localhost:5500 via 'dev' script
 
 ## Page structure
 
-Main page (`index.html`) is a one-page layout, top to bottom. A separate standalone `donate.html` page is linked from the nav and footer.
+Main page (`index.html`) is a one-page layout, top to bottom. A separate standalone `donate.html` page is
+linked from the nav and footer, and `404.html` is the GitHub Pages error page (same nav/footer, `noindex`).
 
 1. **Nav** — brand, Projects / Stack / Contact anchors, a "Donate" link (to `donate.html`), and the primary "Get in touch" CTA
 2. **Hero** — gradient-text tagline, "View my projects" / "Contact me" buttons, multi-color radial gradient background
@@ -43,11 +44,42 @@ Palette lives in `:root` as CSS variables — edit these, don't hardcode colors:
 
 Dark theme throughout. Primary buttons, brand mark, gradient headings, and hero blobs use deep orange gradients — keep this treatment consistent when adding new CTAs. A subtle grain texture overlay (`.page::after`) adds tactile depth.
 
+## SEO
+
+All three pages carry the same head contract — keep them in sync when you touch one:
+
+- `<title>`, `<meta name="description">`, `canonical`, `author`, `theme-color`
+- `robots` / `googlebot` / `bingbot` with `max-image-preview:large`
+- The favicon set (`favicon-48/96/192.png`, `apple-touch-icon.png`) — Google Search requires a
+  square favicon that is a **multiple of 48px**, so don't point these at `my_portfolio_logo.png`
+- Open Graph + Twitter cards, both using `images/og-image.jpg` (1200x630, the size social cards want)
+- JSON-LD: `index.html` has `Person` + `WebSite` + `ProfilePage` + `ItemList` (7 projects);
+  `donate.html` has `WebPage` + `BreadcrumbList`. `404.html` is `noindex` and carries none.
+
+Supporting files: `robots.txt`, `sitemap.xml` (with `<image:image>` entries), and the IndexNow
+key file `<key>.txt` at the root — that filename and its contents must stay identical.
+
+`nelera.net` is already verified in both Google Search Console (Domain property) and Bing
+Webmaster Tools, so no verification meta tag is needed in the head.
+
+**Adding a project means four edits**, not one: the feature row, the JSON-LD `itemListElement`
+array, the sitemap `<image:image>` + `<lastmod>`, then `npm run seo:indexnow`.
+
+`.github/workflows/deploy.yml` strips dev-only files (`CLAUDE.md`, `README.md`, `SEO.md`,
+`package*.json`, `scripts/`, `image.png`, `images/originals/`) before uploading — GitHub Pages
+otherwise serves the entire repo. `robots.txt` disallows them too as a backstop.
+
+Console setup steps that need Daniel's login live in `SEO.md`.
+
 ## Conventions
 
 - Code is separated into `index.html`, `style.css`, and `script.js`.
 - **Banded sections** — add `class="banded"` to alternate section backgrounds. Currently: Tech stack, BookList4U, CanonTrails, and BestScreenTester are banded. Preserve the every-other-section rhythm when reordering.
-- **Mockups** use dark gradient backgrounds with warm-toned radial circles. Real project screenshots are in `images/` folder and displayed via `<img class="mockup-img">` inside `.mockup` containers.
+- **Mockups** use dark gradient backgrounds with warm-toned radial circles. Project screenshots are served as
+  1200px WebP from `images/` via `<img class="mockup-img">` inside `.mockup` containers. Full-resolution PNG
+  sources live in `images/originals/` and are stripped at deploy — rebuild with
+  `cwebp -q 82 -resize 1200 0 -m 6 images/originals/NAME.png -o images/NAME.webp`, then update the `<img>`
+  `width`/`height` to the WebP's real size.
 - **Feature rows** alternate mockup-left vs mockup-right for rhythm; preserve alternation when reordering or adding projects.
 - **Stack cards** are glass-effect with per-card `--card-color` / `--card-glow` via `:nth-child(N)` rules. Each card has a gradient top bar, radial glow, hover lift, and tinted tag hover shadows. When adding/removing cards, re-check the nth-child rules so each card keeps a distinct color.
 - **Tags** use `<span class="tag">`; keep them short (ideally ≤3 words).
@@ -68,11 +100,11 @@ If these change, update both the contact section and the footer.
 ## TODO
 
 ### Must-have (before sharing with recruiters)
-1. [x] **PNG favicon** — use `images/my_portfolio_logo.png` for the favicon and brand mark
+1. [x] **PNG favicon** — `favicon-48/96/192.png` + `apple-touch-icon.png`, generated from `images/my_portfolio_logo.png`
 2. [ ] **Resume / CV** — add a downloadable PDF resume and link it from the contact section
 3. [x] **Hero copy** — personalize tagline and description beyond the current placeholder
 4. [x] **Real screenshots** — all seven projects now have screenshots in `images/`
-5. [x] **Open Graph meta** — add `og:title`, `og:description`, `og:image` so the link previews well when shared
+5. [x] **Open Graph meta** — full OG + Twitter cards on all pages, using a 1200x630 `images/og-image.jpg`
 6. [x] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)
 7. [x] **Separation of Concerns** — Separated index, css, and js into individual files.
 
@@ -86,5 +118,6 @@ If these change, update both the contact section and the footer.
 12. [x] **Accessibility** — add `aria-label` on nav links, verify contrast ratios, keyboard tab order
 13. [x] **Interactive Project Filtering** — Add category filters (Mobile, Web, Web3) to the projects section.
 14. [x] **Scroll-to-Top & Reading Progress** — Add a subtle reading progress bar or back-to-top button.
-15. [x] **Performance Optimization** — Implement lazy loading and async decoding for images.
+15. [x] **Performance Optimization** — lazy loading, async decoding, intrinsic `width`/`height`, and 1200px WebP screenshots (12.1 MB -> 260 KB).
 16. [x] **Micro-interactions** — Add hover effects to cards and "copy to clipboard" for email.
+17. [x] **SEO & crawler setup** — JSON-LD structured data, image sitemap, 404 page, IndexNow, deploy-time file stripping. Console verification steps are in `SEO.md`.

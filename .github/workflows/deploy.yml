@@ -27,6 +27,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Strip dev-only files from the published site
+        run: rm -rf CLAUDE.md README.md SEO.md package.json package-lock.json image.png .claude .github scripts node_modules images/originals
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

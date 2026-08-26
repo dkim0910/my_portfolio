@@ -5,7 +5,8 @@
   "description": "Personal portfolio site",
   "scripts": {
     "start": "npm run dev",
-    "dev": "live-server --port=5500 --host=localhost"
+    "dev": "live-server --port=5500 --host=localhost",
+    "seo:indexnow": "node scripts/indexnow.mjs"
   },
   "devDependencies": {
     "live-server": "^1.2.2"

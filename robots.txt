@@ -1,4 +1,15 @@
+# robots.txt for https://nelera.net/
+# Daniel Kim — portfolio. Every page here is public and meant to be crawled.
+
 User-agent: *
 Allow: /
+
+# GitHub Pages serves the whole repo. These files have no search value and
+# should not end up in an index. (They are also excluded from the deploy.)
+Disallow: /CLAUDE.md
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /image.png
 
 Sitemap: https://nelera.net/sitemap.xml

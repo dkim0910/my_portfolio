@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "live-server --port=5500 --host=localhost",
+    "seo:sitemap": "node scripts/build-sitemap.mjs",
     "seo:indexnow": "node scripts/indexnow.mjs"
   },
   "devDependencies": {

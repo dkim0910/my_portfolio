@@ -8,6 +8,8 @@ Allow: /
 # should not end up in an index. (They are also excluded from the deploy.)
 Disallow: /CLAUDE.md
 Disallow: /README.md
+Disallow: /SEO.md
+Disallow: /scripts/
 Disallow: /package.json
 Disallow: /package-lock.json
 Disallow: /image.png

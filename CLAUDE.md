@@ -50,8 +50,11 @@ All three pages carry the same head contract — keep them in sync when you touc
 
 - `<title>`, `<meta name="description">`, `canonical`, `author`, `theme-color`
 - `robots` / `googlebot` / `bingbot` with `max-image-preview:large`
-- The favicon set (`favicon-48/96/192.png`, `apple-touch-icon.png`) — Google Search requires a
-  square favicon that is a **multiple of 48px**, so don't point these at `my_portfolio_logo.png`
+- The favicon set (`favicon.svg`, `favicon-48/96/192.png`, `apple-touch-icon.png`) — Google
+  Search requires a square favicon that is a **multiple of 48px**, so don't point these at
+  `my_portfolio_logo.png`. The SVG is listed first so browsers that prefer a scalable icon take
+  it; Google still picks a PNG. (`favicon.svg` was committed but linked from nowhere until
+  2026-10-01.)
 - Open Graph + Twitter cards, both using `images/og-image.jpg` (1200x630, the size social cards want)
 - JSON-LD: `index.html` has `Person` + `WebSite` + `ProfilePage` + `ItemList` (7 projects);
   `donate.html` has `WebPage` + `BreadcrumbList`. `404.html` is `noindex` and carries none.
@@ -59,11 +62,19 @@ All three pages carry the same head contract — keep them in sync when you touc
 Supporting files: `robots.txt`, `sitemap.xml` (with `<image:image>` entries), and the IndexNow
 key file `<key>.txt` at the root — that filename and its contents must stay identical.
 
+`sitemap.xml` is **generated**, not hand-edited: `npm run seo:sitemap` reads each route's
+`<lastmod>` from the last commit touching its source files (the homepage takes the newest of
+`index.html`, `style.css`, `script.js`, since a CSS-only change really does change what a
+visitor sees). The script refuses to run clean — it exits non-zero with a warning — if those
+files have uncommitted changes, because that would publish a date older than the content. Run
+it *after* committing. The image list lives in the script's `ROUTES` array.
+
 `nelera.net` is already verified in both Google Search Console (Domain property) and Bing
 Webmaster Tools, so no verification meta tag is needed in the head.
 
 **Adding a project means four edits**, not one: the feature row, the JSON-LD `itemListElement`
-array, the sitemap `<image:image>` + `<lastmod>`, then `npm run seo:indexnow`.
+array, the `images` array in `scripts/build-sitemap.mjs`, then
+`npm run seo:sitemap && npm run seo:indexnow` (commit first — see above).
 
 `.github/workflows/deploy.yml` strips dev-only files (`CLAUDE.md`, `README.md`, `SEO.md`,
 `package*.json`, `scripts/`, `image.png`, `images/originals/`) before uploading — GitHub Pages

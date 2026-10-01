@@ -88,8 +88,12 @@ Keep these in sync or the markup starts lying to Google:
 
 1. The feature row in `index.html`
 2. The `ItemList` → `itemListElement` array in the `index.html` JSON-LD
-3. `<image:image>` entry + `<lastmod>` in `sitemap.xml`
-4. `npm run seo:indexnow`
+3. The `images` array for `/` in `scripts/build-sitemap.mjs`
+4. Commit, then `npm run seo:sitemap && npm run seo:indexnow`
+
+`<lastmod>` is no longer hand-written — step 4 derives it from git. The dates were accurate
+when written, which is the point of automating them before they stopped being: a lastmod that
+contradicts the `Last-Modified` header gets the signal discarded site-wide, not just ignored.
 
 ## Adding a screenshot
 

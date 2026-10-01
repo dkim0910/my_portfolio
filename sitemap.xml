@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://nelera.net/</loc>
-        <lastmod>2026-08-26</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <image:image><image:loc>https://nelera.net/images/geesly_image.webp</image:loc></image:image>
@@ -17,7 +17,7 @@
     </url>
     <url>
         <loc>https://nelera.net/donate.html</loc>
-        <lastmod>2026-08-26</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>

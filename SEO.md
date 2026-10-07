@@ -77,7 +77,7 @@ npm run seo:indexnow -- https://nelera.net/donate.html  # just one
 - Social preview — <https://www.opengraph.xyz/url/https%3A%2F%2Fnelera.net%2F>
 - PageSpeed — <https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fnelera.net%2F>
 
-Expected on `/`: `Person`, `WebSite`, `ProfilePage`, `ItemList` (7 projects).
+Expected on `/`: `Person`, `WebSite`, `ProfilePage`, `ItemList` (8 projects).
 Expected on `/donate.html`: `WebPage`, `BreadcrumbList`.
 
 ---

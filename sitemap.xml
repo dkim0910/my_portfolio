@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://nelera.net/</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <image:image><image:loc>https://nelera.net/images/geesly_image.webp</image:loc></image:image>
@@ -13,6 +13,7 @@
         <image:image><image:loc>https://nelera.net/images/my_website_image.webp</image:loc></image:image>
         <image:image><image:loc>https://nelera.net/images/bestscreentester_image.webp</image:loc></image:image>
         <image:image><image:loc>https://nelera.net/images/maxcandela_image.webp</image:loc></image:image>
+        <image:image><image:loc>https://nelera.net/images/honestmrr_image.webp</image:loc></image:image>
         <image:image><image:loc>https://nelera.net/images/og-image.jpg</image:loc></image:image>
     </url>
     <url>

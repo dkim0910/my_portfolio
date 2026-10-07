@@ -15,6 +15,7 @@ A few of the projects you'll find on the site:
 - **This portfolio** — The site itself, hand-built and designed from scratch.
 - **BestScreenTester** — A free set of browser-based tools to test your screen for dead pixels, color accuracy, motion, and more. No sign-up needed.
 - **MaxCandela** — A small Mac app that unlocks the extra brightness built into MacBook Pro XDR displays with one click.
+- **Honest MRR** — Revenue analytics for SaaS founders: connect Stripe, Paddle, RevenueCat, and more, and get MRR, churn, and LTV numbers you can trace back to every transaction.
 
 ## Get in touch
 

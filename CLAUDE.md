@@ -21,7 +21,7 @@ linked from the nav and footer, and `404.html` is the GitHub Pages error page (s
 1. **Nav** — brand, Projects / Stack / Contact anchors, a "Donate" link (to `donate.html`), and the primary "Get in touch" CTA
 2. **Hero** — gradient-text tagline, "View my projects" / "Contact me" buttons, multi-color radial gradient background
 3. **Tech stack** (`#stack`, banded) — 3-column grid of 6 glass cards: Frontend, Mobile, Backend & data, Cloud & services, AI, Design & planning. Each card has its own color accent (`--card-color`), gradient top bar, radial glow, and hover lift.
-4. **Featured projects** (`#projects`) — a category filter bar (All / Mobile / Web / Web3, driven by `data-filter` buttons and `data-category` on each row) above seven alternating feature rows (text + mockup, swapped every other row):
+4. **Featured projects** (`#projects`) — a category filter bar (All / Mobile / Web / Web3, driven by `data-filter` buttons and `data-category` on each row) above eight alternating feature rows (text + mockup, swapped every other row):
    - Geesly (Flutter dating app) — plain
    - BookList4U (Next.js book-series site) — banded
    - NELA (Solana token) — plain
@@ -29,6 +29,7 @@ linked from the nav and footer, and `404.html` is the GitHub Pages error page (s
    - This portfolio — plain
    - BestScreenTester (Next.js screen-test suite) — banded
    - MaxCandela (macOS XDR brightness utility) — plain
+   - Honest MRR (Next.js revenue-analytics SaaS) — banded
 5. **Contact** — radial-glow gradient card with Email / GitHub / LinkedIn buttons
 6. **Footer** — brand, nav + social links (including a Donate link), copyright + email on the bottom row
 
@@ -56,7 +57,7 @@ All three pages carry the same head contract — keep them in sync when you touc
   it; Google still picks a PNG. (`favicon.svg` was committed but linked from nowhere until
   2026-10-01.)
 - Open Graph + Twitter cards, both using `images/og-image.jpg` (1200x630, the size social cards want)
-- JSON-LD: `index.html` has `Person` + `WebSite` + `ProfilePage` + `ItemList` (7 projects);
+- JSON-LD: `index.html` has `Person` + `WebSite` + `ProfilePage` + `ItemList` (8 projects);
   `donate.html` has `WebPage` + `BreadcrumbList`. `404.html` is `noindex` and carries none.
 
 Supporting files: `robots.txt`, `sitemap.xml` (with `<image:image>` entries), and the IndexNow
@@ -85,7 +86,7 @@ Console setup steps that need Daniel's login live in `SEO.md`.
 ## Conventions
 
 - Code is separated into `index.html`, `style.css`, and `script.js`.
-- **Banded sections** — add `class="banded"` to alternate section backgrounds. Currently: Tech stack, BookList4U, CanonTrails, and BestScreenTester are banded. Preserve the every-other-section rhythm when reordering.
+- **Banded sections** — add `class="banded"` to alternate section backgrounds. Currently: Tech stack, BookList4U, CanonTrails, BestScreenTester, and Honest MRR are banded. Preserve the every-other-section rhythm when reordering.
 - **Mockups** use dark gradient backgrounds with warm-toned radial circles. Project screenshots are served as
   1200px WebP from `images/` via `<img class="mockup-img">` inside `.mockup` containers. Full-resolution PNG
   sources live in `images/originals/` and are stripped at deploy — rebuild with
@@ -96,7 +97,9 @@ Console setup steps that need Daniel's login live in `SEO.md`.
 - **Mockup date overlay** — each `.mockup` holds a `<span class="mockup-date">Created: Month Year</span>`
   that fades in on hover. These are **creation** dates, not last-updated: they come from the first commit
   in each project's repo under `~/Codes` (NELA has no repo — its date is the Raydium pair creation shown
-  on DexScreener). Don't hand-edit them to "look recent"; they're a build log, not a changelog.
+  on DexScreener; Honest MRR shows its launch month, October 2026 — live on honestmrr.com 2026-10-07 —
+  at Daniel's request, though its first commit is July 2026). Don't hand-edit them to "look recent";
+  they're a build log, not a changelog.
 - **Tags** use `<span class="tag">`; keep them short (ideally ≤3 words).
 - **Eyebrows** are pill-shaped (gradient bg + border) — use them above every section heading and project title for consistency.
 - Layout collapses 3→2→1 columns at 960px and 760px. Nav links hide below 760px — brand + primary CTA only.
@@ -108,7 +111,7 @@ Console setup steps that need Daniel's login live in `SEO.md`.
 - LinkedIn: https://www.linkedin.com/in/daniel-kim-6991882b3/
 - Email: hello+contact@nelera.net
 - Portfolio: https://nelera.net
-- Projects: geesly.net, booklist4u.com, canontrails.com, bestscreentester.com, maxcandela.com, DexScreener page for NELA
+- Projects: geesly.net, booklist4u.com, canontrails.com, bestscreentester.com, maxcandela.com, honestmrr.com, DexScreener page for NELA
 
 If these change, update both the contact section and the footer.
 
@@ -118,7 +121,7 @@ If these change, update both the contact section and the footer.
 1. [x] **PNG favicon** — `favicon-48/96/192.png` + `apple-touch-icon.png`, generated from `images/my_portfolio_logo.png`
 2. [ ] **Resume / CV** — add a downloadable PDF resume and link it from the contact section
 3. [x] **Hero copy** — personalize tagline and description beyond the current placeholder
-4. [x] **Real screenshots** — all seven projects now have screenshots in `images/`
+4. [x] **Real screenshots** — all eight projects now have screenshots in `images/`
 5. [x] **Open Graph meta** — full OG + Twitter cards on all pages, using a 1200x630 `images/og-image.jpg`
 6. [x] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)
 7. [x] **Separation of Concerns** — Separated index, css, and js into individual files.

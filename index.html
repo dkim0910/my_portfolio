@@ -6,7 +6,7 @@
 
     <!-- Primary meta -->
     <title>Daniel Kim — Full-Stack Software Engineer &amp; Product Builder</title>
-    <meta name="description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, three Next.js sites, and a macOS utility. Flutter, Next.js, TypeScript, Supabase, Firebase.">
+    <meta name="description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, three Next.js sites, and a macOS utility. Flutter, Next.js, TypeScript, Postgres.">
     <meta name="author" content="Daniel Kim">
     <meta name="theme-color" content="#0f1117">
     <link rel="canonical" href="https://nelera.net/">
@@ -31,7 +31,7 @@
     <meta property="og:site_name" content="Daniel Kim">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Daniel Kim — Full-Stack Software Engineer &amp; Product Builder">
-    <meta property="og:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, three Next.js sites, and a macOS utility.">
+    <meta property="og:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, three Next.js sites, and a macOS utility.">
     <meta property="og:url" content="https://nelera.net/">
     <meta property="og:image" content="https://nelera.net/images/og-image.jpg">
     <meta property="og:image:type" content="image/jpeg">
@@ -42,7 +42,7 @@
     <!-- Twitter / X (spec uses name=, not property=) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Daniel Kim — Full-Stack Software Engineer &amp; Product Builder">
-    <meta name="twitter:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, three Next.js sites, and a macOS utility.">
+    <meta name="twitter:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, three Next.js sites, and a macOS utility.">
     <meta name="twitter:image" content="https://nelera.net/images/og-image.jpg">
     <meta name="twitter:image:alt" content="Daniel Kim's portfolio homepage, showing the hero section and tech stack.">
 
@@ -125,8 +125,8 @@
           "@type": "ItemList",
           "@id": "https://nelera.net/#projects",
           "name": "Featured projects",
-          "description": "Seven products Daniel Kim designed, built, shipped, and operates.",
-          "numberOfItems": 7,
+          "description": "Eight products Daniel Kim designed, built, shipped, and operates.",
+          "numberOfItems": 8,
           "itemListOrder": "https://schema.org/ItemListOrderAscending",
           "itemListElement": [
             {
@@ -205,7 +205,7 @@
                 "applicationCategory": "UtilitiesApplication",
                 "operatingSystem": "Web browser",
                 "image": "https://nelera.net/images/bestscreentester_image.webp",
-                "description": "About 21 free, browser-based screen tests across panel and backlight, color and calibration, motion and timing, plus fun utilities. Fully static and 100% client-side.",
+                "description": "28 free, browser-based screen tests across panel and backlight, color and calibration, motion and timing, plus fun utilities. Fully static and 100% client-side.",
                 "author": { "@id": "https://nelera.net/#person" }
               }
             },
@@ -220,6 +220,20 @@
                 "operatingSystem": "macOS",
                 "image": "https://nelera.net/images/maxcandela_image.webp",
                 "description": "A focused macOS menu-bar utility that unlocks the extra brightness built into MacBook Pro XDR displays with one click.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "WebApplication",
+                "name": "Honest MRR",
+                "url": "https://honestmrr.com",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web browser",
+                "image": "https://nelera.net/images/honestmrr_image.webp",
+                "description": "A multi-tenant SaaS that computes auditable MRR, churn, LTV, and cohorts from Stripe, Paddle, RevenueCat, and six more billing providers, on an append-only ledger that traces every figure back to the provider's own record.",
                 "author": { "@id": "https://nelera.net/#person" }
               }
             }
@@ -349,7 +363,7 @@
         <section id="projects">
             <div class="section-head">
                 <h2>Featured projects</h2>
-                <p>Seven products I designed, built, shipped, and operate — including this site.</p>
+                <p>Eight products I designed, built, shipped, and operate — including this site.</p>
                 <div class="filter-group" aria-label="Filter projects by category">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="mobile">Mobile</button>
@@ -474,7 +488,7 @@
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
                     <h2>BestScreenTester — A full suite of browser screen tests</h2>
-                    <p>~21 free, browser-based screen tests across four categories — panel &amp; backlight (dead pixel, backlight bleed, burn-in), color &amp; calibration (greyscale, gradient, gamma, viewing angle), motion &amp; timing (refresh rate, ghosting, screen tearing), and fun utilities (fake broken screen, boot screen, screensaver) — plus a library of guides. Fully static and 100% client-side using the Fullscreen API, Wake Lock, and Canvas. No accounts, no backend.</p>
+                    <p>28 free, browser-based screen tests across four categories — panel &amp; backlight (dead pixel, backlight bleed, burn-in, PWM flicker), color &amp; calibration (greyscale, gradient, gamma, HDR), motion &amp; timing (refresh rate, ghosting, screen tearing), and fun utilities (fake broken screen, boot screen, screensaver) — plus a library of guides. Fully static and 100% client-side using the Fullscreen API, Wake Lock, and Canvas. No accounts, no backend.</p>
                     <div class="tag-list">
                         <span class="tag">Next.js 16</span>
                         <span class="tag">TypeScript</span>
@@ -508,6 +522,31 @@
                     <p style="margin-top:16px;"><a href="https://maxcandela.com" class="btn btn-secondary">Visit maxcandela.com →</a></p>
                 </div>
                 <div class="mockup"><img src="images/maxcandela_image.webp" alt="MaxCandela product page for the macOS menu-bar XDR display brightness utility" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Created: July 2026</span></div>
+            </div>
+        </section>
+
+        <section class="banded" data-category="web">
+            <!-- Honest MRR -->
+            <div class="feature-row">
+                <div class="mockup"><img src="images/honestmrr_image.webp" alt="Honest MRR landing page with the headline &quot;MRR you can defend&quot; above a preview of the revenue overview dashboard" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: October 2026</span></div>
+                <div class="feature-text">
+                    <span class="eyebrow">Project · Live · SaaS</span>
+                    <h2>Honest MRR — Revenue metrics you can audit</h2>
+                    <p>A multi-tenant SaaS that connects to a founder's billing providers — Stripe, Paddle, RevenueCat, and six more — and reports MRR, churn, LTV, and cohort retention. Every number is built on an append-only ledger and traces back to the verbatim provider record, which is hash-chained at ingest so tampering is detectable. Beyond subscriptions, it reconciles App Store and Google Play payouts, pulls ad spend over OAuth for CAC and payback, and tracks operating costs for burn and runway. Postgres row-level security isolates each tenant. Unit, database-integration, and Playwright end-to-end suites run in CI, and the whole stack is self-hosted with Docker.</p>
+                    <div class="tag-list">
+                        <span class="tag">Next.js 16</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Drizzle ORM</span>
+                        <span class="tag">PostgreSQL + RLS</span>
+                        <span class="tag">Better Auth</span>
+                        <span class="tag">Stripe API</span>
+                        <span class="tag">OAuth</span>
+                        <span class="tag">Tailwind CSS v4</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Playwright</span>
+                    </div>
+                    <p style="margin-top:16px;"><a href="https://honestmrr.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit honestmrr.com →</a></p>
+                </div>
             </div>
         </section>
 

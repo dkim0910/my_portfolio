@@ -9,10 +9,12 @@ Hi, I'm Daniel — a software engineer who likes turning ideas into real, shippe
 A few of the projects you'll find on the site:
 
 - **Geesly** — A dating app for iPhone and Android, in the spirit of Tinder and Hinge, with real-time matching and support for 9 languages.
-- **BookList4U** — Find any book series and read it in the right order, whether by release date or story timeline. Over 100 hand-curated series.
+- **BookList4U** — Find any book series and read it in the right order, whether by release date or story timeline. 95 hand-curated series.
 - **NELA** — A token I launched on Solana to learn how the whole process works, end to end.
 - **CanonTrails** — The right order to play any video game series, including DLC and spin-offs, with time-to-finish estimates.
 - **This portfolio** — The site itself, hand-built and designed from scratch.
+- **Animaruni** — Track the anime you watch, get recommendations from your own library, and find out what that opening song is called.
+- **Runnertic** — A Korean running service for finding courses and photo spots and recording runs, built with a small team.
 - **BestScreenTester** — A free set of browser-based tools to test your screen for dead pixels, color accuracy, motion, and more. No sign-up needed.
 - **MaxCandela** — A small Mac app that unlocks the extra brightness built into MacBook Pro XDR displays with one click.
 - **Honest MRR** — Revenue analytics for SaaS founders: connect Stripe, Paddle, RevenueCat, and more, and get MRR, churn, and LTV numbers you can trace back to every transaction.

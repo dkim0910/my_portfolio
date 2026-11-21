@@ -33,7 +33,8 @@ const ROUTES = [
     // Kept in the order the projects appear on the page; og-image last.
     images: [
       'geesly_image.webp', 'booklist4u_image.webp', 'Nelera_image.webp',
-      'canontrails_image.webp', 'my_website_image.webp',
+      'canontrails_image.webp', 'my_website_image.webp', 'animaruni_image.webp',
+      'runnertic_image.webp',
       'bestscreentester_image.webp', 'maxcandela_image.webp', 'honestmrr_image.webp',
       'og-image.jpg',
     ].map((f) => `${ORIGIN}/images/${f}`),

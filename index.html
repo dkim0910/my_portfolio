@@ -6,7 +6,7 @@
 
     <!-- Primary meta -->
     <title>Daniel Kim — Full-Stack Software Engineer &amp; Product Builder</title>
-    <meta name="description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, three Next.js sites, and a macOS utility. Flutter, Next.js, TypeScript, Postgres.">
+    <meta name="description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, four Next.js sites, and a macOS utility. Flutter, Next.js, TypeScript, Postgres.">
     <meta name="author" content="Daniel Kim">
     <meta name="theme-color" content="#0f1117">
     <link rel="canonical" href="https://nelera.net/">
@@ -31,7 +31,7 @@
     <meta property="og:site_name" content="Daniel Kim">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Daniel Kim — Full-Stack Software Engineer &amp; Product Builder">
-    <meta property="og:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, three Next.js sites, and a macOS utility.">
+    <meta property="og:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, four Next.js sites, and a macOS utility.">
     <meta property="og:url" content="https://nelera.net/">
     <meta property="og:image" content="https://nelera.net/images/og-image.jpg">
     <meta property="og:image:type" content="image/jpeg">
@@ -42,7 +42,7 @@
     <!-- Twitter / X (spec uses name=, not property=) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Daniel Kim — Full-Stack Software Engineer &amp; Product Builder">
-    <meta name="twitter:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, three Next.js sites, and a macOS utility.">
+    <meta name="twitter:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, four Next.js sites, and a macOS utility.">
     <meta name="twitter:image" content="https://nelera.net/images/og-image.jpg">
     <meta name="twitter:image:alt" content="Daniel Kim's portfolio homepage, showing the hero section and tech stack.">
 
@@ -60,7 +60,6 @@
           "givenName": "Daniel",
           "familyName": "Kim",
           "url": "https://nelera.net/",
-          "email": "mailto:hello+contact@nelera.net",
           "jobTitle": "Full-Stack Software Engineer",
           "description": "Full-stack software engineer who designs, builds, ships, and operates his own products — mobile, web, and desktop.",
           "image": {
@@ -71,6 +70,7 @@
             "height": 1254,
             "caption": "Daniel Kim"
           },
+          "knowsLanguage": ["en", "ko"],
           "sameAs": [
             "https://github.com/dkim0910",
             "https://www.linkedin.com/in/daniel-kim-6991882b3/"
@@ -90,6 +90,9 @@
             "Supabase",
             "Firebase",
             "Google Cloud Platform",
+            "Docker",
+            "Cloudflare",
+            "GitHub Actions",
             "Vercel",
             "Mobile app development",
             "SEO and structured data"
@@ -125,8 +128,8 @@
           "@type": "ItemList",
           "@id": "https://nelera.net/#projects",
           "name": "Featured projects",
-          "description": "Eight products Daniel Kim designed, built, shipped, and operates.",
-          "numberOfItems": 8,
+          "description": "Ten projects Daniel Kim built and shipped: nine solo products he operates, and one team project.",
+          "numberOfItems": 10,
           "itemListOrder": "https://schema.org/ItemListOrderAscending",
           "itemListElement": [
             {
@@ -153,7 +156,7 @@
                 "applicationCategory": "ReferenceApplication",
                 "operatingSystem": "Web browser",
                 "image": "https://nelera.net/images/booklist4u_image.webp",
-                "description": "Find any book series and read it in the right order — by publication date or in-world chronology. 100+ hand-curated series with NYT bestseller and Google Books integration.",
+                "description": "Find any book series and read it in the right order — by publication date or in-world chronology. 95 hand-curated series with NYT bestseller and Google Books integration.",
                 "author": { "@id": "https://nelera.net/#person" }
               }
             },
@@ -200,18 +203,46 @@
               "position": 6,
               "item": {
                 "@type": "WebApplication",
-                "name": "BestScreenTester",
-                "url": "https://bestscreentester.com",
-                "applicationCategory": "UtilitiesApplication",
+                "name": "Animaruni",
+                "url": "https://animaruni.com",
+                "applicationCategory": "EntertainmentApplication",
                 "operatingSystem": "Web browser",
-                "image": "https://nelera.net/images/bestscreentester_image.webp",
-                "description": "28 free, browser-based screen tests across panel and backlight, color and calibration, motion and timing, plus fun utilities. Fully static and 100% client-side.",
+                "image": "https://nelera.net/images/animaruni_image.webp",
+                "description": "An anime tracking and discovery site: browse by season, genre, and release order, look up opening and ending theme songs, and track, score, and favourite titles with taste-based recommendations.",
                 "author": { "@id": "https://nelera.net/#person" }
               }
             },
             {
               "@type": "ListItem",
               "position": 7,
+              "item": {
+                "@type": "WebApplication",
+                "name": "Runnertic",
+                "url": "https://runnertic.com",
+                "applicationCategory": "HealthApplication",
+                "operatingSystem": "Web browser, iOS",
+                "image": "https://nelera.net/images/runnertic_image.webp",
+                "description": "A Korean running service for finding running courses and photo spots, recording runs live, and sharing them with the community. Built with a small team.",
+                "contributor": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "WebApplication",
+                "name": "BestScreenTester",
+                "url": "https://bestscreentester.com",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Web browser",
+                "image": "https://nelera.net/images/bestscreentester_image.webp",
+                "description": "27 free, browser-based screen tests and tools across panel and backlight, color and calibration, motion and timing, plus utilities, in seven languages. Fully static and 100% client-side.",
+                "author": { "@id": "https://nelera.net/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
               "item": {
                 "@type": "SoftwareApplication",
                 "name": "MaxCandela",
@@ -225,7 +256,7 @@
             },
             {
               "@type": "ListItem",
-              "position": 8,
+              "position": 10,
               "item": {
                 "@type": "WebApplication",
                 "name": "Honest MRR",
@@ -251,6 +282,7 @@
             <div class="nav-left">
                 <a class="brand" href="#" aria-label="Daniel Kim - Home"><img src="/favicon-96.png" alt="Daniel Kim logo" class="brand-mark" width="32" height="32" loading="eager" fetchpriority="high" decoding="async">Daniel Kim</a>
                 <div class="nav-links">
+                    <a href="#about" aria-label="About Daniel Kim">About</a>
                     <a href="#projects" aria-label="View my projects">Projects</a>
                     <a href="#stack" aria-label="View my tech stack">Stack</a>
                     <a href="#contact" aria-label="Go to contact section">Contact</a>
@@ -265,10 +297,11 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <span class="eyebrow">Software Engineer</span>
-                    <h1>Crafting robust backends and elegant frontends for the modern web.</h1>
-                    <p>I'm a full-stack engineer passionate about building scalable solutions and delivering high-quality user experiences across the stack.</p>
+                    <h1>I design, build, ship, and run real products — end to end.</h1>
+                    <p>I'm a full-stack engineer who has shipped ten projects, including a Flutter dating app, a revenue-analytics SaaS, four Next.js sites, and a macOS utility. I write the code, run the servers, and handle the releases myself.</p>
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary">View my projects</a>
+                        <a href="/Daniel_Kim_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Resume (PDF)</a>
                         <a href="#contact" class="btn btn-secondary">Contact me</a>
                     </div>
                 </div>
@@ -279,6 +312,26 @@
                         <pre class="code-body"><code id="codeBlock"></code></pre>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <div class="about">
+                <div class="about-text">
+                    <span class="eyebrow">About</span>
+                    <h2>Hi, I'm Daniel.</h2>
+                    <p>I build products and I run the systems underneath them. Since September 2025 I've been the sole engineer behind the solo projects on this page — writing the code, and administering the Linux servers, Docker containers, Postgres databases, CI/CD pipelines, and DNS that keep them online.</p>
+                    <p>I also served nearly two years of Korean national service as a security officer at the Supreme Court of Korea, trusted to staff an access-control post alone. I'm now looking for a full-time role in software engineering or in infrastructure: data center, network, or cloud support.</p>
+                    <p class="about-actions"><a href="/Daniel_Kim_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download resume (PDF)</a></p>
+                </div>
+                <dl class="about-facts">
+                    <div><dt>Location</dt><dd>Seattle, WA — relocating January 2027</dd></div>
+                    <div><dt>Open to</dt><dd>Software engineering, and data center, network, or cloud support roles</dd></div>
+                    <div><dt>Education</dt><dd>B.S. Software Engineering, Western Governors University — starting March 2027</dd></div>
+                    <div><dt>Languages</dt><dd>English and Korean, both fluent</dd></div>
+                    <div><dt>Work authorization</dt><dd>U.S. citizen, no sponsorship needed</dd></div>
+                </dl>
             </div>
         </section>
 
@@ -313,6 +366,7 @@
                     <h3>Backend &amp; data</h3>
                     <div class="tag-list">
                         <span class="tag">Node.js</span>
+                        <span class="tag">Linux</span>
                         <span class="tag">Java</span>
                         <span class="tag">Spring Boot</span>
                         <span class="tag">PostgreSQL</span>
@@ -325,12 +379,12 @@
                 <div class="stack-card">
                     <h3>Cloud &amp; services</h3>
                     <div class="tag-list">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Cloudflare</span>
+                        <span class="tag">GitHub Actions</span>
                         <span class="tag">Vercel</span>
                         <span class="tag">Firebase</span>
                         <span class="tag">Google Analytics</span>
-                        <span class="tag">Google Ads</span>
-                        <span class="tag">Google AdSense</span>
-                        <span class="tag">Google AdMob</span>
                         <span class="tag">Google Search Console</span>
                         <span class="tag">RevenueCat</span>
                     </div>
@@ -342,7 +396,6 @@
                         <span class="tag">Claude Code CLI</span>
                         <span class="tag">GPT</span>
                         <span class="tag">Gemini</span>
-                        <span class="tag">Prompt engineering</span>
                     </div>
                 </div>
                 <div class="stack-card">
@@ -363,12 +416,13 @@
         <section id="projects">
             <div class="section-head">
                 <h2>Featured projects</h2>
-                <p>Eight products I designed, built, shipped, and operate — including this site.</p>
-                <div class="filter-group" aria-label="Filter projects by category">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="web3">Web3</button>
+                <p>Ten projects I've built and shipped — nine on my own and one with a team — including this site.</p>
+                <div class="filter-group" role="group" aria-label="Filter projects by category">
+                    <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
+                    <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+                    <button type="button" class="filter-btn" data-filter="desktop" aria-pressed="false">Desktop</button>
+                    <button type="button" class="filter-btn" data-filter="web3" aria-pressed="false">Web3</button>
                 </div>
             </div>
 
@@ -376,8 +430,8 @@
             <div class="feature-row" data-category="mobile">
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live · iOS &amp; Android</span>
-                    <h2>Geesly — Dating app</h2>
-                    <p>A cross-platform dating app in the spirit of Tinder, Hinge, and Glam. Real-time matching over Firestore, geospatial discovery, in-app currency ("corns"), RevenueCat subscriptions, rewarded ads, and Vision-API content moderation. Localized in 9 languages. The hardest lesson has been distribution — shipping the app is only the first problem.</p>
+                    <h3>Geesly — Dating app</h3>
+                    <p>17,000+ downloads and a 4.5-star rating. A cross-platform dating app with real-time matching over Firestore, geospatial discovery, RevenueCat subscriptions, and Vision-API content moderation, localized in 9 languages. The hardest lesson has been distribution — shipping the app is only the first problem.</p>
                     <div class="tag-list">
                         <span class="tag">Flutter</span>
                         <span class="tag">Dart</span>
@@ -389,7 +443,11 @@
                         <span class="tag">Google Vision API</span>
                         <span class="tag">i18n (9 languages)</span>
                     </div>
-                    <p style="margin-top:16px;"><a href="https://geesly.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit geesly.net →</a></p>
+                    <div class="project-links">
+                        <a href="https://geesly.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit geesly.net →</a>
+                        <a href="https://apps.apple.com/app/id6756942405" class="btn btn-secondary" target="_blank" rel="noopener">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.geesly.blm" class="btn btn-secondary" target="_blank" rel="noopener">Google Play</a>
+                    </div>
                 </div>
                 <div class="mockup"><img src="images/geesly_image.webp" alt="Geesly dating app interface showing real-time matching and profile discovery on mobile" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: September 2025</span></div>
             </div>
@@ -398,22 +456,25 @@
         <section class="banded" data-category="web">
             <!-- BookList4U -->
             <div class="feature-row">
-                <div class="mockup"><img src="images/booklist4u_image.webp" alt="BookList4U homepage listing book series in publication and chronological reading order" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Created: February 2026</span></div>
+                <div class="mockup"><img src="images/booklist4u_image.webp" alt="BookList4U homepage with the series search, the month's top books, and the latest books in ongoing series" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: February 2026</span></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
-                    <h2>BookList4U — Book series, in order</h2>
-                    <p>Find any book series and read it in the right order — by publication date or in-world chronology. 100+ hand-curated series with original editorials, community-submitted reading times, NYT bestseller integration, and a Google-Books-powered generator so users can add new series themselves. Daily Vercel cron keeps data fresh; Amazon affiliate links monetize clicks.</p>
+                    <h3>BookList4U — Book series, in order</h3>
+                    <p>95 hand-curated book series, each in publication order and in-world chronological order. Readers add community reading times and can generate new series through Google Books; NYT bestseller data and Amazon affiliate links round it out. Self-hosted in Docker with its own Postgres, deployed by GitHub Actions.</p>
                     <div class="tag-list">
                         <span class="tag">Next.js 16</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">Tailwind CSS v4</span>
-                        <span class="tag">Supabase / Postgres</span>
-                        <span class="tag">Vercel</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">GitHub Actions</span>
                         <span class="tag">Google Books API</span>
                         <span class="tag">NYT Books API</span>
                         <span class="tag">SEO / Schema.org</span>
                     </div>
-                    <p style="margin-top:16px;"><a href="https://booklist4u.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit booklist4u.com →</a></p>
+                    <div class="project-links">
+                        <a href="https://booklist4u.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit booklist4u.com →</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -423,14 +484,16 @@
             <div class="feature-row">
                 <div class="feature-text">
                     <span class="eyebrow">Project · On-chain</span>
-                    <h2>NELA — Solana token</h2>
+                    <h3>NELA — Solana token</h3>
                     <p>Issued a token on Solana to learn the full lifecycle end to end: contract setup, liquidity provisioning, and DEX listing. A roughly $500 lesson in how tokenomics, fees, and market-making actually behave in the wild.</p>
                     <div class="tag-list">
                         <span class="tag">Solana</span>
                         <span class="tag">Web3</span>
                         <span class="tag">DeFi</span>
                     </div>
-                    <p style="margin-top:16px;"><a href="https://dexscreener.com/solana/vbyphyrvrrhsomsytiepsv8bcdtmh1pas3v1frzg46e" class="btn btn-secondary" target="_blank" rel="noopener">View on DexScreener →</a></p>
+                    <div class="project-links">
+                        <a href="https://dexscreener.com/solana/vbyphyrvrrhsomsytiepsv8bcdtmh1pas3v1frzg46e" class="btn btn-secondary" target="_blank" rel="noopener">View on DexScreener →</a>
+                    </div>
                 </div>
                 <div class="mockup"><img src="images/Nelera_image.webp" alt="NELA Solana token price chart and liquidity pool on DexScreener" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Created: March 2026</span></div>
             </div>
@@ -439,24 +502,27 @@
         <section class="banded" data-category="web">
             <!-- CanonTrails -->
             <div class="feature-row">
-                <div class="mockup"><img src="images/canontrails_image.webp" alt="CanonTrails homepage showing the canonical play order for a video game series" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: March 2026</span></div>
+                <div class="mockup"><img src="images/canontrails_image.webp" alt="CanonTrails homepage showing the most-viewed play order and trending game series" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: March 2026</span></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
-                    <h2>CanonTrails — The right order to play any game series</h2>
-                    <p>Canonical play order with DLC placement, branching timelines, and HowLongToBeat estimates per game version. Imports from IGDB with auto-detected entry types (main / DLC / remaster / spinoff), stores per-platform playtime, and routes buy clicks through Amazon + CJ-affiliate store links with hashed-IP tracking. Auto-generated Open Graph images, ⌘K global search, and cookie-gated admin curator tools (entry-type editor, canonical-order editor, HLTB batch refresh).</p>
+                    <h3>CanonTrails — The right order to play any game series</h3>
+                    <p>95 game series and more than 2,100 games mapped into canonical play order, with DLC placement, branching timelines, and HowLongToBeat estimates per game version. Games import from IGDB with auto-detected entry types, and buy links route through affiliate stores. Self-hosted in Docker with its own Postgres behind Cloudflare, deployed by GitHub Actions.</p>
                     <div class="tag-list">
                         <span class="tag">Next.js 16</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">Drizzle ORM</span>
-                        <span class="tag">Supabase / Postgres</span>
+                        <span class="tag">PostgreSQL</span>
                         <span class="tag">Tailwind CSS v4</span>
-                        <span class="tag">Vercel</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">GitHub Actions</span>
                         <span class="tag">IGDB + RAWG APIs</span>
                         <span class="tag">HowLongToBeat</span>
                         <span class="tag">CJ Affiliate</span>
                         <span class="tag">SEO / Schema.org</span>
                     </div>
-                    <p style="margin-top:16px;"><a href="https://canontrails.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit canontrails.com →</a></p>
+                    <div class="project-links">
+                        <a href="https://canontrails.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit canontrails.com →</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -466,7 +532,7 @@
             <div class="feature-row">
                 <div class="feature-text">
                     <span class="eyebrow">Project · You're looking at it</span>
-                    <h2>This portfolio</h2>
+                    <h3>This portfolio</h3>
                     <p>The site you're on right now. Written in clean HTML, CSS, and vanilla JavaScript with no frameworks or build tools. Dark theme, animated code showcase, glass-morphism cards, and a responsive layout that works from phone to ultrawide.</p>
                     <div class="tag-list">
                         <span class="tag">HTML</span>
@@ -475,9 +541,67 @@
                         <span class="tag">Responsive</span>
                         <span class="tag">Zero-dependency</span>
                     </div>
-                    <p style="margin-top:16px;"><a href="https://nelera.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit nelera.net →</a></p>
+                    <div class="project-links">
+                        <a href="https://nelera.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit nelera.net →</a>
+                        <a href="https://github.com/dkim0910/my_portfolio" class="btn btn-secondary" target="_blank" rel="noopener">Source on GitHub</a>
+                    </div>
                 </div>
-                <div class="mockup"><img src="images/my_website_image.webp" alt="Daniel Kim's portfolio homepage with the hero section and tech stack grid" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Created: April 2026</span></div>
+                <div class="mockup"><img src="images/my_website_image.webp" alt="Daniel Kim's portfolio homepage with the hero section and tech stack grid" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: April 2026</span></div>
+            </div>
+        </section>
+
+        <section class="banded" data-category="web">
+            <!-- Animaruni -->
+            <div class="feature-row">
+                <div class="mockup"><img src="images/animaruni_image.webp" alt="Animaruni homepage featuring the top trending anime with its score, episode count, and genres" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: May 2026</span></div>
+                <div class="feature-text">
+                    <span class="eyebrow">Project · Live</span>
+                    <h3>Animaruni — Track anime and find that opening song</h3>
+                    <p>Track, score, and favourite anime, get recommendations modelled on your own library, and look up any show's opening and ending theme songs. Catalog data comes from the AniList GraphQL API through a throttled layer, and theme songs from AnimeThemes. Self-hosted in Docker with its own Postgres; a deploy only runs after CI passes.</p>
+                    <div class="tag-list">
+                        <span class="tag">Next.js 16</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Tailwind CSS v4</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Auth.js</span>
+                        <span class="tag">AniList GraphQL</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">GitHub Actions</span>
+                        <span class="tag">Vitest</span>
+                        <span class="tag">SEO / Schema.org</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://animaruni.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit animaruni.com →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section data-category="web">
+            <!-- Runnertic -->
+            <div class="feature-row">
+                <div class="feature-text">
+                    <span class="eyebrow">Team project · Live · Web &amp; iOS</span>
+                    <h3>Runnertic — Running courses and photo spots</h3>
+                    <p>A Korean running service built with a small team: find running courses and photo spots on a map, record a run live, and share it with the community. My part covered the home page, community posts with reports and operator moderation, SEO, Sign in with Apple, a Cloud KMS envelope for the key that encrypts personal data fields, and the iOS App Store release. The web app runs on Next.js with Firestore behind it, alongside a native iOS app on the App Store and an Android release on ONE store.</p>
+                    <div class="tag-list">
+                        <span class="tag">Next.js 16</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">MUI</span>
+                        <span class="tag">Firebase Auth</span>
+                        <span class="tag">Firestore</span>
+                        <span class="tag">Cloud KMS</span>
+                        <span class="tag">Swift / iOS</span>
+                        <span class="tag">Vitest</span>
+                        <span class="tag">Team project</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://runnertic.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit runnertic.com →</a>
+                        <a href="https://apps.apple.com/kr/app/runnertic/id6797750002" class="btn btn-secondary" target="_blank" rel="noopener">App Store</a>
+                        <a href="https://onesto.re/0001008762" class="btn btn-secondary" target="_blank" rel="noopener">ONE store</a>
+                    </div>
+                </div>
+                <div class="mockup"><img src="images/runnertic_image.webp" alt="Runnertic homepage in Korean with app store buttons and a running course shown on a map" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: June 2026</span></div>
             </div>
         </section>
 
@@ -487,30 +611,34 @@
                 <div class="mockup"><img src="images/bestscreentester_image.webp" alt="BestScreenTester homepage showing the suite of browser-based monitor and screen tests" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: June 2026</span></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live</span>
-                    <h2>BestScreenTester — A full suite of browser screen tests</h2>
-                    <p>28 free, browser-based screen tests across four categories — panel &amp; backlight (dead pixel, backlight bleed, burn-in, PWM flicker), color &amp; calibration (greyscale, gradient, gamma, HDR), motion &amp; timing (refresh rate, ghosting, screen tearing), and fun utilities (fake broken screen, boot screen, screensaver) — plus a library of guides. Fully static and 100% client-side using the Fullscreen API, Wake Lock, and Canvas. No accounts, no backend.</p>
+                    <h3>BestScreenTester — A full suite of browser screen tests</h3>
+                    <p>27 free screen tests in seven languages — dead pixels, backlight bleed, refresh rate, PWM flicker, HDR, and more — plus 40+ guides. Fully static and 100% client-side using the Fullscreen API, Wake Lock, and Canvas: no accounts, no backend.</p>
                     <div class="tag-list">
                         <span class="tag">Next.js 16</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">Tailwind CSS v4</span>
                         <span class="tag">MDX</span>
+                        <span class="tag">i18n (7 languages)</span>
                         <span class="tag">Canvas / Fullscreen API</span>
                         <span class="tag">Static export</span>
                         <span class="tag">GitHub Pages</span>
                         <span class="tag">SEO / Schema.org</span>
                     </div>
-                    <p style="margin-top:16px;"><a href="https://bestscreentester.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit bestscreentester.com →</a></p>
+                    <div class="project-links">
+                        <a href="https://bestscreentester.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit bestscreentester.com →</a>
+                        <a href="https://github.com/dkim0910/bestscreentester" class="btn btn-secondary" target="_blank" rel="noopener">Source on GitHub</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section data-category="web">
+        <section data-category="desktop">
             <!-- MaxCandela -->
             <div class="feature-row">
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live · macOS</span>
-                    <h2>MaxCandela — Brighter MacBook XDR displays</h2>
-                    <p>A focused macOS utility for MacBook Pro XDR displays that unlocks the panel's extra brightness from the menu bar. The product page explains the problem clearly: macOS caps everyday content below the display's rated peak brightness, while MaxCandela gives users a one-click way to reach full brightness with true colors, no setup, and no account required.</p>
+                    <h3>MaxCandela — Brighter MacBook XDR displays</h3>
+                    <p>A macOS menu-bar app that lets MacBook Pro XDR displays reach the 1,000 nits the panel is rated for, instead of the roughly 600 macOS allows for everyday content. One click, true colors, no setup, and no account. Sold on the Mac App Store with a 5-day free trial.</p>
                     <div class="tag-list">
                         <span class="tag">macOS</span>
                         <span class="tag">Menu bar app</span>
@@ -519,9 +647,13 @@
                         <span class="tag">Browser demo</span>
                         <span class="tag">Landing page</span>
                     </div>
-                    <p style="margin-top:16px;"><a href="https://maxcandela.com" class="btn btn-secondary">Visit maxcandela.com →</a></p>
+                    <div class="project-links">
+                        <a href="https://maxcandela.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit maxcandela.com →</a>
+                        <a href="https://apps.apple.com/app/id6792267034?mt=12" class="btn btn-secondary" target="_blank" rel="noopener">Mac App Store</a>
+                        <a href="https://github.com/dkim0910/maxcandela" class="btn btn-secondary" target="_blank" rel="noopener">Source on GitHub</a>
+                    </div>
                 </div>
-                <div class="mockup"><img src="images/maxcandela_image.webp" alt="MaxCandela product page for the macOS menu-bar XDR display brightness utility" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Created: July 2026</span></div>
+                <div class="mockup"><img src="images/maxcandela_image.webp" alt="MaxCandela product page for the macOS menu-bar XDR display brightness utility" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: July 2026</span></div>
             </div>
         </section>
 
@@ -531,8 +663,8 @@
                 <div class="mockup"><img src="images/honestmrr_image.webp" alt="Honest MRR landing page with the headline &quot;MRR you can defend&quot; above a preview of the revenue overview dashboard" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: October 2026</span></div>
                 <div class="feature-text">
                     <span class="eyebrow">Project · Live · SaaS</span>
-                    <h2>Honest MRR — Revenue metrics you can audit</h2>
-                    <p>A multi-tenant SaaS that connects to a founder's billing providers — Stripe, Paddle, RevenueCat, and six more — and reports MRR, churn, LTV, and cohort retention. Every number is built on an append-only ledger and traces back to the verbatim provider record, which is hash-chained at ingest so tampering is detectable. Beyond subscriptions, it reconciles App Store and Google Play payouts, pulls ad spend over OAuth for CAC and payback, and tracks operating costs for burn and runway. Postgres row-level security isolates each tenant. Unit, database-integration, and Playwright end-to-end suites run in CI, and the whole stack is self-hosted with Docker.</p>
+                    <h3>Honest MRR — Revenue metrics you can audit</h3>
+                    <p>Auditable MRR, churn, LTV, and cohort retention from nine billing providers, including Stripe, Paddle, and RevenueCat. Every number sits on an append-only, hash-chained ledger and traces back to the provider's own record, and Postgres row-level security isolates each tenant. Unit, integration, and Playwright end-to-end suites run in CI; the stack is self-hosted with Docker.</p>
                     <div class="tag-list">
                         <span class="tag">Next.js 16</span>
                         <span class="tag">TypeScript</span>
@@ -545,7 +677,9 @@
                         <span class="tag">Docker</span>
                         <span class="tag">Playwright</span>
                     </div>
-                    <p style="margin-top:16px;"><a href="https://honestmrr.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit honestmrr.com →</a></p>
+                    <div class="project-links">
+                        <a href="https://honestmrr.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit honestmrr.com →</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -558,6 +692,7 @@
                 <div class="contact-actions">
                     <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener" class="btn btn-primary">Message me on LinkedIn</a>
                     <a href="#" class="btn btn-secondary" data-contact="email">Email me</a>
+                    <a href="/Daniel_Kim_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Resume (PDF)</a>
                     <a href="https://github.com/dkim0910" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                 </div>
             </div>
@@ -568,6 +703,7 @@
             <div class="footer-inner">
                 <a class="brand" href="#"><img src="/favicon-96.png" alt="Daniel Kim logo" class="brand-mark" width="32" height="32" loading="lazy" decoding="async">Daniel Kim</a>
                 <div class="footer-links">
+                    <a href="#about">About</a>
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
                     <a href="donate.html">Donate</a>

@@ -1,23 +1,32 @@
 (function() {
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Email protection & Copy to Clipboard
     var u = 'hello+contact';
     var d = 'nelera.net';
     var email = u + '@' + d;
     document.querySelectorAll('[data-contact="email"]').forEach(function(el) {
+        var originalText = el.textContent;
+        var resetTimer;
         el.href = 'mailto:' + email;
         el.addEventListener('click', function(e) {
             if (e.shiftKey || e.metaKey || e.ctrlKey) return; // Allow normal mailto if modifier keys are held
+            // No clipboard API (older browsers, non-HTTPS): let the mailto link do its job.
+            if (!navigator.clipboard || !navigator.clipboard.writeText) return;
             e.preventDefault();
             navigator.clipboard.writeText(email).then(function() {
-                var originalText = el.textContent;
                 el.textContent = 'Email copied!';
                 el.classList.add('btn-primary');
                 el.classList.remove('btn-secondary');
-                setTimeout(function() {
+                clearTimeout(resetTimer);
+                resetTimer = setTimeout(function() {
                     el.textContent = originalText;
                     el.classList.remove('btn-primary');
                     el.classList.add('btn-secondary');
                 }, 2000);
+            }).catch(function() {
+                // Copy was refused (permissions, lost focus): fall back to opening the mail client.
+                window.location.href = el.href;
             });
         });
     });
@@ -44,43 +53,59 @@
         codeBlock.classList.add('code-fade-in');
         codeIdx = (codeIdx + 1) % snippets.length;
     }
-    showSnippet();
-    setInterval(showSnippet, 4500);
+    if (codeBlock && codeLang) {
+        showSnippet();
+        // Visitors who asked for reduced motion get one static snippet instead of a loop;
+        // a hidden tab doesn't need to keep swapping either.
+        if (!reduceMotion) {
+            setInterval(function() {
+                if (!document.hidden) showSnippet();
+            }, 4500);
+        }
+    }
 
     // Navbar scroll effect & Progress bar & Scroll Top
     var nav = document.querySelector('.nav');
     var progressBar = document.getElementById('progress-bar');
     var scrollTopBtn = document.getElementById('scroll-top');
+    var ticking = false;
 
-    window.addEventListener('scroll', function() {
+    function updateScrollUi() {
+        ticking = false;
         var scrollY = window.scrollY;
-        
+
         // Nav background
         if (nav) {
             nav.classList.toggle('scrolled', scrollY > 20);
         }
 
-        // Progress bar
+        // Progress bar (a page shorter than the viewport has nothing to scroll)
         if (progressBar) {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            progressBar.style.width = scrolled + "%";
+            var scrolled = height > 0 ? Math.min(100, (scrollY / height) * 100) : 0;
+            progressBar.style.width = scrolled + '%';
         }
 
         // Scroll top button
         if (scrollTopBtn) {
-            if (scrollY > 500) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
+            scrollTopBtn.classList.toggle('visible', scrollY > 500);
         }
-    });
+    }
+
+    function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(updateScrollUi);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    // Arriving on an anchor (/#projects) or a restored scroll position never fires 'scroll'.
+    updateScrollUi();
 
     if (scrollTopBtn) {
         scrollTopBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
         });
     }
 
@@ -91,20 +116,22 @@
     filterBtns.forEach(function(btn) {
         btn.addEventListener('click', function() {
             var filter = btn.getAttribute('data-filter');
-            
+
             // Update buttons
-            filterBtns.forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
+            filterBtns.forEach(function(b) {
+                var isActive = b === btn;
+                b.classList.toggle('active', isActive);
+                b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
 
             // Filter projects
             projects.forEach(function(project) {
                 var category = project.getAttribute('data-category');
-                if (filter === 'all' || category === filter) {
-                    project.classList.remove('hidden');
-                } else {
-                    project.classList.add('hidden');
-                }
+                project.classList.toggle('hidden', filter !== 'all' && category !== filter);
             });
+
+            // Hiding sections changes the page height, so the progress bar is stale.
+            updateScrollUi();
         });
     });
 

@@ -18,17 +18,20 @@ npm start     # live-server on http://localhost:5500 via 'dev' script
 Main page (`index.html`) is a one-page layout, top to bottom. A separate standalone `donate.html` page is
 linked from the nav and footer, and `404.html` is the GitHub Pages error page (same nav/footer, `noindex`).
 
-1. **Nav** — brand, Projects / Stack / Contact anchors, a "Donate" link (to `donate.html`), and the primary "Get in touch" CTA
-2. **Hero** — gradient-text tagline, "View my projects" / "Contact me" buttons, multi-color radial gradient background
+1. **Nav** — brand, About / Projects / Stack / Contact anchors, a "Donate" link (to `donate.html`), and the primary "Get in touch" CTA
+2. **Hero** — gradient-text tagline, "View my projects" / "Resume (PDF)" / "Contact me" buttons, multi-color radial gradient background
+2a. **About** (`#about`, plain) — two paragraphs + "Download resume" on the left, a `<dl class="about-facts">` card (location, open to, education, languages, work authorization) on the right. The facts come from the resume; keep the two in agreement.
 3. **Tech stack** (`#stack`, banded) — 3-column grid of 6 glass cards: Frontend, Mobile, Backend & data, Cloud & services, AI, Design & planning. Each card has its own color accent (`--card-color`), gradient top bar, radial glow, and hover lift.
-4. **Featured projects** (`#projects`) — a category filter bar (All / Mobile / Web / Web3, driven by `data-filter` buttons and `data-category` on each row) above eight alternating feature rows (text + mockup, swapped every other row):
+4. **Featured projects** (`#projects`) — a category filter bar (All / Mobile / Web / Desktop / Web3, driven by `data-filter` buttons with `aria-pressed`, and `data-category` on each row) above ten alternating feature rows, in creation-date order; each project title is an `<h3>` under the section's `<h2>` (text + mockup, swapped every other row):
    - Geesly (Flutter dating app) — plain
    - BookList4U (Next.js book-series site) — banded
    - NELA (Solana token) — plain
    - CanonTrails (Next.js game-series site) — banded
    - This portfolio — plain
+   - Animaruni (Next.js anime tracking site) — banded
+   - Runnertic (Korean running service; the one **team** project — eyebrow says so, and its JSON-LD uses `contributor`, not `author`) — plain
    - BestScreenTester (Next.js screen-test suite) — banded
-   - MaxCandela (macOS XDR brightness utility) — plain
+   - MaxCandela (macOS XDR brightness utility, the only `desktop` row) — plain
    - Honest MRR (Next.js revenue-analytics SaaS) — banded
 5. **Contact** — radial-glow gradient card with Email / GitHub / LinkedIn buttons
 6. **Footer** — brand, nav + social links (including a Donate link), copyright + email on the bottom row
@@ -41,7 +44,7 @@ Palette lives in `:root` as CSS variables — edit these, don't hardcode colors:
 - `--accent-2: #14b8a6` (teal), `--accent-3: #f97316` (orange)
 - `--surface: #0f1117`, `--soft: #161927`, `--soft-2: #1a1e30`
 - `--text: #e8eaed`, `--muted: #8b92a5`, `--border: #2a2f42`
-- `--dark: #0a0c14`, `--dark-muted: #6b7280` (footer only)
+- `--dark: #0a0c14`, `--dark-muted: #7c8496` (footer only; 5:1 on `--dark` — the old `#6b7280` was 4:1 and failed WCAG AA at 12px)
 
 Dark theme throughout. Primary buttons, brand mark, gradient headings, and hero blobs use deep orange gradients — keep this treatment consistent when adding new CTAs. A subtle grain texture overlay (`.page::after`) adds tactile depth.
 
@@ -57,7 +60,7 @@ All three pages carry the same head contract — keep them in sync when you touc
   it; Google still picks a PNG. (`favicon.svg` was committed but linked from nowhere until
   2026-10-01.)
 - Open Graph + Twitter cards, both using `images/og-image.jpg` (1200x630, the size social cards want)
-- JSON-LD: `index.html` has `Person` + `WebSite` + `ProfilePage` + `ItemList` (8 projects);
+- JSON-LD: `index.html` has `Person` + `WebSite` + `ProfilePage` + `ItemList` (10 projects);
   `donate.html` has `WebPage` + `BreadcrumbList`. `404.html` is `noindex` and carries none.
 
 Supporting files: `robots.txt`, `sitemap.xml` (with `<image:image>` entries), and the IndexNow
@@ -74,7 +77,7 @@ it *after* committing. The image list lives in the script's `ROUTES` array.
 Webmaster Tools, so no verification meta tag is needed in the head.
 
 **Adding a project means four edits**, not one: the feature row, the JSON-LD `itemListElement`
-array, the `images` array in `scripts/build-sitemap.mjs`, then
+array (plus the "Ten projects" counts in the section head, the hero, and the `ItemList`), the `images` array in `scripts/build-sitemap.mjs`, then
 `npm run seo:sitemap && npm run seo:indexnow` (commit first — see above).
 
 `.github/workflows/deploy.yml` strips dev-only files (`CLAUDE.md`, `README.md`, `SEO.md`,
@@ -86,7 +89,7 @@ Console setup steps that need Daniel's login live in `SEO.md`.
 ## Conventions
 
 - Code is separated into `index.html`, `style.css`, and `script.js`.
-- **Banded sections** — add `class="banded"` to alternate section backgrounds. Currently: Tech stack, BookList4U, CanonTrails, BestScreenTester, and Honest MRR are banded. Preserve the every-other-section rhythm when reordering.
+- **Banded sections** — add `class="banded"` to alternate section backgrounds. Currently: Tech stack, BookList4U, CanonTrails, Animaruni, BestScreenTester, and Honest MRR are banded. Preserve the every-other-section rhythm when reordering.
 - **Mockups** use dark gradient backgrounds with warm-toned radial circles. Project screenshots are served as
   1200px WebP from `images/` via `<img class="mockup-img">` inside `.mockup` containers. Full-resolution PNG
   sources live in `images/originals/` and are stripped at deploy — rebuild with
@@ -101,8 +104,11 @@ Console setup steps that need Daniel's login live in `SEO.md`.
   at Daniel's request, though its first commit is July 2026). Don't hand-edit them to "look recent";
   they're a build log, not a changelog.
 - **Tags** use `<span class="tag">`; keep them short (ideally ≤3 words).
+- **Project blurbs** are two or three sentences that open with a concrete number where one exists. Each row ends in a `.project-links` wrapper: the site link first, then store links (App Store, Google Play, ONE store) and "Source on GitHub" only for repos that are public (currently `bestscreentester`, `maxcandela`, `my_portfolio`).
+- **Donate icons** are self-hosted in `images/donate/` — don't hotlink third-party CDNs.
+- **Email** is assembled in `script.js` to keep it away from scrapers, so it must not appear in the HTML or the JSON-LD.
 - **Eyebrows** are pill-shaped (gradient bg + border) — use them above every section heading and project title for consistency.
-- Layout collapses 3→2→1 columns at 960px and 760px. Nav links hide below 760px — brand + primary CTA only.
+- Layout collapses 3→2→1 columns at 960px and 760px. Below 760px the nav wraps: brand + primary CTA on the first row, the section links on a second row (`.nav-left { display: contents }`).
 - **Accessibility** — Use `aria-label` for navigation and interactive elements. Maintain visible `:focus-visible` states for keyboard navigation.
 
 ## External links (keep in sync)
@@ -111,7 +117,7 @@ Console setup steps that need Daniel's login live in `SEO.md`.
 - LinkedIn: https://www.linkedin.com/in/daniel-kim-6991882b3/
 - Email: hello+contact@nelera.net
 - Portfolio: https://nelera.net
-- Projects: geesly.net, booklist4u.com, canontrails.com, bestscreentester.com, maxcandela.com, honestmrr.com, DexScreener page for NELA
+- Projects: geesly.net, booklist4u.com, canontrails.com, animaruni.com, runnertic.com, bestscreentester.com, maxcandela.com, honestmrr.com, DexScreener page for NELA
 
 If these change, update both the contact section and the footer.
 
@@ -119,9 +125,9 @@ If these change, update both the contact section and the footer.
 
 ### Must-have (before sharing with recruiters)
 1. [x] **PNG favicon** — `favicon-48/96/192.png` + `apple-touch-icon.png`, generated from `images/my_portfolio_logo.png`
-2. [ ] **Resume / CV** — add a downloadable PDF resume and link it from the contact section
+2. [x] **Resume / CV** — `Daniel_Kim_Resume.pdf` at the repo root, linked from the hero, About, and contact sections. It is a **web copy**: same wording as the private resume but with no phone number and `hello+contact@nelera.net` instead of the personal Gmail. Source and build command live in `~/Codes/resume/source/resume_web.html`; never drop the private PDF in here.
 3. [x] **Hero copy** — personalize tagline and description beyond the current placeholder
-4. [x] **Real screenshots** — all eight projects now have screenshots in `images/`
+4. [x] **Real screenshots** — all ten projects now have screenshots in `images/`
 5. [x] **Open Graph meta** — full OG + Twitter cards on all pages, using a 1200x630 `images/og-image.jpg`
 6. [x] **Mobile QA** — test layout on real phones (especially the 760px breakpoint and stack grid collapse)
 7. [x] **Separation of Concerns** — Separated index, css, and js into individual files.

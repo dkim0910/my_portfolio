@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://nelera.net/</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <image:image><image:loc>https://nelera.net/images/geesly_image.webp</image:loc></image:image>
@@ -11,6 +11,8 @@
         <image:image><image:loc>https://nelera.net/images/Nelera_image.webp</image:loc></image:image>
         <image:image><image:loc>https://nelera.net/images/canontrails_image.webp</image:loc></image:image>
         <image:image><image:loc>https://nelera.net/images/my_website_image.webp</image:loc></image:image>
+        <image:image><image:loc>https://nelera.net/images/animaruni_image.webp</image:loc></image:image>
+        <image:image><image:loc>https://nelera.net/images/runnertic_image.webp</image:loc></image:image>
         <image:image><image:loc>https://nelera.net/images/bestscreentester_image.webp</image:loc></image:image>
         <image:image><image:loc>https://nelera.net/images/maxcandela_image.webp</image:loc></image:image>
         <image:image><image:loc>https://nelera.net/images/honestmrr_image.webp</image:loc></image:image>
@@ -18,7 +20,7 @@
     </url>
     <url>
         <loc>https://nelera.net/donate.html</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>

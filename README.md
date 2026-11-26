@@ -16,8 +16,8 @@ A few of the projects you'll find on the site:
 - **Animaruni** — Track the anime you watch, get recommendations from your own library, and find out what that opening song is called.
 - **Runnertic** — A Korean running service for finding courses and photo spots and recording runs, built with a small team.
 - **BestScreenTester** — A free set of browser-based tools to test your screen for dead pixels, color accuracy, motion, and more. No sign-up needed.
-- **MaxCandela** — A small Mac app that unlocks the extra brightness built into MacBook Pro XDR displays with one click.
-- **Honest MRR** — Revenue analytics for SaaS founders: connect Stripe, Paddle, RevenueCat, and more, and get MRR, churn, and LTV numbers you can trace back to every transaction.
+- **MaxCandela** — A Mac menu-bar toolbox: 27 utilities behind one icon, 14 free, with a Pro tier that includes a brightness boost for MacBook Pro XDR displays.
+- **Honest MRR** — Revenue analytics for SaaS founders: connect Stripe, Paddle, RevenueCat, and six more providers for MRR, churn, and LTV, where every MRR movement opens to the provider's own record.
 
 ## Get in touch
 

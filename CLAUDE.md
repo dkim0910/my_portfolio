@@ -99,8 +99,8 @@ Console setup steps that need Daniel's login live in `SEO.md`.
 - **Stack cards** are glass-effect with per-card `--card-color` / `--card-glow` via `:nth-child(N)` rules. Each card has a gradient top bar, radial glow, hover lift, and tinted tag hover shadows. When adding/removing cards, re-check the nth-child rules so each card keeps a distinct color.
 - **Mockup date overlay** — each `.mockup` holds a `<span class="mockup-date">Created: Month Year</span>`
   that fades in on hover. These are **creation** dates, not last-updated: they come from the first commit
-  in each project's repo under `~/Codes` (NELA has no repo — its date is the Raydium pair creation shown
-  on DexScreener; Honest MRR shows its launch month, October 2026 — live on honestmrr.com 2026-10-07 —
+  in each project's repo under `~/Codes` (NELA has no repo — its date is the Raydium pool creation,
+  2026-03-10, on-chain; Honest MRR shows its launch month, October 2026 — live on honestmrr.com 2026-10-07 —
   at Daniel's request, though its first commit is July 2026). Don't hand-edit them to "look recent";
   they're a build log, not a changelog.
 - **Tags** use `<span class="tag">`; keep them short (ideally ≤3 words).
@@ -117,7 +117,7 @@ Console setup steps that need Daniel's login live in `SEO.md`.
 - LinkedIn: https://www.linkedin.com/in/daniel-kim-6991882b3/
 - Email: hello+contact@nelera.net
 - Portfolio: https://nelera.net
-- Projects: geesly.net, booklist4u.com, canontrails.com, animaruni.com, runnertic.com, bestscreentester.com, maxcandela.com, honestmrr.com, DexScreener page for NELA
+- Projects: geesly.net, booklist4u.com, canontrails.com, animaruni.com, runnertic.com, bestscreentester.com, maxcandela.com, honestmrr.com, and NELA's Solana Explorer page (mint `4yrL8PiijG2SQr7PBTBLmq8A4SPihAHp38oCPb8WMNcJ`, pool `vByPHYrvrrhSomsYtiEPSv8bCdtMh1pas3V1fRzG46E`). DexScreener, GeckoTerminal and Birdeye 404 on it since sniper wallets dumped ~70% of supply on 2026-05-08 (LP burned, authorities revoked — not a rug); `Nelera_image.webp` is the March 2026 DexScreener chart, kept as a record.
 
 If these change, update both the contact section and the footer.
 

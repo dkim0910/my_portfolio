@@ -533,7 +533,8 @@ section.banded { background: linear-gradient(180deg, var(--soft) 0%, var(--soft-
 .footer .brand { color: var(--text); font-size: 16px; }
 .footer-links {
     display: flex;
-    gap: 28px;
+    flex-wrap: wrap;
+    gap: 12px 28px;
     font-size: 14px;
 }
 .footer-links a {
@@ -724,11 +725,14 @@ section.banded { background: linear-gradient(180deg, var(--soft) 0%, var(--soft-
     .hero { padding-top: 56px; padding-bottom: 56px; }
     .hero h1 { font-size: 28px; }
     .stack-grid { grid-template-columns: 1fr; }
-    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+    /* minmax(0, …): a bare 1fr can't shrink below the code sample's longest line, which pushed the hero text off a 320px screen */
+    .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
     .feature-row { grid-template-columns: 1fr; gap: 28px; }
     .contact { padding: 32px 20px; }
     .footer { padding: 28px 20px 20px; }
     .footer-inner { flex-direction: column; align-items: flex-start; }
+    /* Six links in one row overflowed a 390px phone by ~60px: two rows of three instead */
+    .footer-links { display: grid; grid-template-columns: repeat(3, auto); gap: 12px 28px; }
     .other-ways-container { grid-template-columns: 1fr; }
     .way-card { padding: 16px 18px; gap: 14px; }
     .thank-you-box { padding: 32px 24px; }

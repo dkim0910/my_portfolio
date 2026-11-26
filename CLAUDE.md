@@ -31,7 +31,7 @@ linked from the nav and footer, and `404.html` is the GitHub Pages error page (s
    - Animaruni (Next.js anime tracking site) — banded
    - Runnertic (Korean running service; the one **team** project — eyebrow says so, and its JSON-LD uses `contributor`, not `author`) — plain
    - BestScreenTester (Next.js screen-test suite) — banded
-   - MaxCandela (macOS XDR brightness utility, the only `desktop` row) — plain
+   - MaxCandela (macOS menu-bar toolbox with an XDR brightness boost, the only `desktop` row) — plain
    - Honest MRR (Next.js revenue-analytics SaaS) — banded
 5. **Contact** — radial-glow gradient card with Email / GitHub / LinkedIn buttons
 6. **Footer** — brand, nav + social links (including a Donate link), copyright + email on the bottom row

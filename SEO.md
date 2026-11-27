@@ -77,7 +77,7 @@ npm run seo:indexnow -- https://nelera.net/donate.html  # just one
 - Social preview — <https://www.opengraph.xyz/url/https%3A%2F%2Fnelera.net%2F>
 - PageSpeed — <https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fnelera.net%2F>
 
-Expected on `/`: `Person`, `WebSite`, `ProfilePage`, `ItemList` (8 projects).
+Expected on `/`: `Person`, `WebSite`, `ProfilePage`, `ItemList` (10 projects).
 Expected on `/donate.html`: `WebPage`, `BreadcrumbList`.
 
 ---
@@ -110,8 +110,8 @@ during load.
 ## What the site is not doing
 
 - **No analytics.** Deliberate (TODO #8). Search Console covers search traffic.
-- **No resume PDF.** Still open (TODO #2) — a linked, crawlable PDF is worth real
-  long-tail traffic for name searches.
+- ~~No resume PDF.~~ Done (TODO #2): `Daniel_Kim_Resume.pdf` is at the repo root, deployed,
+  and linked from the hero, About, and contact sections.
 - **Backlinks are the actual bottleneck.** Nothing on-page fixes a site with no inbound
   links. Linking here from your GitHub profile README and your LinkedIn "Website" field
   is the cheapest fix.

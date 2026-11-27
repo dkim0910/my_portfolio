@@ -33,7 +33,7 @@ linked from the nav and footer, and `404.html` is the GitHub Pages error page (s
    - BestScreenTester (Next.js screen-test suite) — banded
    - MaxCandela (macOS menu-bar toolbox with an XDR brightness boost, the only `desktop` row) — plain
    - Honest MRR (Next.js revenue-analytics SaaS) — banded
-5. **Contact** — radial-glow gradient card with Email / GitHub / LinkedIn buttons
+5. **Contact** — radial-glow gradient card with LinkedIn / Email / Resume (PDF) / GitHub buttons
 6. **Footer** — brand, nav + social links (including a Donate link), copyright + email on the bottom row
 
 ## Design system
@@ -81,8 +81,10 @@ array (plus the "Ten projects" counts in the section head, the hero, and the `It
 `npm run seo:sitemap && npm run seo:indexnow` (commit first — see above).
 
 `.github/workflows/deploy.yml` strips dev-only files (`CLAUDE.md`, `README.md`, `SEO.md`,
-`package*.json`, `scripts/`, `image.png`, `images/originals/`) before uploading — GitHub Pages
-otherwise serves the entire repo. `robots.txt` disallows them too as a backstop.
+`package*.json`, `scripts/`, `image.png`, `images/originals/`, plus `.claude`, `.github` and
+`node_modules`) before uploading — GitHub Pages otherwise serves the entire repo. `robots.txt`
+disallows the docs, `package*.json`, `scripts/` and `image.png` too as a backstop (it has no
+rule for `images/originals/`).
 
 Console setup steps that need Daniel's login live in `SEO.md`.
 

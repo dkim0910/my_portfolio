@@ -4,7 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Daniel Kim's personal portfolio — clean HTML, CSS, and vanilla JavaScript targeted at recruiters. No framework, no bundler, no build step. The only dependency is `live-server` for local development with auto-reload. Favicon and brand mark use `images/my_portfolio_logo.png`. Dark theme with warm accent colors and subtle grain texture overlay.
+Daniel Kim's personal portfolio — clean HTML, CSS, and vanilla JavaScript targeted at recruiters for software
+engineering and for data center / network / cloud support roles. No framework, no bundler, no build step. The only
+dependency is `live-server` for local development with auto-reload. Brand mark: `favicon-96.png` (from
+`images/my_portfolio_logo.png`).
+
+Since 2026-11-28 the design is the **"Ops Console"**: the site is styled like an infrastructure dashboard — ten
+"services", where each runs and how it deploys, and a live reachability check run from the visitor's browser —
+pitching "I write the code, and I run the servers it lives on."
 
 ## Preview
 
@@ -15,38 +22,42 @@ npm start     # live-server on http://localhost:5500 via 'dev' script
 
 ## Page structure
 
-Main page (`index.html`) is a one-page layout, top to bottom. A separate standalone `donate.html` page is
-linked from the nav and footer, and `404.html` is the GitHub Pages error page (same nav/footer, `noindex`).
+Main page (`index.html`) is one page, top to bottom. `donate.html` is a standalone page linked from the footer, and
+`404.html` is the GitHub Pages error page (`noindex`). All three share the sticky header (`.hdr`: crumb
+`daniel-kim / <page>`, GitHub + Resume buttons, section tabs) and the footer (`.foot`, which holds the only Donate link).
 
-1. **Nav** — brand, About / Projects / Stack / Contact anchors, a "Donate" link (to `donate.html`), and the primary "Get in touch" CTA
-2. **Hero** — gradient-text tagline, "View my projects" / "Resume (PDF)" / "Contact me" buttons, multi-color radial gradient background
-2a. **About** (`#about`, plain) — two paragraphs + "Download resume" on the left, a `<dl class="about-facts">` card (location, open to, education, languages, work authorization) on the right. The facts come from the resume; keep the two in agreement.
-3. **Tech stack** (`#stack`, banded) — 3-column grid of 6 glass cards: Frontend, Mobile, Backend & data, Cloud & services, AI, Design & planning. Each card has its own color accent (`--card-color`), gradient top bar, radial glow, and hover lift.
-4. **Featured projects** (`#projects`) — a category filter bar (All / Mobile / Web / Desktop / Web3, driven by `data-filter` buttons with `aria-pressed`, and `data-category` on each row) above ten alternating feature rows, in creation-date order; each project title is an `<h3>` under the section's `<h2>` (text + mockup, swapped every other row):
-   - Geesly (Flutter dating app) — plain
-   - BookList4U (Next.js book-series site) — banded
-   - NELA (Solana token) — plain
-   - CanonTrails (Next.js game-series site) — banded
-   - This portfolio — plain
-   - Animaruni (Next.js anime tracking site) — banded
-   - Runnertic (Korean running service; the one **team** project — eyebrow says so, and its JSON-LD uses `contributor`, not `author`) — plain
-   - BestScreenTester (Next.js screen-test suite) — banded
-   - MaxCandela (macOS menu-bar toolbox with an XDR brightness boost, the only `desktop` row) — plain
-   - Honest MRR (Next.js revenue-analytics SaaS) — banded
-5. **Contact** — radial-glow gradient card with LinkedIn / Email / Resume (PDF) / GitHub buttons
-6. **Footer** — brand, nav + social links (including a Donate link), copyright + email on the bottom row
+1. **Header** — crumb with a `10 services` badge, tabs (Overview / Services / Architecture / Runbook / Contact) with a
+   scrollspy, and a live `N/9 domains reachable` counter (hidden under 760px).
+2. **Overview** (`#overview`) — headline, lede, Resume / Copy email / LinkedIn buttons, the **availability panel**
+   (roles, authorization, location, languages, education — keep in agreement with the resume), and a 5-stat row
+   (10 projects, 4 self-hosted, 3 store apps, 17,000+ Geesly downloads, live domains count).
+3. **Services** (`#services`) — filter chips (All / Self-hosted / Static / Firebase / App stores / On-chain, driven by
+   `data-filter` and each row's `data-tags`), the live-check status + Re-check button, and the services table. The
+   table bar has **Open all / Close all** (expands every visible row) and **Open all N in tabs** (opens each visible
+   row's first link; skips the portfolio's own row; browsers allow one tab per click unless pop-ups are allowed, and
+   the page says so in `[data-bulk-note]`). Rows are in **creation order, oldest first**: Geesly, BookList4U, NELA,
+   CanonTrails, nelera.net, Animaruni, Runnertic (the one **team** project — `team` badge, and its JSON-LD uses
+   `contributor`, not `author`), BestScreenTester, MaxCandela, Honest MRR. On desktop the first row starts open.
+4. **Architecture** (`#architecture`) — an inline SVG ("How it's wired": GitHub → GitHub Actions → self-hosted
+   Docker + Postgres / GitHub Pages; Firebase · Google Cloud; Solana; native macOS; Cloudflare; the four stores; and a
+   dashed **Amazon Web Services · coming soon** box). Under 1080px the SVG is swapped for stacked `.lane` cards, which
+   must carry the same content. The service dots (`data-dot`) reuse the live checks.
+5. **Runbook** (`#runbook`) — five numbered habits, each tied to a real project; the Supreme Court security-officer
+   card; the tool inventory.
+6. **Contact** (`#contact`) — LinkedIn / Resume buttons and a channel list (email, LinkedIn, GitHub, resume).
 
 ## Design system
 
-Palette lives in `:root` as CSS variables — edit these, don't hardcode colors:
+Palette and type live in `:root` in `style.css` — edit the variables, don't hardcode colors:
 
-- `--primary: #ea580c` (deep orange), `--primary-hover: #c2410c`
-- `--accent-2: #14b8a6` (teal), `--accent-3: #f97316` (orange)
-- `--surface: #0f1117`, `--soft: #161927`, `--soft-2: #1a1e30`
-- `--text: #e8eaed`, `--muted: #8b92a5`, `--border: #2a2f42`
-- `--dark: #0a0c14`, `--dark-muted: #7c8496` (footer only; 5:1 on `--dark` — the old `#6b7280` was 4:1 and failed WCAG AA at 12px)
+- Surfaces: `--bg #0b0c0e`, `--bg-2`, `--panel #111316`, `--panel-2`, `--hover`; lines `--line`, `--line-2`, `--line-3`
+- Text: `--text #e8eaed`, `--text-2`, `--muted #8d949e`, `--dim #636a74`
+- Status colors, used sparingly: `--green` (reachable / open to work), `--amber` (no response, `team` badge,
+  "coming soon"), `--violet` (on-chain); `--link` for focus rings
+- Type: Inter (`--sans`) for prose, JetBrains Mono (`--mono`) for labels and data, both from Google Fonts
 
-Dark theme throughout. Primary buttons, brand mark, gradient headings, and hero blobs use deep orange gradients — keep this treatment consistent when adding new CTAs. A subtle grain texture overlay (`.page::after`) adds tactile depth.
+Hairline borders and flat panels (`.panel`). Primary buttons are light (`.btn-primary`), the rest outlined (`.btn`,
+`.btn-sm`). No gradient text, glass cards, or pill eyebrows — section labels are mono `.sec-label` ("01 · services").
 
 ## SEO
 
@@ -76,8 +87,10 @@ it *after* committing. The image list lives in the script's `ROUTES` array.
 `nelera.net` is already verified in both Google Search Console (Domain property) and Bing
 Webmaster Tools, so no verification meta tag is needed in the head.
 
-**Adding a project means four edits**, not one: the feature row, the JSON-LD `itemListElement`
-array (plus the "Ten projects" counts in the section head, the hero, and the `ItemList`), the `images` array in `scripts/build-sitemap.mjs`, then
+**Adding a project touches several places**, not one: its `<article class="svc">` row in `#svc-list` (with
+`data-id`, `data-domain` unless it has no website, and `data-tags` for the filters), the architecture SVG **and** the
+matching `.lane` card, the filter-chip counts, the counts in the lede / stats / `10 services` badge / `ItemList`, the
+JSON-LD `itemListElement` array, the `images` array in `scripts/build-sitemap.mjs`, then
 `npm run seo:sitemap && npm run seo:indexnow` (commit first — see above).
 
 `.github/workflows/deploy.yml` strips dev-only files (`CLAUDE.md`, `README.md`, `SEO.md`,
@@ -90,28 +103,34 @@ Console setup steps that need Daniel's login live in `SEO.md`.
 
 ## Conventions
 
-- Code is separated into `index.html`, `style.css`, and `script.js`.
-- **Banded sections** — add `class="banded"` to alternate section backgrounds. Currently: Tech stack, BookList4U, CanonTrails, Animaruni, BestScreenTester, and Honest MRR are banded. Preserve the every-other-section rhythm when reordering.
-- **Mockups** use dark gradient backgrounds with warm-toned radial circles. Project screenshots are served as
-  1200px WebP from `images/` via `<img class="mockup-img">` inside `.mockup` containers. Full-resolution PNG
-  sources live in `images/originals/` and are stripped at deploy — rebuild with
+- Code is separated into `index.html`, `style.css`, and `script.js`. `donate.html` and `404.html` use `style.css`
+  only (no script); `404.html` uses absolute paths because GitHub Pages serves it at any depth.
+- **Project rows are static HTML**, not rendered by JS, so crawlers and no-JS visitors see every project.
+  `script.js` only adds behaviour (expand/collapse, filters, bulk buttons, live checks, scrollspy) and returns early
+  on pages without `#svc-list`.
+- **Live checks** are one `fetch(..., {mode: 'no-cors'})` per row with a `data-domain`, from the visitor's browser,
+  labelled as such. Never show uptime %, request counts, or any number that isn't measured on the spot.
+- **Screenshots** are served as 1200px WebP from `images/` (row thumbnails and the expanded detail). Full-resolution
+  PNG sources (3456×1920) live in `images/originals/` and are stripped at deploy — rebuild with
   `cwebp -q 82 -resize 1200 0 -m 6 images/originals/NAME.png -o images/NAME.webp`, then update the `<img>`
-  `width`/`height` to the WebP's real size.
-- **Feature rows** alternate mockup-left vs mockup-right for rhythm; preserve alternation when reordering or adding projects.
-- **Stack cards** are glass-effect with per-card `--card-color` / `--card-glow` via `:nth-child(N)` rules. Each card has a gradient top bar, radial glow, hover lift, and tinted tag hover shadows. When adding/removing cards, re-check the nth-child rules so each card keeps a distinct color.
-- **Mockup date overlay** — each `.mockup` holds a `<span class="mockup-date">Created: Month Year</span>`
-  that fades in on hover. These are **creation** dates, not last-updated: they come from the first commit
-  in each project's repo under `~/Codes` (NELA has no repo — its date is the Raydium pool creation,
-  2026-03-10, on-chain; Honest MRR shows its launch month, October 2026 — live on honestmrr.com 2026-10-07 —
-  at Daniel's request, though its first commit is July 2026). Don't hand-edit them to "look recent";
-  they're a build log, not a changelog.
-- **Tags** use `<span class="tag">`; keep them short (ideally ≤3 words).
-- **Project blurbs** are two or three sentences that open with a concrete number where one exists. Each row ends in a `.project-links` wrapper: the site link first, then store links (App Store, Google Play, ONE store) and "Source on GitHub" only for repos that are public (currently `bestscreentester`, `maxcandela`, `my_portfolio`).
+  `width`/`height` to the WebP's real size. `my_website_image` and `og-image.jpg` show this site, so re-capture
+  them after a visible redesign.
+- **Created** dates in the table are **creation** dates, not last-updated: they come from the first commit in each
+  project's repo under `~/Codes` (NELA has no repo — its date is the Raydium pool creation, 2026-03-10, on-chain;
+  Honest MRR shows its launch month, October 2026 — live on honestmrr.com 2026-10-07 — at Daniel's request, though
+  its first commit is July 2026). Don't hand-edit them to "look recent".
+- **Highlights** (the table's second column) are one short real number or fact per project. Blurbs in the expanded
+  row are two or three sentences that open with a concrete number where one exists. Each detail ends in `.d-links`:
+  the site link first (primary), then store links (App Store, Google Play, ONE store, Mac App Store) and "Source on
+  GitHub" only for repos that are public (currently `bestscreentester`, `maxcandela`, `my_portfolio`).
 - **Donate icons** are self-hosted in `images/donate/` — don't hotlink third-party CDNs.
-- **Email** is assembled in `script.js` to keep it away from scrapers, so it must not appear in the HTML or the JSON-LD.
-- **Eyebrows** are pill-shaped (gradient bg + border) — use them above every section heading and project title for consistency.
-- Layout collapses 3→2→1 columns at 960px and 760px. Below 760px the nav wraps: brand + primary CTA on the first row, the section links on a second row (`.nav-left { display: contents }`).
-- **Accessibility** — Use `aria-label` for navigation and interactive elements. Maintain visible `:focus-visible` states for keyboard navigation.
+- **Email** is assembled in `script.js` (`[data-email-text]`, `[data-contact="email"]` with copy-to-clipboard) to keep
+  it away from scrapers, so it must not appear in the HTML or the JSON-LD.
+- Breakpoints: 1180px (Created column hides), 1080px (architecture SVG → lane cards), 980px (hero and grids stack),
+  880px (table rows become cards), 760px (phone spacing, header simplifies). Check 1440px and 390px with zero
+  horizontal overflow.
+- **Accessibility** — skip link, `aria-expanded`/`aria-controls` on rows, `aria-pressed` on filters and Open all,
+  visible `:focus-visible` rings, and `prefers-reduced-motion` turns off animation (including the SVG flow dots).
 
 ## External links (keep in sync)
 
@@ -143,7 +162,7 @@ If these change, update both the contact section and the footer.
 ### Nice-to-have
 12. [x] **Accessibility** — add `aria-label` on nav links, verify contrast ratios, keyboard tab order
 13. [x] **Interactive Project Filtering** — Add category filters (Mobile, Web, Web3) to the projects section.
-14. [x] **Scroll-to-Top & Reading Progress** — Add a subtle reading progress bar or back-to-top button.
+14. [x] **Scroll-to-Top & Reading Progress** — Add a subtle reading progress bar or back-to-top button. (Removed in the 2026-11-28 Ops Console redesign; the sticky header tabs replace it.)
 15. [x] **Performance Optimization** — lazy loading, async decoding, intrinsic `width`/`height`, and 1200px WebP screenshots (12.1 MB -> 260 KB).
 16. [x] **Micro-interactions** — Add hover effects to cards and "copy to clipboard" for email.
 17. [x] **SEO & crawler setup** — JSON-LD structured data, image sitemap, 404 page, IndexNow, deploy-time file stripping. Console verification steps are in `SEO.md`.

@@ -8,7 +8,7 @@
     <title>Support My Work — Donate | Daniel Kim</title>
     <meta name="description" content="Help keep CanonTrails, BookList4U, BestScreenTester and my other projects free and ad-light. Support via Ko-fi, Buy Me a Coffee, or Patreon — or just share them.">
     <meta name="author" content="Daniel Kim">
-    <meta name="theme-color" content="#0f1117">
+    <meta name="theme-color" content="#0b0c0e">
     <link rel="canonical" href="https://nelera.net/donate.html">
 
     <!-- Crawler directives -->
@@ -44,6 +44,9 @@
     <meta name="twitter:image:alt" content="Daniel Kim's portfolio — share card for the Support My Work page.">
 
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -93,164 +96,138 @@
     </script>
 </head>
 <body>
-    <div id="progress-bar"></div>
-    <div class="page">
-        <!-- Nav -->
-        <nav class="nav" aria-label="Main navigation">
-            <div class="nav-left">
-                <a class="brand" href="index.html" aria-label="Daniel Kim - Home"><img src="/favicon-96.png" alt="Daniel Kim logo" class="brand-mark" width="32" height="32" loading="eager" fetchpriority="high" decoding="async">Daniel Kim</a>
-                <div class="nav-links">
-                    <a href="index.html#about" aria-label="About Daniel Kim">About</a>
-                    <a href="index.html#projects" aria-label="View my projects">Projects</a>
-                    <a href="index.html#stack" aria-label="View my tech stack">Stack</a>
-                    <a href="index.html#contact" aria-label="Go to contact section">Contact</a>
-                    <a href="donate.html" class="active" aria-label="Donate page">Donate</a>
-                </div>
-            </div>
-            <a href="index.html#contact" class="btn btn-primary" aria-label="Contact Daniel Kim">Get in touch</a>
-        </nav>
+<a class="skip" href="#main">Skip to content</a>
 
-        <!-- Hero -->
-        <section class="hero">
-            <div class="hero-centered">
-                <span class="eyebrow">Donate</span>
-                <h1>Keep my projects free.</h1>
-                <p>CanonTrails, BookList4U, BestScreenTester, and Animaruni are built with care and run without paywalls. If you find them useful, consider supporting so I can keep the servers running and keep improving them.</p>
-            </div>
-        </section>
-
-        <!-- Where your support goes -->
-        <section class="banded">
-            <div class="section-head">
-                <span class="eyebrow">Impact</span>
-                <h2>Where your support goes</h2>
-                <p>Every contribution directly supports domain fees, server infrastructure, and development time.</p>
-            </div>
-            <div class="donate-grid">
-                <div class="donate-card">
-                    <div class="donate-card-icon" style="background: rgba(234, 88, 12, 0.12); color: var(--primary);">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
-                    </div>
-                    <h3>Hosting &amp; Infrastructure</h3>
-                    <p>Servers, databases, CDN, and domain costs to keep all sites fast, secure, and available worldwide 24/7.</p>
-                </div>
-                <div class="donate-card">
-                    <div class="donate-card-icon" style="background: rgba(167, 139, 250, 0.12); color: #a78bfa;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    </div>
-                    <h3>Development</h3>
-                    <p>New features, bug fixes, and continuous maintenance — including user accounts, search improvements, and open-source tools.</p>
-                </div>
-                <div class="donate-card">
-                    <div class="donate-card-icon" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
-                    </div>
-                    <h3>Curation Time</h3>
-                    <p>Researching and verifying canonical orders, book series lists, screen test suites, and data accuracy across all platforms.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ways to support -->
-        <section>
-            <div class="section-head">
-                <span class="eyebrow">Support</span>
-                <h2>Choose how you'd like to help</h2>
-                <p>Select your preferred platform below to send a one-time or recurring donation.</p>
-            </div>
-            <div class="ways-list">
-                <!-- Ko-fi -->
-                <a href="https://ko-fi.com/nelera" target="_blank" rel="noopener noreferrer" class="way-card way-card-kofi">
-                    <div class="way-icon-wrapper">
-                        <img src="images/donate/kofi.png" alt="Ko-fi" width="40" height="40" style="object-fit: contain;">
-                    </div>
-                    <div class="way-info">
-                        <h3>Ko-fi</h3>
-                        <p>Support with a one-time or monthly donation</p>
-                    </div>
-                    <svg class="way-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
-
-                <!-- Buy Me a Coffee -->
-                <a href="https://buymeacoffee.com/nelera" target="_blank" rel="noopener noreferrer" class="way-card way-card-bmc">
-                    <div class="way-icon-wrapper">
-                        <img src="images/donate/buymeacoffee.svg" alt="Buy Me a Coffee" width="40" height="40" style="object-fit: contain;">
-                    </div>
-                    <div class="way-info">
-                        <h3>Buy Me a Coffee</h3>
-                        <p>Buy a coffee to show your support</p>
-                    </div>
-                    <svg class="way-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
-
-                <!-- Patreon -->
-                <a href="https://patreon.com/nelera" target="_blank" rel="noopener noreferrer" class="way-card way-card-patreon">
-                    <div class="way-icon-wrapper">
-                        <img src="images/donate/patreon.png" alt="Patreon" width="40" height="40" style="object-fit: contain;">
-                    </div>
-                    <div class="way-info">
-                        <h3>Patreon</h3>
-                        <p>Become a patron and support ongoing development</p>
-                    </div>
-                    <svg class="way-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
-            </div>
-        </section>
-
-        <!-- Other ways to help -->
-        <section class="banded">
-            <div class="section-head">
-                <span class="eyebrow">Free Support</span>
-                <h2>No budget? No problem</h2>
-                <p>There are plenty of non-monetary ways to help keep my projects growing.</p>
-            </div>
-            <div class="other-ways-container">
-                <div class="other-way-item">
-                    <h3>Share my projects</h3>
-                    <p>Tell a friend, post on social media, or link to CanonTrails, BookList4U, BestScreenTester, or Animaruni from a forum. Word of mouth is the best support.</p>
-                </div>
-                <div class="other-way-item">
-                    <h3>Use buy links</h3>
-                    <p>When you purchase games or books through affiliate links on CanonTrails or BookList4U, I earn a small commission at no extra cost to you.</p>
-                </div>
-                <div class="other-way-item">
-                    <h3>Report errors &amp; bugs</h3>
-                    <p>Spot something wrong or broken? Let me know on GitHub or via email. Accurate data is the backbone of these archives.</p>
-                </div>
-                <div class="other-way-item">
-                    <h3>Suggest improvements</h3>
-                    <p>Ideas for features, UI refinements, or new project concepts are always welcome. Every suggestion helps shape the roadmap.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Thank you -->
-        <section>
-            <div class="thank-you-box">
-                <svg class="thank-you-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                <h2 style="font-size: 28px; font-weight: 800; color: var(--text); margin-bottom: 12px;">Thank you.</h2>
-                <p style="color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0;">Whether you donate, share, or just use my projects to find your next adventure — you're helping keep this work alive. I appreciate every one of you.</p>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-inner">
-                <a class="brand" href="index.html"><img src="/favicon-96.png" alt="Daniel Kim logo" class="brand-mark" width="32" height="32" loading="lazy" decoding="async">Daniel Kim</a>
-                <div class="footer-links">
-                    <a href="index.html#projects">Projects</a>
-                    <a href="index.html#contact">Contact</a>
-                    <a href="donate.html" class="active">Donate</a>
-                    <a href="https://github.com/dkim0910" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 Daniel Kim. HTML / CSS / JavaScript.</span>
-            </div>
-        </footer>
+<header class="hdr">
+  <div class="wrap">
+    <div class="bar">
+      <a class="crumb" href="/" aria-label="Daniel Kim — home">
+        <img src="/favicon-96.png" alt="" width="24" height="24">
+        <span class="who">daniel-kim</span>
+        <span class="slash" aria-hidden="true">/</span>
+        <span class="env-name">donate</span>
+      </a>
+      <div class="bar-right">
+        <a class="btn btn-sm" href="https://github.com/dkim0910" target="_blank" rel="noopener" aria-label="GitHub profile (opens in a new tab)">GitHub</a>
+        <a class="btn btn-sm btn-primary" href="/Daniel_Kim_Resume.pdf" target="_blank" rel="noopener">Resume <span class="sr-only">(PDF, opens in a new tab)</span></a>
+      </div>
     </div>
-    <button id="scroll-top" aria-label="Scroll to top" title="Scroll to top">↑</button>
-    <script src="script.js"></script>
+    <div class="tabrow">
+      <nav class="tabs" aria-label="Sections">
+        <a href="/#overview">Overview</a>
+        <a href="/#services">Services</a>
+        <a href="/#architecture">Architecture</a>
+        <a href="/#runbook">Runbook</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="h-hero">
+    <div class="wrap">
+      <p class="kicker">Daniel Kim · donate</p>
+      <h1 id="h-hero">Keep my projects free.</h1>
+      <p class="lede">CanonTrails, BookList4U, BestScreenTester, and Animaruni are built with care and run without paywalls. If you find them useful, consider supporting so I can keep the servers running and keep improving them.</p>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-impact">
+    <div class="wrap">
+      <div class="sec-h">
+        <div>
+          <p class="sec-label">01 · impact</p>
+          <h2 id="h-impact">Where your support goes</h2>
+          <p class="sec-p">Every contribution directly supports domain fees, server infrastructure, and development time.</p>
+        </div>
+      </div>
+      <div class="panel cards">
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></div>
+          <h3>Hosting &amp; infrastructure</h3>
+          <p>Servers, databases, CDN, and domain costs to keep all sites fast, secure, and available worldwide 24/7.</p>
+        </article>
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h3>Development</h3>
+          <p>New features, bug fixes, and continuous maintenance — including user accounts, search improvements, and open-source tools.</p>
+        </article>
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg></div>
+          <h3>Curation time</h3>
+          <p>Researching and verifying canonical orders, book series lists, screen test suites, and data accuracy across all platforms.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-ways">
+    <div class="wrap">
+      <div class="sec-h">
+        <div>
+          <p class="sec-label">02 · support</p>
+          <h2 id="h-ways">Choose how you'd like to help</h2>
+          <p class="sec-p">Pick a platform below to send a one-time or recurring donation.</p>
+        </div>
+      </div>
+      <ul class="panel ways">
+        <li><a href="https://ko-fi.com/nelera" target="_blank" rel="noopener noreferrer">
+          <img src="images/donate/kofi.png" alt="" width="44" height="44">
+          <div><h3>Ko-fi</h3><p>Support with a one-time or monthly donation</p></div>
+          <span class="go">ko-fi.com/nelera ↗</span></a></li>
+        <li><a href="https://buymeacoffee.com/nelera" target="_blank" rel="noopener noreferrer">
+          <img src="images/donate/buymeacoffee.svg" alt="" width="44" height="44">
+          <div><h3>Buy Me a Coffee</h3><p>Buy a coffee to show your support</p></div>
+          <span class="go">buymeacoffee.com/nelera ↗</span></a></li>
+        <li><a href="https://patreon.com/nelera" target="_blank" rel="noopener noreferrer">
+          <img src="images/donate/patreon.png" alt="" width="44" height="44">
+          <div><h3>Patreon</h3><p>Become a patron and support ongoing development</p></div>
+          <span class="go">patreon.com/nelera ↗</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-free">
+    <div class="wrap">
+      <div class="sec-h">
+        <div>
+          <p class="sec-label">03 · free support</p>
+          <h2 id="h-free">No budget? No problem</h2>
+          <p class="sec-p">There are plenty of non-monetary ways to help keep my projects growing.</p>
+        </div>
+      </div>
+      <ol class="panel steps">
+        <li><span class="num">01</span><div><h3>Share my projects</h3><p>Tell a friend, post on social media, or link to CanonTrails, BookList4U, BestScreenTester, or Animaruni from a forum. Word of mouth is the best support.</p></div></li>
+        <li><span class="num">02</span><div><h3>Use buy links</h3><p>When you purchase games or books through affiliate links on CanonTrails or BookList4U, I earn a small commission at no extra cost to you.</p></div></li>
+        <li><span class="num">03</span><div><h3>Report errors &amp; bugs</h3><p>Spot something wrong or broken? Let me know on GitHub or via email. Accurate data is the backbone of these archives.</p></div></li>
+        <li><span class="num">04</span><div><h3>Suggest improvements</h3><p>Ideas for features, UI refinements, or new project concepts are always welcome. Every suggestion helps shape the roadmap.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-thanks">
+    <div class="wrap">
+      <div class="panel thanks">
+        <h2 id="h-thanks">Thank you.</h2>
+        <p>Whether you donate, share, or just use my projects to find your next adventure — you're helping keep this work alive. I appreciate every one of you.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <span>© 2026 Daniel Kim · <span class="mono">nelera.net</span></span>
+      <nav aria-label="Footer">
+        <a href="https://github.com/dkim0910" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/Daniel_Kim_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="donate.html" aria-current="page">Donate</a>
+      </nav>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

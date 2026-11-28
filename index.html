@@ -8,7 +8,7 @@
     <title>Daniel Kim — Full-Stack Software Engineer &amp; Product Builder</title>
     <meta name="description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, four Next.js sites, and a macOS utility. Flutter, Next.js, TypeScript, Postgres.">
     <meta name="author" content="Daniel Kim">
-    <meta name="theme-color" content="#0f1117">
+    <meta name="theme-color" content="#0b0c0e">
     <link rel="canonical" href="https://nelera.net/">
 
     <!-- Crawler directives -->
@@ -37,16 +37,19 @@
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Daniel Kim's portfolio homepage, showing the hero section and tech stack.">
+    <meta property="og:image:alt" content="Daniel Kim's portfolio homepage: the headline “I write the code, and I run the servers it lives on.” beside an availability panel.">
 
     <!-- Twitter / X (spec uses name=, not property=) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Daniel Kim — Full-Stack Software Engineer &amp; Product Builder">
     <meta name="twitter:description" content="Full-stack engineer shipping real products end to end — a Flutter dating app, a revenue-analytics SaaS, four Next.js sites, and a macOS utility.">
     <meta name="twitter:image" content="https://nelera.net/images/og-image.jpg">
-    <meta name="twitter:image:alt" content="Daniel Kim's portfolio homepage, showing the hero section and tech stack.">
+    <meta name="twitter:image:alt" content="Daniel Kim's portfolio homepage: the headline “I write the code, and I run the servers it lives on.” beside an availability panel.">
 
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -275,453 +278,414 @@
     </script>
 </head>
 <body>
-    <div id="progress-bar"></div>
-    <div class="page">
-        <!-- Nav -->
-        <nav class="nav" aria-label="Main navigation">
-            <div class="nav-left">
-                <a class="brand" href="#" aria-label="Daniel Kim - Home"><img src="/favicon-96.png" alt="Daniel Kim logo" class="brand-mark" width="32" height="32" loading="eager" fetchpriority="high" decoding="async">Daniel Kim</a>
-                <div class="nav-links">
-                    <a href="#about" aria-label="About Daniel Kim">About</a>
-                    <a href="#projects" aria-label="View my projects">Projects</a>
-                    <a href="#stack" aria-label="View my tech stack">Stack</a>
-                    <a href="#contact" aria-label="Go to contact section">Contact</a>
-                    <a href="donate.html" aria-label="Support my work">Donate</a>
-                </div>
-            </div>
-            <a href="#contact" class="btn btn-primary" aria-label="Contact Daniel Kim">Get in touch</a>
-        </nav>
+<a class="skip" href="#main">Skip to content</a>
 
-        <!-- Hero -->
-        <section class="hero">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <span class="eyebrow">Software Engineer</span>
-                    <h1>I design, build, ship, and run real products — end to end.</h1>
-                    <p>I'm a full-stack engineer who has shipped ten projects, including a Flutter dating app, a revenue-analytics SaaS, four Next.js sites, and a macOS utility. I write the code, run the servers, and handle the releases myself.</p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View my projects</a>
-                        <a href="/Daniel_Kim_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Resume (PDF)</a>
-                        <a href="#contact" class="btn btn-secondary">Contact me</a>
-                    </div>
-                </div>
-                <div class="hero-code">
-                    <div class="code-window">
-                        <div class="code-dots"><span></span><span></span><span></span></div>
-                        <div class="code-lang" id="codeLang">JavaScript</div>
-                        <pre class="code-body"><code id="codeBlock"></code></pre>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About -->
-        <section id="about">
-            <div class="about">
-                <div class="about-text">
-                    <span class="eyebrow">About</span>
-                    <h2>Hi, I'm Daniel.</h2>
-                    <p>I build products and I run the systems underneath them. Since September 2025 I've been the sole engineer behind the solo projects on this page — writing the code, and administering the Linux servers, Docker containers, Postgres databases, CI/CD pipelines, and DNS that keep them online.</p>
-                    <p>I also served nearly two years of Korean national service as a security officer at the Supreme Court of Korea, trusted to staff an access-control post alone. I'm now looking for a full-time role in software engineering or in infrastructure: data center, network, or cloud support.</p>
-                    <p class="about-actions"><a href="/Daniel_Kim_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download resume (PDF)</a></p>
-                </div>
-                <dl class="about-facts">
-                    <div><dt>Location</dt><dd>Seattle, WA — relocating January 2027</dd></div>
-                    <div><dt>Open to</dt><dd>Software engineering, and data center, network, or cloud support roles</dd></div>
-                    <div><dt>Education</dt><dd>B.S. Software Engineering, Western Governors University — starting March 2027</dd></div>
-                    <div><dt>Languages</dt><dd>English and Korean, both fluent</dd></div>
-                    <div><dt>Work authorization</dt><dd>U.S. citizen, no sponsorship needed</dd></div>
-                </dl>
-            </div>
-        </section>
-
-        <!-- Tech stack -->
-        <section id="stack" class="banded">
-            <div class="section-head">
-                <h2>Tech stack</h2>
-                <p>Tools and services I've used to ship and operate the projects below.</p>
-            </div>
-            <div class="stack-grid">
-                <div class="stack-card">
-                    <h3>Frontend</h3>
-                    <div class="tag-list">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">React</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Tailwind CSS</span>
-                        <span class="tag">HTML &amp; CSS</span>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <h3>Mobile</h3>
-                    <div class="tag-list">
-                        <span class="tag">Flutter</span>
-                        <span class="tag">Dart</span>
-                        <span class="tag">iOS</span>
-                        <span class="tag">Android</span>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <h3>Backend &amp; data</h3>
-                    <div class="tag-list">
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">Spring Boot</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Oracle DB</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">Firebase</span>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <h3>Cloud &amp; services</h3>
-                    <div class="tag-list">
-                        <span class="tag">Docker</span>
-                        <span class="tag">Cloudflare</span>
-                        <span class="tag">GitHub Actions</span>
-                        <span class="tag">Vercel</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">Google Analytics</span>
-                        <span class="tag">Google Search Console</span>
-                        <span class="tag">RevenueCat</span>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <h3>AI</h3>
-                    <div class="tag-list">
-                        <span class="tag">Claude</span>
-                        <span class="tag">Claude Code CLI</span>
-                        <span class="tag">GPT</span>
-                        <span class="tag">Gemini</span>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <h3>Design &amp; planning</h3>
-                    <div class="tag-list">
-                        <span class="tag">ERD</span>
-                        <span class="tag">Flow charts</span>
-                        <span class="tag">Sequence diagrams</span>
-                        <span class="tag">Wireframes</span>
-                        <span class="tag">SEO</span>
-                        <span class="tag">Solana / Web3</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured projects -->
-        <section id="projects">
-            <div class="section-head">
-                <h2>Featured projects</h2>
-                <p>Ten projects I've built and shipped — nine on my own and one with a team — including this site.</p>
-                <div class="filter-group" role="group" aria-label="Filter projects by category">
-                    <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-                    <button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
-                    <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
-                    <button type="button" class="filter-btn" data-filter="desktop" aria-pressed="false">Desktop</button>
-                    <button type="button" class="filter-btn" data-filter="web3" aria-pressed="false">Web3</button>
-                </div>
-            </div>
-
-            <!-- Geesly -->
-            <div class="feature-row" data-category="mobile">
-                <div class="feature-text">
-                    <span class="eyebrow">Project · Live · iOS &amp; Android</span>
-                    <h3>Geesly — Dating app</h3>
-                    <p>17,000+ downloads and a 4.5-star rating. A cross-platform dating app with real-time matching over Firestore, geospatial discovery, RevenueCat subscriptions, and Vision-API content moderation, localized in 9 languages. The hardest lesson has been distribution — shipping the app is only the first problem.</p>
-                    <div class="tag-list">
-                        <span class="tag">Flutter</span>
-                        <span class="tag">Dart</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">Firestore</span>
-                        <span class="tag">Cloud Functions</span>
-                        <span class="tag">RevenueCat</span>
-                        <span class="tag">FCM</span>
-                        <span class="tag">Google Vision API</span>
-                        <span class="tag">i18n (9 languages)</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://geesly.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit geesly.net →</a>
-                        <a href="https://apps.apple.com/app/id6756942405" class="btn btn-secondary" target="_blank" rel="noopener">App Store</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.geesly.blm" class="btn btn-secondary" target="_blank" rel="noopener">Google Play</a>
-                    </div>
-                </div>
-                <div class="mockup"><img src="images/geesly_image.webp" alt="Geesly dating app interface showing real-time matching and profile discovery on mobile" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: September 2025</span></div>
-            </div>
-        </section>
-
-        <section class="banded" data-category="web">
-            <!-- BookList4U -->
-            <div class="feature-row">
-                <div class="mockup"><img src="images/booklist4u_image.webp" alt="BookList4U homepage with the series search, the month's top books, and the latest books in ongoing series" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: February 2026</span></div>
-                <div class="feature-text">
-                    <span class="eyebrow">Project · Live</span>
-                    <h3>BookList4U — Book series, in order</h3>
-                    <p>95 hand-curated book series, each in publication order and in-world chronological order. Readers add community reading times and can generate new series through Google Books; NYT bestseller data and Amazon affiliate links round it out. Self-hosted in Docker with its own Postgres, deployed by GitHub Actions.</p>
-                    <div class="tag-list">
-                        <span class="tag">Next.js 16</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Tailwind CSS v4</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">GitHub Actions</span>
-                        <span class="tag">Google Books API</span>
-                        <span class="tag">NYT Books API</span>
-                        <span class="tag">SEO / Schema.org</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://booklist4u.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit booklist4u.com →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section data-category="web3">
-            <!-- NELA token -->
-            <div class="feature-row">
-                <div class="feature-text">
-                    <span class="eyebrow">Project · On-chain</span>
-                    <h3>NELA — Solana token</h3>
-                    <p>1 billion tokens minted on Solana with the mint and freeze authorities revoked, a Raydium pool seeded, and the LP tokens burned so the liquidity could never be pulled. Sniper bots bought about 70% of the supply in the second the pool opened, held it for two months, then sold it all at once and cut the price 98%. A roughly $500 lesson in how token launches actually get exploited.</p>
-                    <div class="tag-list">
-                        <span class="tag">Solana</span>
-                        <span class="tag">Raydium</span>
-                        <span class="tag">Web3</span>
-                        <span class="tag">DeFi</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://explorer.solana.com/address/4yrL8PiijG2SQr7PBTBLmq8A4SPihAHp38oCPb8WMNcJ" class="btn btn-secondary" target="_blank" rel="noopener">View on Solana Explorer →</a>
-                    </div>
-                </div>
-                <div class="mockup"><img src="images/Nelera_image.webp" alt="NELA/SOL price chart and liquidity pool on DexScreener in March 2026, before the sniper sell-off" class="mockup-img" loading="lazy" decoding="async" width="1200" height="669"><span class="mockup-date">Created: March 2026</span></div>
-            </div>
-        </section>
-
-        <section class="banded" data-category="web">
-            <!-- CanonTrails -->
-            <div class="feature-row">
-                <div class="mockup"><img src="images/canontrails_image.webp" alt="CanonTrails homepage with the headline &quot;Play it in the right order&quot; beside a featured Assassin's Creed series and its game trail" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: March 2026</span></div>
-                <div class="feature-text">
-                    <span class="eyebrow">Project · Live</span>
-                    <h3>CanonTrails — The right order to play any game series</h3>
-                    <p>95 game series and more than 2,100 games mapped into canonical play order, with DLC placement, branching timelines, and HowLongToBeat estimates per game version. Games import from IGDB with auto-detected entry types, and buy links route through affiliate stores. Self-hosted in Docker with its own Postgres behind Cloudflare, deployed by GitHub Actions.</p>
-                    <div class="tag-list">
-                        <span class="tag">Next.js 16</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Drizzle ORM</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Tailwind CSS v4</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">GitHub Actions</span>
-                        <span class="tag">IGDB + RAWG APIs</span>
-                        <span class="tag">HowLongToBeat</span>
-                        <span class="tag">CJ Affiliate</span>
-                        <span class="tag">SEO / Schema.org</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://canontrails.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit canontrails.com →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section data-category="web">
-            <!-- This website -->
-            <div class="feature-row">
-                <div class="feature-text">
-                    <span class="eyebrow">Project · You're looking at it</span>
-                    <h3>This portfolio</h3>
-                    <p>The site you're on right now. Written in clean HTML, CSS, and vanilla JavaScript with no frameworks or build tools. Dark theme, animated code showcase, glass-morphism cards, and a responsive layout that works from phone to ultrawide.</p>
-                    <div class="tag-list">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Responsive</span>
-                        <span class="tag">Zero-dependency</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://nelera.net" class="btn btn-secondary" target="_blank" rel="noopener">Visit nelera.net →</a>
-                        <a href="https://github.com/dkim0910/my_portfolio" class="btn btn-secondary" target="_blank" rel="noopener">Source on GitHub</a>
-                    </div>
-                </div>
-                <div class="mockup"><img src="images/my_website_image.webp" alt="Daniel Kim's portfolio homepage with the hero section and tech stack grid" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: April 2026</span></div>
-            </div>
-        </section>
-
-        <section class="banded" data-category="web">
-            <!-- Animaruni -->
-            <div class="feature-row">
-                <div class="mockup"><img src="images/animaruni_image.webp" alt="Animaruni homepage featuring the top trending anime with its score, episode count, and genres" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: May 2026</span></div>
-                <div class="feature-text">
-                    <span class="eyebrow">Project · Live</span>
-                    <h3>Animaruni — Track anime and find that opening song</h3>
-                    <p>Track, score, and favourite anime, get recommendations modelled on your own library, and look up any show's opening and ending theme songs. Catalog data comes from the AniList GraphQL API through a throttled layer, and theme songs from AnimeThemes. Self-hosted in Docker with its own Postgres; a deploy only runs after CI passes.</p>
-                    <div class="tag-list">
-                        <span class="tag">Next.js 16</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Tailwind CSS v4</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Auth.js</span>
-                        <span class="tag">AniList GraphQL</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">GitHub Actions</span>
-                        <span class="tag">Vitest</span>
-                        <span class="tag">SEO / Schema.org</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://animaruni.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit animaruni.com →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section data-category="web">
-            <!-- Runnertic -->
-            <div class="feature-row">
-                <div class="feature-text">
-                    <span class="eyebrow">Team project · Live · Web &amp; iOS</span>
-                    <h3>Runnertic — Running courses and photo spots</h3>
-                    <p>A Korean running service built with a small team: find running courses and photo spots on a map, record a run live, and share it with the community. My part covered the home page, community posts with reports and operator moderation, SEO, Sign in with Apple, a Cloud KMS envelope for the key that encrypts personal data fields, and the iOS App Store release. The web app runs on Next.js with Firestore behind it, alongside a native iOS app on the App Store and an Android release on ONE store.</p>
-                    <div class="tag-list">
-                        <span class="tag">Next.js 16</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">MUI</span>
-                        <span class="tag">Firebase Auth</span>
-                        <span class="tag">Firestore</span>
-                        <span class="tag">Cloud KMS</span>
-                        <span class="tag">Swift / iOS</span>
-                        <span class="tag">Vitest</span>
-                        <span class="tag">Team project</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://runnertic.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit runnertic.com →</a>
-                        <a href="https://apps.apple.com/kr/app/runnertic/id6797750002" class="btn btn-secondary" target="_blank" rel="noopener">App Store</a>
-                        <a href="https://onesto.re/0001008762" class="btn btn-secondary" target="_blank" rel="noopener">ONE store</a>
-                    </div>
-                </div>
-                <div class="mockup"><img src="images/runnertic_image.webp" alt="Runnertic homepage in Korean with app store buttons and a running course shown on a map" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: June 2026</span></div>
-            </div>
-        </section>
-
-        <section class="banded" data-category="web">
-            <!-- BestScreenTester -->
-            <div class="feature-row">
-                <div class="mockup"><img src="images/bestscreentester_image.webp" alt="BestScreenTester homepage showing the suite of browser-based monitor and screen tests" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: June 2026</span></div>
-                <div class="feature-text">
-                    <span class="eyebrow">Project · Live</span>
-                    <h3>BestScreenTester — A full suite of browser screen tests</h3>
-                    <p>27 free screen tests in seven languages — dead pixels, backlight bleed, refresh rate, PWM flicker, HDR, and more — plus 40+ guides. Fully static and 100% client-side using the Fullscreen API, Wake Lock, and Canvas: no accounts, no backend.</p>
-                    <div class="tag-list">
-                        <span class="tag">Next.js 16</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Tailwind CSS v4</span>
-                        <span class="tag">MDX</span>
-                        <span class="tag">i18n (7 languages)</span>
-                        <span class="tag">Canvas / Fullscreen API</span>
-                        <span class="tag">Static export</span>
-                        <span class="tag">GitHub Pages</span>
-                        <span class="tag">SEO / Schema.org</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://bestscreentester.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit bestscreentester.com →</a>
-                        <a href="https://github.com/dkim0910/bestscreentester" class="btn btn-secondary" target="_blank" rel="noopener">Source on GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section data-category="desktop">
-            <!-- MaxCandela -->
-            <div class="feature-row">
-                <div class="feature-text">
-                    <span class="eyebrow">Project · Live · macOS</span>
-                    <h3>MaxCandela — A menu-bar toolbox for Mac</h3>
-                    <p>27 Mac tools behind one menu-bar icon. Fourteen are free, including Keep Awake, focus sessions, break reminders, and clipboard tools; Pro adds screenshots with markup, on-device text capture, a clipboard manager, per-app volume, and an XDR brightness boost that takes MacBook Pro displays past the roughly 600 nits macOS allows everyday content. Native Swift and AppKit, sold on the Mac App Store at $0.99 a month or $9.99 once after a free trial.</p>
-                    <div class="tag-list">
-                        <span class="tag">Swift</span>
-                        <span class="tag">AppKit</span>
-                        <span class="tag">Metal / EDR</span>
-                        <span class="tag">ScreenCaptureKit</span>
-                        <span class="tag">Vision OCR</span>
-                        <span class="tag">Core Audio</span>
-                        <span class="tag">StoreKit 2</span>
-                        <span class="tag">App Intents</span>
-                        <span class="tag">Mac App Store</span>
-                        <span class="tag">Next.js 16</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://maxcandela.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit maxcandela.com →</a>
-                        <a href="https://apps.apple.com/app/id6792267034?mt=12" class="btn btn-secondary" target="_blank" rel="noopener">Mac App Store</a>
-                        <a href="https://github.com/dkim0910/maxcandela" class="btn btn-secondary" target="_blank" rel="noopener">Source on GitHub</a>
-                    </div>
-                </div>
-                <div class="mockup"><img src="images/maxcandela_image.webp" alt="MaxCandela home page with the headline &quot;27 Mac tools. One menu-bar icon.&quot; beside the app's open menu of display controls and tools" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: July 2026</span></div>
-            </div>
-        </section>
-
-        <section class="banded" data-category="web">
-            <!-- Honest MRR -->
-            <div class="feature-row">
-                <div class="mockup"><img src="images/honestmrr_image.webp" alt="Honest MRR landing page with the headline &quot;MRR you can defend.&quot; beside a sample monthly MRR receipt" class="mockup-img" loading="lazy" decoding="async" width="1200" height="667"><span class="mockup-date">Created: October 2026</span></div>
-                <div class="feature-text">
-                    <span class="eyebrow">Project · Live · SaaS</span>
-                    <h3>Honest MRR — Revenue metrics you can audit</h3>
-                    <p>Nine billing providers, including Stripe, Paddle, and RevenueCat, feed one ledger of MRR movements for MRR, churn, LTV, and cohort retention; ad spend, app-store reports, and traffic sit alongside it without ever counting as MRR. Every MRR movement opens to its ledger entry and the provider's own record, each billing record joins a per-tenant hash chain, and founders send investors monthly PDF statements or expiring share links. Self-hosted in Docker behind Postgres row-level security; unit, integration, and Playwright suites must pass before a deploy runs.</p>
-                    <div class="tag-list">
-                        <span class="tag">Next.js 16</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Drizzle ORM</span>
-                        <span class="tag">PostgreSQL + RLS</span>
-                        <span class="tag">Better Auth</span>
-                        <span class="tag">Stripe API</span>
-                        <span class="tag">OAuth</span>
-                        <span class="tag">Tailwind CSS v4</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Playwright</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://honestmrr.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit honestmrr.com →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-            <div class="contact">
-                <h2>Let's build something together.</h2>
-                <p>I'm open to full-time roles and interesting freelance work.</p>
-                <div class="contact-actions">
-                    <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener" class="btn btn-primary">Message me on LinkedIn</a>
-                    <a href="#" class="btn btn-secondary" data-contact="email">Email me</a>
-                    <a href="/Daniel_Kim_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Resume (PDF)</a>
-                    <a href="https://github.com/dkim0910" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-inner">
-                <a class="brand" href="#"><img src="/favicon-96.png" alt="Daniel Kim logo" class="brand-mark" width="32" height="32" loading="lazy" decoding="async">Daniel Kim</a>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                    <a href="donate.html">Donate</a>
-                    <a href="https://github.com/dkim0910" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 Daniel Kim. HTML / CSS / JavaScript.</span>
-            </div>
-        </footer>
+<header class="hdr">
+  <div class="wrap">
+    <div class="bar">
+      <a class="crumb" href="#overview" aria-label="Daniel Kim — back to top">
+        <img src="/favicon-96.png" alt="" width="24" height="24">
+        <span class="who">daniel-kim</span>
+        <span class="slash" aria-hidden="true">/</span>
+        <span class="env-name">production</span>
+        <span class="env">10 services</span>
+      </a>
+      <div class="bar-right">
+        <a class="btn btn-sm" href="https://github.com/dkim0910" target="_blank" rel="noopener" aria-label="GitHub profile (opens in a new tab)">GitHub</a>
+        <a class="btn btn-sm btn-primary" href="/Daniel_Kim_Resume.pdf" target="_blank" rel="noopener">Resume <span class="sr-only">(PDF, opens in a new tab)</span></a>
+      </div>
     </div>
-    <button id="scroll-top" aria-label="Scroll to top" title="Scroll to top">↑</button>
-    <script src="script.js"></script>
+    <div class="tabrow">
+      <nav class="tabs" aria-label="Sections">
+        <a href="#overview" aria-current="true">Overview</a>
+        <a href="#services">Services</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#runbook">Runbook</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="live" aria-live="polite"><span class="dot checking" data-live-dot></span><span><b data-live-count>–/9</b> domains reachable</span></div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ======================= OVERVIEW ======================= -->
+  <section class="hero" id="overview" aria-labelledby="h-hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Daniel Kim · Full-stack software engineer</p>
+          <h1 id="h-hero">I write the code, <span>and I run the servers it lives on.</span></h1>
+          <p class="lede">Since September 2025 I've shipped <strong>ten projects</strong> — nine on my own, one with a team — across iOS, Android, macOS, and the web. On the solo ones I also administer the <strong>Linux servers, Docker containers, Postgres databases, CI/CD pipelines, and DNS</strong> that keep them online.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/Daniel_Kim_Resume.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Resume (PDF)</a>
+            <a class="btn" href="#contact" data-contact="email"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="m2.5 4.5 5.5 4 5.5-4" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg><span data-label>Copy email</span></a>
+            <a class="btn" href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+
+        <aside class="panel avail" aria-labelledby="h-avail">
+          <div class="avail-h"><span id="h-avail">availability</span><span class="open"><span class="dot ok"></span>Open to work</span></div>
+          <dl class="kv">
+            <div><dt>roles</dt><dd>Software engineering<small>Data center, network, or cloud support</small></dd></div>
+            <div><dt>authorization</dt><dd>U.S. citizen<small>No sponsorship needed</small></dd></div>
+            <div><dt>location</dt><dd>Seattle, WA<small>Relocating January 2027</small></dd></div>
+            <div><dt>languages</dt><dd>English and Korean, both fluent</dd></div>
+            <div><dt>education</dt><dd>B.S. Software Engineering, WGU<small>Starting March 2027</small></dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="panel stats" role="list" aria-label="Summary">
+        <div class="stat" role="listitem"><div class="stat-v">10</div><div class="stat-l">Projects shipped</div><div class="stat-s">9 solo · 1 team</div></div>
+        <div class="stat" role="listitem"><div class="stat-v">4</div><div class="stat-l">Self-hosted apps</div><div class="stat-s">Docker + PostgreSQL</div></div>
+        <div class="stat" role="listitem"><div class="stat-v">3</div><div class="stat-l">Apps in stores</div><div class="stat-s">iOS, Android, macOS</div></div>
+        <div class="stat" role="listitem"><div class="stat-v">17,000+</div><div class="stat-l">Geesly downloads</div><div class="stat-s">4.5-star rating</div></div>
+        <div class="stat" role="listitem"><div class="stat-v"><span class="dot checking" data-live-dot></span><span data-live-count>–/9</span></div><div class="stat-l">Domains reachable now</div><div class="stat-s">checked from your browser</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SERVICES ======================= -->
+  <section class="sec" id="services" aria-labelledby="h-services">
+    <div class="wrap">
+      <div class="sec-h">
+        <div>
+          <p class="sec-label">01 · services</p>
+          <h2 id="h-services">Everything I've shipped, and where it runs</h2>
+          <p class="sec-p">In the order I built them, oldest first. Open a row for the screenshot, what it does, and its links. The status column is a real request from your browser to each public domain, made when this page loaded.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="seg" role="group" aria-label="Filter services">
+          <button type="button" data-filter="all" aria-pressed="true">All <span class="n">10</span></button>
+          <button type="button" data-filter="self" aria-pressed="false">Self-hosted <span class="n">4</span></button>
+          <button type="button" data-filter="static" aria-pressed="false">Static <span class="n">2</span></button>
+          <button type="button" data-filter="firebase" aria-pressed="false">Firebase <span class="n">2</span></button>
+          <button type="button" data-filter="store" aria-pressed="false">App stores <span class="n">3</span></button>
+          <button type="button" data-filter="chain" aria-pressed="false">On-chain <span class="n">1</span></button>
+        </div>
+        <div class="checked"><span data-checked-at>Checking from your browser…</span><button type="button" class="btn btn-sm" data-recheck>
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v2.8h-2.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Re-check</button></div>
+      </div>
+
+      <div class="svc-table">
+        <div class="svc-bar">
+          <span class="svc-count" data-count aria-live="polite"><b>10</b> services</span>
+          <div class="bulk">
+            <button type="button" class="btn btn-sm" data-expand-all aria-pressed="false" aria-controls="svc-list">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 4.5 4 4 4-4M4 8.5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-label>Open all</span></button>
+            <button type="button" class="btn btn-sm" data-open-tabs>
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-label>Open all in tabs</span></button>
+          </div>
+          <p class="bulk-note" data-bulk-note role="status"></p>
+        </div>
+        <div class="svc-head cols" aria-hidden="true">
+          <span>Service</span><span>Highlight</span><span>Runtime</span><span>Delivery</span><span class="h-cr">Created</span><span>Status</span><span></span>
+        </div>
+        <div id="svc-list">
+          <article class="svc" data-id="geesly" data-domain="geesly.net" data-tags="firebase store"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-geesly"><span class="c-svc"><img class="thumb" src="images/geesly_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">Geesly</span><span class="svc-sub">geesly.net</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>17,000+ downloads</span><span class="c-rt"><span class="lbl">Runtime</span>Flutter · Firebase</span><span class="c-dl"><span class="lbl">Delivery</span>App Store · Google Play</span><span class="c-cr"><span class="lbl">Created</span>Sep 2025</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="geesly"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-geesly" hidden><figure class="shot"><img src="images/geesly_image.webp" alt="Geesly dating app interface showing real-time matching and profile discovery on mobile" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">Geesly</h3><p class="d-sum">A cross-platform dating app</p><p class="d-blurb">17,000+ downloads and a 4.5-star rating. Real-time matching over Firestore, geospatial discovery, RevenueCat subscriptions, and Vision-API content moderation, localized in 9 languages. The hardest lesson has been distribution — shipping the app is only the first problem.</p><dl class="d-kv"><dt>stack</dt><dd>Flutter · Dart · Firestore · Cloud Functions · RevenueCat · Google Vision API</dd><dt>created</dt><dd>Sep 2025</dd><dt>platform</dt><dd>iOS · Android</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://geesly.net" target="_blank" rel="noopener">Visit geesly.net<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-sm" href="https://apps.apple.com/app/id6756942405" target="_blank" rel="noopener">App Store<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.geesly.blm" target="_blank" rel="noopener">Google Play<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="booklist4u" data-domain="booklist4u.com" data-tags="self"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-booklist4u"><span class="c-svc"><img class="thumb" src="images/booklist4u_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">BookList4U</span><span class="svc-sub">booklist4u.com</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>95 curated series</span><span class="c-rt"><span class="lbl">Runtime</span>Docker · Postgres</span><span class="c-dl"><span class="lbl">Delivery</span>GitHub Actions</span><span class="c-cr"><span class="lbl">Created</span>Feb 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="booklist4u"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-booklist4u" hidden><figure class="shot"><img src="images/booklist4u_image.webp" alt="BookList4U homepage with the series search, the month’s top books, and the latest books in ongoing series" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">BookList4U</h3><p class="d-sum">Book series, in order</p><p class="d-blurb">95 hand-curated book series, each in publication order and in-world chronological order. Readers add community reading times and can generate new series through Google Books; NYT bestseller data and Amazon affiliate links round it out. Self-hosted in Docker with its own Postgres, deployed by GitHub Actions.</p><dl class="d-kv"><dt>stack</dt><dd>Next.js 16 · TypeScript · PostgreSQL · Docker · Google Books API · NYT Books API</dd><dt>created</dt><dd>Feb 2026</dd><dt>platform</dt><dd>Web</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://booklist4u.com" target="_blank" rel="noopener">Visit booklist4u.com<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="nela" data-tags="chain"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-nela"><span class="c-svc"><img class="thumb" src="images/Nelera_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">NELA</span><span class="svc-sub">mint 4yrL…MNcJ</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>1B supply · LP burned</span><span class="c-rt"><span class="lbl">Runtime</span>Solana · Raydium pool</span><span class="c-dl"><span class="lbl">Delivery</span>On-chain</span><span class="c-cr"><span class="lbl">Created</span>Mar 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="chain"><span class="dia"></span>On-chain</span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-nela" hidden><figure class="shot"><img src="images/Nelera_image.webp" alt="NELA/SOL price chart and liquidity pool on DexScreener in March 2026, before the sniper sell-off" width="1200" height="669" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">NELA</h3><p class="d-sum">A Solana token, launched end to end</p><p class="d-blurb">1 billion tokens minted on Solana with the mint and freeze authorities revoked, a Raydium pool seeded, and the LP tokens burned so the liquidity could never be pulled. Sniper bots bought about 70% of the supply in the second the pool opened, held it for two months, then sold it all at once and cut the price 98%. A roughly $500 lesson in how token launches actually get exploited.</p><dl class="d-kv"><dt>stack</dt><dd>Solana · Raydium</dd><dt>created</dt><dd>Mar 2026</dd><dt>platform</dt><dd>Solana</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://explorer.solana.com/address/4yrL8PiijG2SQr7PBTBLmq8A4SPihAHp38oCPb8WMNcJ" target="_blank" rel="noopener">View on Solana Explorer<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="canontrails" data-domain="canontrails.com" data-tags="self"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-canontrails"><span class="c-svc"><img class="thumb" src="images/canontrails_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">CanonTrails</span><span class="svc-sub">canontrails.com</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>2,100+ games</span><span class="c-rt"><span class="lbl">Runtime</span>Docker · Postgres · Cloudflare</span><span class="c-dl"><span class="lbl">Delivery</span>GitHub Actions</span><span class="c-cr"><span class="lbl">Created</span>Mar 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="canontrails"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-canontrails" hidden><figure class="shot"><img src="images/canontrails_image.webp" alt="CanonTrails homepage with the headline “Play it in the right order” beside a featured Assassin’s Creed series and its game trail" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">CanonTrails</h3><p class="d-sum">The right order to play any game series</p><p class="d-blurb">95 game series and more than 2,100 games mapped into canonical play order, with DLC placement, branching timelines, and HowLongToBeat estimates per game version. Games import from IGDB with auto-detected entry types, and buy links route through affiliate stores. Self-hosted in Docker with its own Postgres behind Cloudflare, deployed by GitHub Actions.</p><dl class="d-kv"><dt>stack</dt><dd>Next.js 16 · TypeScript · Drizzle ORM · PostgreSQL · IGDB + RAWG APIs</dd><dt>created</dt><dd>Mar 2026</dd><dt>platform</dt><dd>Web</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://canontrails.com" target="_blank" rel="noopener">Visit canontrails.com<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="portfolio" data-domain="nelera.net" data-tags="static"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-portfolio"><span class="c-svc"><img class="thumb" src="images/my_website_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">nelera.net</span><span class="svc-sub">nelera.net</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>Zero dependencies</span><span class="c-rt"><span class="lbl">Runtime</span>Static HTML · CSS · JS</span><span class="c-dl"><span class="lbl">Delivery</span>GitHub Actions → Pages</span><span class="c-cr"><span class="lbl">Created</span>Apr 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="portfolio"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-portfolio" hidden><figure class="shot"><img src="images/my_website_image.webp" alt="The nelera.net homepage: headline, availability panel, and summary stats" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">nelera.net</h3><p class="d-sum">This portfolio</p><p class="d-blurb">Hand-written HTML, CSS, and vanilla JavaScript with no framework and no build step. A GitHub Actions workflow strips dev-only files before uploading to GitHub Pages, and the sitemap’s dates come from git history.</p><dl class="d-kv"><dt>stack</dt><dd>HTML · CSS · JavaScript · GitHub Actions · GitHub Pages</dd><dt>created</dt><dd>Apr 2026</dd><dt>platform</dt><dd>Web · this site</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://nelera.net" target="_blank" rel="noopener">Visit nelera.net<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-sm" href="https://github.com/dkim0910/my_portfolio" target="_blank" rel="noopener">Source on GitHub<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="animaruni" data-domain="animaruni.com" data-tags="self"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-animaruni"><span class="c-svc"><img class="thumb" src="images/animaruni_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">Animaruni</span><span class="svc-sub">animaruni.com</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>Theme-song lookup</span><span class="c-rt"><span class="lbl">Runtime</span>Docker · Postgres</span><span class="c-dl"><span class="lbl">Delivery</span>GitHub Actions · gated</span><span class="c-cr"><span class="lbl">Created</span>May 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="animaruni"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-animaruni" hidden><figure class="shot"><img src="images/animaruni_image.webp" alt="Animaruni homepage featuring the top trending anime with its score, episode count, and genres" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">Animaruni</h3><p class="d-sum">Track anime and find that opening song</p><p class="d-blurb">Track, score, and favourite anime, get recommendations modelled on your own library, and look up any show’s opening and ending theme songs. Catalog data comes from the AniList GraphQL API through a throttled layer, and theme songs from AnimeThemes. Self-hosted in Docker with its own Postgres; a deploy only runs after CI passes.</p><dl class="d-kv"><dt>stack</dt><dd>Next.js 16 · TypeScript · PostgreSQL · Auth.js · AniList GraphQL · Vitest</dd><dt>created</dt><dd>May 2026</dd><dt>platform</dt><dd>Web</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://animaruni.com" target="_blank" rel="noopener">Visit animaruni.com<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="runnertic" data-domain="runnertic.com" data-tags="firebase store"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-runnertic"><span class="c-svc"><img class="thumb" src="images/runnertic_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">Runnertic <span class="badge">team</span></span><span class="svc-sub">runnertic.com</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>Team project</span><span class="c-rt"><span class="lbl">Runtime</span>Next.js · Firestore</span><span class="c-dl"><span class="lbl">Delivery</span>App Store · ONE store</span><span class="c-cr"><span class="lbl">Created</span>Jun 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="runnertic"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-runnertic" hidden><figure class="shot"><img src="images/runnertic_image.webp" alt="Runnertic homepage in Korean with app store buttons and a running course shown on a map" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">Runnertic <span class="badge">team project</span></h3><p class="d-sum">Running courses and photo spots · built with a small team</p><p class="d-blurb">A Korean running service: find running courses and photo spots on a map, record a run live, and share it with the community. My part covered the home page, community posts with reports and operator moderation, SEO, Sign in with Apple, a Cloud KMS envelope for the key that encrypts personal data fields, and the iOS App Store release.</p><dl class="d-kv"><dt>stack</dt><dd>Next.js 16 · TypeScript · Firebase Auth · Firestore · Cloud KMS · Swift / iOS</dd><dt>created</dt><dd>Jun 2026</dd><dt>platform</dt><dd>Web · iOS · Android</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://runnertic.com" target="_blank" rel="noopener">Visit runnertic.com<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-sm" href="https://apps.apple.com/kr/app/runnertic/id6797750002" target="_blank" rel="noopener">App Store<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-sm" href="https://onesto.re/0001008762" target="_blank" rel="noopener">ONE store<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="bestscreentester" data-domain="bestscreentester.com" data-tags="static"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-bestscreentester"><span class="c-svc"><img class="thumb" src="images/bestscreentester_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">BestScreenTester</span><span class="svc-sub">bestscreentester.com</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>27 tests · 7 languages</span><span class="c-rt"><span class="lbl">Runtime</span>Static · 100% client-side</span><span class="c-dl"><span class="lbl">Delivery</span>GitHub Pages</span><span class="c-cr"><span class="lbl">Created</span>Jun 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="bestscreentester"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-bestscreentester" hidden><figure class="shot"><img src="images/bestscreentester_image.webp" alt="BestScreenTester homepage showing the suite of browser-based monitor and screen tests" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">BestScreenTester</h3><p class="d-sum">A full suite of browser screen tests</p><p class="d-blurb">27 free screen tests in seven languages — dead pixels, backlight bleed, refresh rate, PWM flicker, HDR, and more — plus 40+ guides. Fully static and 100% client-side using the Fullscreen API, Wake Lock, and Canvas: no accounts, no backend.</p><dl class="d-kv"><dt>stack</dt><dd>Next.js 16 · TypeScript · MDX · Canvas / Fullscreen API · Static export</dd><dt>created</dt><dd>Jun 2026</dd><dt>platform</dt><dd>Web</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://bestscreentester.com" target="_blank" rel="noopener">Visit bestscreentester.com<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-sm" href="https://github.com/dkim0910/bestscreentester" target="_blank" rel="noopener">Source on GitHub<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="maxcandela" data-domain="maxcandela.com" data-tags="store"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-maxcandela"><span class="c-svc"><img class="thumb" src="images/maxcandela_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">MaxCandela</span><span class="svc-sub">maxcandela.com</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>27 tools · 14 free</span><span class="c-rt"><span class="lbl">Runtime</span>Native Swift · AppKit</span><span class="c-dl"><span class="lbl">Delivery</span>Mac App Store</span><span class="c-cr"><span class="lbl">Created</span>Jul 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="maxcandela"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-maxcandela" hidden><figure class="shot"><img src="images/maxcandela_image.webp" alt="MaxCandela home page with the headline “27 Mac tools. One menu-bar icon.” beside the app’s open menu of display controls and tools" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">MaxCandela</h3><p class="d-sum">A menu-bar toolbox for Mac</p><p class="d-blurb">27 Mac tools behind one menu-bar icon. Fourteen are free, including Keep Awake, focus sessions, break reminders, and clipboard tools; Pro adds screenshots with markup, on-device text capture, a clipboard manager, per-app volume, and an XDR brightness boost that takes MacBook Pro displays past the roughly 600 nits macOS allows everyday content. Sold on the Mac App Store at $0.99 a month or $9.99 once after a free trial.</p><dl class="d-kv"><dt>stack</dt><dd>Swift · AppKit · Metal / EDR · ScreenCaptureKit · Vision OCR · StoreKit 2</dd><dt>created</dt><dd>Jul 2026</dd><dt>platform</dt><dd>macOS</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://maxcandela.com" target="_blank" rel="noopener">Visit maxcandela.com<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-sm" href="https://apps.apple.com/app/id6792267034?mt=12" target="_blank" rel="noopener">Mac App Store<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-sm" href="https://github.com/dkim0910/maxcandela" target="_blank" rel="noopener">Source on GitHub<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+          <article class="svc" data-id="honestmrr" data-domain="honestmrr.com" data-tags="self"><button type="button" class="svc-row cols" aria-expanded="false" aria-controls="d-honestmrr"><span class="c-svc"><img class="thumb" src="images/honestmrr_image.webp" alt="" width="56" height="36"><span class="svc-id"><span class="svc-name">Honest MRR</span><span class="svc-sub">honestmrr.com</span></span></span><span class="c-hl"><span class="lbl">Highlight</span>9 billing providers</span><span class="c-rt"><span class="lbl">Runtime</span>Docker · Postgres + RLS</span><span class="c-dl"><span class="lbl">Delivery</span>GitHub Actions · gated</span><span class="c-cr"><span class="lbl">Created</span>Oct 2026</span><span class="c-st"><span class="sr-only">Status: </span><span class="st" data-state="checking" data-st="honestmrr"><span class="dot checking"></span><span class="t">Checking…</span></span></span><span class="c-chev"><svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><div class="detail" id="d-honestmrr" hidden><figure class="shot"><img src="images/honestmrr_image.webp" alt="Honest MRR landing page with the headline “MRR you can defend.” beside a sample monthly MRR receipt" width="1200" height="667" loading="lazy" decoding="async"></figure><div class="d-body"><h3 class="d-title">Honest MRR</h3><p class="d-sum">Revenue metrics you can audit</p><p class="d-blurb">Nine billing providers, including Stripe, Paddle, and RevenueCat, feed one ledger of MRR movements for MRR, churn, LTV, and cohort retention. Every MRR movement opens to its ledger entry and the provider’s own record, each billing record joins a per-tenant hash chain, and founders send investors monthly PDF statements or expiring share links. Self-hosted in Docker behind Postgres row-level security; unit, integration, and Playwright suites must pass before a deploy runs.</p><dl class="d-kv"><dt>stack</dt><dd>Next.js 16 · TypeScript · Drizzle ORM · PostgreSQL + RLS · Better Auth · Playwright</dd><dt>created</dt><dd>Oct 2026</dd><dt>platform</dt><dd>Web · SaaS</dd></dl><div class="d-links"><a class="btn btn-sm btn-primary" href="https://honestmrr.com" target="_blank" rel="noopener">Visit honestmrr.com<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ARCHITECTURE ======================= -->
+  <section class="sec" id="architecture" aria-labelledby="h-arch">
+    <div class="wrap">
+      <div class="sec-h">
+        <div>
+          <p class="sec-label">02 · architecture</p>
+          <h2 id="h-arch">How it's wired</h2>
+          <p class="sec-p">Where each project runs and how it reaches people. The dots on each service are the same live checks as the table above.</p>
+        </div>
+      </div>
+
+      <div class="panel arch">
+        <svg viewBox="0 0 1160 644" role="img" aria-labelledby="arch-title arch-desc">
+          <title id="arch-title">Architecture of Daniel Kim's projects</title>
+          <desc id="arch-desc">Code lives on GitHub. GitHub Actions deploys four self-hosted apps (BookList4U, CanonTrails, Animaruni, Honest MRR), each a Next.js app with PostgreSQL in Docker, and deploys nelera.net to GitHub Pages. BestScreenTester is also on GitHub Pages. Cloudflare sits in front of CanonTrails. Geesly and Runnertic run on Firebase and Google Cloud and ship through the App Store, Google Play, and ONE store. MaxCandela is a native Swift app on the Mac App Store. NELA is a Solana token with a Raydium pool. Amazon Web Services (AWS) is marked as coming soon.</desc>
+          <defs>
+            <marker id="arw" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.5 L8 4 L0 7.5 z" fill="#5b636e"/></marker>
+            <marker id="arw-p" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.5 L8 4 L0 7.5 z" fill="#8a7444"/></marker>
+          </defs>
+
+          <!-- column labels -->
+          <text class="t-col" x="20" y="18">source</text>
+          <text class="t-col" x="230" y="18">ci / cd</text>
+          <text class="t-col" x="440" y="18">runtime</text>
+          <text class="t-col" x="920" y="18">edge &amp; release</text>
+
+          <!-- edges (under nodes) -->
+          <path class="e" d="M190 216 H230" marker-end="url(#arw)"/>
+          <path class="e" id="p-g1" d="M400 216 C 424 216, 416 129, 440 129" marker-end="url(#arw)"/>
+          <path class="e" id="p-pg" d="M400 216 C 430 216, 426 296, 456 296" marker-end="url(#arw)"/>
+          <path class="e e-proxy" d="M920 106 H844" marker-end="url(#arw-p)"/>
+          <path class="e e-rel" d="M844 414 C 882 414, 882 404, 920 404" marker-end="url(#arw)"/>
+          <path class="e e-rel" d="M844 414 C 882 414, 882 448, 920 448" marker-end="url(#arw)"/>
+          <path class="e e-rel" d="M844 470 C 882 470, 882 448, 920 448" marker-end="url(#arw)"/>
+          <path class="e e-rel" d="M844 470 C 882 470, 882 492, 920 492" marker-end="url(#arw)"/>
+          <path class="e e-rel" d="M844 588 H920" marker-end="url(#arw)"/>
+          <circle class="flow-dot" r="2.4"><animateMotion dur="1.6s" repeatCount="indefinite" path="M190 216 H228"/></circle>
+          <circle class="flow-dot" r="2.4"><animateMotion dur="2.2s" begin=".5s" repeatCount="indefinite" path="M400 216 C 424 216, 416 129, 438 129"/></circle>
+          <circle class="flow-dot" r="2.4"><animateMotion dur="2.2s" begin="1.3s" repeatCount="indefinite" path="M400 216 C 430 216, 426 296, 454 296"/></circle>
+
+          <!-- source + ci -->
+          <rect class="n" x="20" y="186" width="170" height="60" rx="8"/>
+          <text class="t-title" x="36" y="212">GitHub</text>
+          <text class="t-sub" x="36" y="231">github.com/dkim0910</text>
+          <rect class="n" x="230" y="186" width="170" height="60" rx="8"/>
+          <text class="t-title" x="246" y="212">GitHub Actions</text>
+          <text class="t-sub" x="246" y="231">test · build · deploy</text>
+
+          <!-- what I administer -->
+          <rect class="n-plain" x="20" y="296" width="380" height="156" rx="10"/>
+          <text class="t-grp" x="36" y="320">administered by me</text>
+          <text class="t-ok" x="36" y="348">✓</text><text class="t-li" x="56" y="348">Linux servers</text>
+          <text class="t-ok" x="36" y="370">✓</text><text class="t-li" x="56" y="370">Docker containers</text>
+          <text class="t-ok" x="36" y="392">✓</text><text class="t-li" x="56" y="392">PostgreSQL databases</text>
+          <text class="t-ok" x="36" y="414">✓</text><text class="t-li" x="56" y="414">CI/CD pipelines</text>
+          <text class="t-ok" x="36" y="436">✓</text><text class="t-li" x="56" y="436">DNS</text>
+
+          <!-- security controls -->
+          <rect class="n-plain" x="20" y="476" width="380" height="152" rx="10"/>
+          <text class="t-grp" x="36" y="500">data protection in place</text>
+          <text class="t-li" x="36" y="528">Postgres row-level security <tspan class="s">— Honest MRR</tspan></text>
+          <text class="t-li" x="36" y="552">Per-tenant hash chain <tspan class="s">— Honest MRR</tspan></text>
+          <text class="t-li" x="36" y="576">Cloud KMS envelope for PII key <tspan class="s">— Runnertic</tspan></text>
+          <text class="t-li" x="36" y="600">Vision-API content moderation <tspan class="s">— Geesly</tspan></text>
+
+          <!-- G1 self-hosted -->
+          <rect class="g" x="440" y="40" width="420" height="178" rx="10"/>
+          <text class="t-grp" x="456" y="62">self-hosted · docker + postgresql</text>
+          <text class="t-cnt" x="844" y="62" text-anchor="end">4 apps</text>
+          <rect class="n" x="456" y="78" width="186" height="56" rx="7"/>
+          <text class="t-title" x="470" y="101">BookList4U</text><text class="t-sub" x="470" y="120">Next.js · Postgres</text>
+          <circle class="sdot checking" data-dot="booklist4u" cx="628" cy="92" r="3.5"/>
+          <rect class="n" x="658" y="78" width="186" height="56" rx="7"/>
+          <text class="t-title" x="672" y="101">CanonTrails</text><text class="t-sub" x="672" y="120">Next.js · Postgres</text>
+          <circle class="sdot checking" data-dot="canontrails" cx="830" cy="92" r="3.5"/>
+          <rect class="n" x="456" y="146" width="186" height="56" rx="7"/>
+          <text class="t-title" x="470" y="169">Animaruni</text><text class="t-sub" x="470" y="188">Next.js · Postgres</text>
+          <circle class="sdot checking" data-dot="animaruni" cx="628" cy="160" r="3.5"/>
+          <rect class="n" x="658" y="146" width="186" height="56" rx="7"/>
+          <text class="t-title" x="672" y="169">Honest MRR</text><text class="t-sub" x="672" y="188">Next.js · Postgres + RLS</text>
+          <circle class="sdot checking" data-dot="honestmrr" cx="830" cy="160" r="3.5"/>
+
+          <!-- G2 pages -->
+          <rect class="g" x="440" y="234" width="420" height="102" rx="10"/>
+          <text class="t-grp" x="456" y="256">github pages · static</text>
+          <text class="t-cnt" x="844" y="256" text-anchor="end">2 sites</text>
+          <rect class="n" x="456" y="272" width="186" height="48" rx="7"/>
+          <text class="t-title" x="470" y="292">nelera.net</text><text class="t-sub" x="470" y="309">HTML · CSS · JS</text>
+          <circle class="sdot checking" data-dot="portfolio" cx="628" cy="284" r="3.5"/>
+          <rect class="n" x="658" y="272" width="186" height="48" rx="7"/>
+          <text class="t-title" x="672" y="292">BestScreenTester</text><text class="t-sub" x="672" y="309">Next.js static export</text>
+          <circle class="sdot checking" data-dot="bestscreentester" cx="830" cy="284" r="3.5"/>
+
+          <!-- G3 firebase -->
+          <rect class="g" x="440" y="352" width="420" height="158" rx="10"/>
+          <text class="t-grp" x="456" y="374">firebase · google cloud</text>
+          <text class="t-cnt" x="844" y="374" text-anchor="end">2 apps</text>
+          <rect class="n" x="456" y="390" width="388" height="48" rx="7"/>
+          <text class="t-title" x="470" y="410">Geesly</text><text class="t-sub" x="470" y="427">Flutter · Firestore · Cloud Functions · FCM</text>
+          <circle class="sdot checking" data-dot="geesly" cx="830" cy="402" r="3.5"/>
+          <rect class="n" x="456" y="446" width="388" height="48" rx="7"/>
+          <text class="t-title" x="470" y="466">Runnertic</text>
+          <rect class="tag-box" x="539" y="455.5" width="36" height="15" rx="3"/><text class="t-tag" x="557" y="466" text-anchor="middle">team</text>
+          <text class="t-sub" x="470" y="483">Next.js · Firestore · Firebase Auth · Cloud KMS</text>
+          <circle class="sdot checking" data-dot="runnertic" cx="830" cy="458" r="3.5"/>
+
+          <!-- G4 solana + native -->
+          <rect class="g" x="440" y="526" width="202" height="102" rx="10"/>
+          <text class="t-grp" x="456" y="548">solana</text>
+          <rect class="n" x="456" y="564" width="170" height="48" rx="7"/>
+          <text class="t-title" x="470" y="584">NELA</text><text class="t-sub" x="470" y="601">Raydium · LP burned</text>
+          <rect class="dia-svg" x="608" y="572" width="7" height="7" rx="1" transform="rotate(45 611.5 575.5)"/>
+          <rect class="g" x="658" y="526" width="202" height="102" rx="10"/>
+          <text class="t-grp" x="674" y="548">native · macos</text>
+          <rect class="n" x="674" y="564" width="170" height="48" rx="7"/>
+          <text class="t-title" x="688" y="584">MaxCandela</text><text class="t-sub" x="688" y="601">Swift · AppKit</text>
+          <circle class="sdot checking" data-dot="maxcandela" cx="830" cy="576" r="3.5"/>
+
+          <!-- edge + release -->
+          <rect class="n" x="920" y="78" width="220" height="56" rx="8"/>
+          <text class="t-title" x="936" y="101">Cloudflare</text><text class="t-sub" x="936" y="120">in front of CanonTrails</text>
+          <text class="t-col" x="882" y="98" text-anchor="middle" style="font-size:9.5px">proxy</text>
+
+          <!-- AWS: coming soon -->
+          <text class="t-grp" x="920" y="190">cloud</text>
+          <rect class="n n-soon" x="920" y="202" width="220" height="64" rx="8"/>
+          <text class="t-title" x="936" y="227">Amazon Web Services</text>
+          <text class="t-sub" x="936" y="250">AWS</text>
+          <rect class="tag-box" x="1046" y="238" width="78" height="17" rx="3"/>
+          <text class="t-tag" x="1085" y="250" text-anchor="middle">coming soon</text>
+
+          <text class="t-grp" x="920" y="374">release channels</text>
+          <rect class="n" x="920" y="386" width="220" height="36" rx="7"/>
+          <text class="t-title" x="936" y="409">Google Play</text><text class="t-sub" x="1124" y="409" text-anchor="end">Android</text>
+          <rect class="n" x="920" y="430" width="220" height="36" rx="7"/>
+          <text class="t-title" x="936" y="453">App Store</text><text class="t-sub" x="1124" y="453" text-anchor="end">iOS</text>
+          <rect class="n" x="920" y="474" width="220" height="36" rx="7"/>
+          <text class="t-title" x="936" y="497">ONE store</text><text class="t-sub" x="1124" y="497" text-anchor="end">Android</text>
+          <rect class="n" x="920" y="570" width="220" height="36" rx="7"/>
+          <text class="t-title" x="936" y="593">Mac App Store</text><text class="t-sub" x="1124" y="593" text-anchor="end">macOS</text>
+        </svg>
+
+        <div class="legend" aria-hidden="true">
+          <span><svg viewBox="0 0 28 10"><path d="M1 5H24" stroke="#4a515c" stroke-width="1.4"/><path d="M21 1.5 27 5l-6 3.5z" fill="#5b636e"/></svg>deploy</span>
+          <span><svg viewBox="0 0 28 10"><path d="M1 5H24" stroke="#6b5a33" stroke-width="1.4" stroke-dasharray="4 4"/><path d="M21 1.5 27 5l-6 3.5z" fill="#8a7444"/></svg>proxied traffic</span>
+          <span><svg viewBox="0 0 28 10"><path d="M1 5H24" stroke="#3f4651" stroke-width="1.4"/><path d="M21 1.5 27 5l-6 3.5z" fill="#5b636e"/></svg>store release</span>
+          <span><span class="dot ok"></span>reachable now</span>
+          <span><span class="dot fail"></span>no response</span>
+          <span><span class="st" style="gap:0"><span class="dia"></span></span>on-chain</span>
+          <span><svg viewBox="0 0 28 10"><rect x="1" y="1" width="26" height="8" rx="2" fill="none" stroke="rgba(240,178,74,.7)" stroke-dasharray="3 3"/></svg>coming soon</span>
+        </div>
+
+        <!-- stacked version for narrow screens -->
+        <ol class="lanes" aria-label="Architecture, by where each project runs">
+          <li class="lane">
+            <div class="lane-h"><h3>Self-hosted</h3><span>Docker + PostgreSQL</span></div>
+            <p class="lane-via"><b>GitHub</b> → <b>GitHub Actions</b> → deploy</p>
+            <ul class="nodes">
+              <li><span class="dot checking" data-dot="booklist4u"></span>BookList4U</li>
+              <li><span class="dot checking" data-dot="canontrails"></span>CanonTrails<small>behind Cloudflare</small></li>
+              <li><span class="dot checking" data-dot="animaruni"></span>Animaruni</li>
+              <li><span class="dot checking" data-dot="honestmrr"></span>Honest MRR<small>Postgres RLS</small></li>
+            </ul>
+          </li>
+          <li class="lane">
+            <div class="lane-h"><h3>Static</h3><span>GitHub Pages</span></div>
+            <p class="lane-via"><b>GitHub Actions</b> → nelera.net · BestScreenTester is a static export</p>
+            <ul class="nodes">
+              <li><span class="dot checking" data-dot="portfolio"></span>nelera.net<small>this site</small></li>
+              <li><span class="dot checking" data-dot="bestscreentester"></span>BestScreenTester</li>
+            </ul>
+          </li>
+          <li class="lane">
+            <div class="lane-h"><h3>Firebase · Google Cloud</h3><span>Firestore · Functions · KMS</span></div>
+            <p class="lane-via">Backends for the two mobile apps</p>
+            <ul class="nodes">
+              <li><span class="dot checking" data-dot="geesly"></span>Geesly<small>Flutter</small></li>
+              <li><span class="dot checking" data-dot="runnertic"></span>Runnertic<small>team project</small></li>
+            </ul>
+          </li>
+          <li class="lane lane-soon">
+            <div class="lane-h"><h3>Amazon Web Services</h3><span class="soon">coming soon</span></div>
+            <p class="lane-via">AWS</p>
+          </li>
+          <li class="lane">
+            <div class="lane-h"><h3>Release channels</h3><span>4 stores</span></div>
+            <p class="lane-via">How the apps reach phones and Macs</p>
+            <ul class="nodes">
+              <li><span class="dot checking" data-dot="geesly"></span>Geesly<small>App Store · Google Play</small></li>
+              <li><span class="dot checking" data-dot="runnertic"></span>Runnertic<small>App Store · ONE store</small></li>
+              <li><span class="dot checking" data-dot="maxcandela"></span>MaxCandela<small>Mac App Store</small></li>
+            </ul>
+          </li>
+          <li class="lane">
+            <div class="lane-h"><h3>Solana</h3><span>on-chain</span></div>
+            <p class="lane-via">Raydium pool seeded, LP tokens burned</p>
+            <ul class="nodes"><li><span class="dia"></span>NELA<small>1B supply</small></li></ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= RUNBOOK ======================= -->
+  <section class="sec" id="runbook" aria-labelledby="h-runbook">
+    <div class="wrap">
+      <div class="sec-h">
+        <div>
+          <p class="sec-label">03 · runbook</p>
+          <h2 id="h-runbook">How I work</h2>
+          <p class="sec-p">Five habits, each with the project where you can see it.</p>
+        </div>
+      </div>
+      <div class="rb-grid">
+        <ol class="panel steps">
+          <li><span class="num">01</span><div><h3>Own the whole path</h3><p>On the solo projects I'm the only engineer. I write the code, then administer the Linux servers, Docker containers, Postgres databases, CI/CD pipelines, and DNS that keep it online — <em>BookList4U, CanonTrails, Animaruni, and Honest MRR</em> each run self-hosted in Docker with Postgres.</p></div></li>
+          <li><span class="num">02</span><div><h3>Let tests decide when to deploy</h3><p>On <em>Honest MRR</em>, unit, integration, and Playwright suites must pass before a deploy runs. On <em>Animaruni</em>, a deploy only runs after CI passes.</p></div></li>
+          <li><span class="num">03</span><div><h3>Protect the data</h3><p>Postgres row-level security and a per-tenant hash chain on <em>Honest MRR</em>; a Cloud KMS envelope for the key that encrypts personal data fields on <em>Runnertic</em>; Vision-API content moderation on <em>Geesly</em>.</p></div></li>
+          <li><span class="num">04</span><div><h3>Ship through the stores</h3><p><em>Geesly</em> on the App Store and Google Play, <em>MaxCandela</em> on the Mac App Store with StoreKit 2, and the iOS App Store release of <em>Runnertic</em>.</p></div></li>
+          <li><span class="num">05</span><div><h3>Write down what went wrong</h3><p><em>NELA</em>: sniper bots bought about 70% of the supply the second the pool opened, then sold it all two months later and cut the price 98% — a roughly $500 lesson. <em>Geesly</em>: shipping the app is only the first problem; distribution has been the hardest lesson.</p></div></li>
+        </ol>
+
+        <div class="side">
+          <article class="panel prev" aria-labelledby="h-prev">
+            <div class="card-h"><span>before software</span><span>national service</span></div>
+            <div class="card-b">
+              <h3 id="h-prev">Security officer, Supreme Court of Korea</h3>
+              <p class="meta">Korean national service · nearly two years</p>
+              <p>Trusted to staff an access-control post alone. Physical security, procedure, and owning a post are a real part of data center work — and I've already done that part.</p>
+            </div>
+          </article>
+          <article class="panel" aria-labelledby="h-inv">
+            <div class="card-h"><span id="h-inv">inventory</span><span>tools I've shipped with</span></div>
+            <dl class="inv">
+              <div><dt>ops</dt><dd>Linux, Docker, GitHub Actions, Cloudflare, Vercel</dd></div>
+              <div><dt>data</dt><dd>PostgreSQL, MySQL, Oracle DB, Supabase, Firebase</dd></div>
+              <div><dt>backend</dt><dd>Node.js, Java, Spring Boot</dd></div>
+              <div><dt>frontend</dt><dd>Next.js, React, TypeScript, Tailwind CSS</dd></div>
+              <div><dt>mobile</dt><dd>Flutter, Dart, Swift, iOS, Android</dd></div>
+              <div><dt>ai</dt><dd>Claude, Claude Code CLI, GPT, Gemini</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CONTACT ======================= -->
+  <section class="sec" id="contact" aria-labelledby="h-contact">
+    <div class="wrap contact">
+      <div>
+        <p class="sec-label">04 · contact</p>
+        <h2 id="h-contact">Hiring? Let's talk.</h2>
+        <p class="sec-p">I'm looking for a full-time role in software engineering, or in data center, network, or cloud support. I'm open to interesting freelance work too.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+          <a class="btn" href="/Daniel_Kim_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        </div>
+      </div>
+      <ul class="panel chan" aria-label="Contact channels">
+        <li><span class="k">email</span><span class="v" data-email-text>enable JavaScript to see it</span><a class="btn btn-sm a" href="#contact" data-contact="email"><span data-label>Copy</span></a></li>
+        <li><span class="k">linkedin</span><span class="v">in/daniel-kim-6991882b3</span><a class="btn btn-sm a" href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">Open ↗</a></li>
+        <li><span class="k">github</span><span class="v">github.com/dkim0910</span><a class="btn btn-sm a" href="https://github.com/dkim0910" target="_blank" rel="noopener">Open ↗</a></li>
+        <li><span class="k">resume</span><span class="v">Daniel_Kim_Resume.pdf</span><a class="btn btn-sm a" href="/Daniel_Kim_Resume.pdf" target="_blank" rel="noopener">Download</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <span>© 2026 Daniel Kim · <span class="mono">nelera.net</span></span>
+      <nav aria-label="Footer">
+        <a href="https://github.com/dkim0910" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/daniel-kim-6991882b3/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/Daniel_Kim_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="donate.html">Donate</a>
+      </nav>
+    </div>
+    <p class="note">Status checks are plain requests from your browser to each public domain. Nothing is logged or stored. Hand-built in HTML, CSS, and JavaScript.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
